@@ -1,0 +1,37 @@
+-----Mapped Tables-----
+
+CREATE TABLE Person(
+  pid SERIAL PRIMARY KEY,
+  firstName VARCHAR(10) NOT NULL,
+  lastName VARCHAR(20) NOT NULL,
+  username VARCHAR(20) UNIQUE NOT NULL,
+  email VARCHAR(30) UNIQUE NOT NULL
+);
+
+CREATE TABLE GroupChat(
+  gid SERIAL PRIMARY KEY,
+  gName VARCHAR(20) NOT NULL,
+  admin INTEGER REFERENCES Person(pid) NOT NULL
+);
+
+CREATE TABLE Messages(
+  mid SERIAL PRIMARY KEY,
+  content VARCHAR(280),
+  sendBy INTEGER REFERENCES Person(pid) NOT NULL,
+  sendTo INTEGER REFERENCES GroupChat(gid) NOT NULL,
+  replied INTEGER REFERENCES Messages(mid),
+  date TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE TABLE Members(
+  "group" INTEGER REFERENCES GroupChat(gid) NOT NULL,
+  "user" INTEGER REFERENCES Person(pid) NOT NULL,
+  PRIMARY KEY ("group","user")
+);
+
+CREATE TABLE Contacts(
+  main_user INTEGER REFERENCES Person(pid) NOT NULL,
+  contact_user VARCHAR REFERENCES Person(username) NOT NULL,
+  contact_name VARCHAR(20),
+  PRIMARY KEY (main_user,contact_user)
+);
