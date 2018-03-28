@@ -2,7 +2,7 @@ from flask import jsonify
 from dao.groups import GroupsDAO
 
 
-class PartHandler:
+class GroupHandler:
     def build_group_chat_dict(self, row):
         result = {}
         result['gid'] = row[0]
@@ -27,14 +27,31 @@ class PartHandler:
         result['pprice'] = pprice
         return result
 
-    def getAllParts(self):
-        dao = PartsDAO()
-        parts_list = dao.getAllParts()
-        result_list = []
-        for row in parts_list:
-            result = self.build_part_dict(row)
-            result_list.append(result)
-        return jsonify(Parts=result_list)
+    def getAllGroups(self):
+
+        G1 = {}
+        G1['gid'] = 1
+        G1['gName'] = 'MessageGroup'
+        G1['admin'] = 85
+
+        G2 = {}
+        G2['gid'] = 2
+        G2['gName'] = 'Grupo DB'
+        G2['admin'] = 123
+
+        G3 = {}
+        G3['gid'] = 3
+        G3['gName'] = 'Algarete Chat'
+        G3['admin'] = 1
+
+        return jsonify(G1, G2, G3)
+        # dao = GroupsDAO()
+        # groups_list = dao.getAllGroups()
+        # result_list = []
+        # for row in groups_list:
+        #     result = self.build_group_chat_dict(row)
+        #     result_list.append(result)
+        # return jsonify(Groups=result_list)
 
     def getPartById(self, pid):
         dao = PartsDAO()
