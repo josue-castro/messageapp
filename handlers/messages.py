@@ -1,4 +1,4 @@
-from flask import jsonify, request
+from flask import jsonify
 from dao.message import MessageDAO
 class MessageHandler:
     def mapToDic(self, row):

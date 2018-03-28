@@ -1,5 +1,6 @@
 from flask import Flask
 from handlers.messages import MessageHandler
+from handlers.contacts import ContactHandler
 app = Flask(__name__)
 
 
@@ -23,14 +24,17 @@ def members():
 def getGroupMessages(gid):
     return MessageHandler().getGroupMessages(gid)
 
-@app.route('/group/<int:gid>/messages/<int:pid>')
+@app.route('/group/<int:gid>/messages/by/<int:pid>')
 def getMessageBySender(gid, pid):
     return MessageHandler().getMessagesBySender(gid, pid)
 
+@app.route('/<int:pid>/contacts')
+def getMyContacts(pid):
+    return ContactHandler().getMyContacts(pid)
 
-@app.route('/contacts')
-def contacts():
-    return 0
+@app.route('/<int:pid>/contacts/<string:name>')
+def getContactByName(pid, name):
+    return ContactHandler().getContactByName(pid, name)
 
 
 if __name__ == '__main__':
