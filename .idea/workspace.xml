@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a7d77fc7-82fb-442d-a5e0-1254fe52254d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/handlers/messages.py" afterPath="$PROJECT_DIR$/handlers/messages.py" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -207,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522245891619</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="contact route added">
+      <created>1522252076975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1522252076975</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -265,7 +270,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="message route" />
-    <option name="LAST_COMMIT_MESSAGE" value="message route" />
+    <MESSAGE value="contact route added" />
+    <option name="LAST_COMMIT_MESSAGE" value="contact route added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
