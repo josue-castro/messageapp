@@ -1,5 +1,5 @@
 from flask import Flask
-
+from handlers.messages import MessageHandler
 app = Flask(__name__)
 
 
@@ -9,7 +9,7 @@ def home():
 
 @app.route('/login')
 def login():
-    return "No Login  for you!!!"
+    return "Login page"
 
 @app.route('/groups')
 def groups():
@@ -19,9 +19,10 @@ def groups():
 def members():
     return 0
 
-@app.route('/groups/<int:gid>/messages')
-def messages():
-    return 0
+@app.route('/group/<int:gid>/messages')
+def getGroupMessages(gid):
+    return MessageHandler().getGroupMessages(gid)
+
 
 @app.route('/contacts')
 def contacts():
