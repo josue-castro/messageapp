@@ -29,4 +29,9 @@ class MessageDAO:
                 result.append(m)
         return result
 
-
+    def getMessagesBySender(self, gid, pid):
+        result = []
+        for m in self.messages:
+            if gid == m[3] and pid == m[2]:
+                result.append(m)
+        return result

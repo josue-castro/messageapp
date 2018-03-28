@@ -23,6 +23,10 @@ def members():
 def getGroupMessages(gid):
     return MessageHandler().getGroupMessages(gid)
 
+@app.route('/group/<int:gid>/messages/<int:pid>')
+def getMessageBySender(gid, pid):
+    return MessageHandler().getMessagesBySender(gid, pid)
+
 
 @app.route('/contacts')
 def contacts():

@@ -17,7 +17,7 @@ class MessageHandler:
         mapped_results = []
         for m in result:
             mapped_results.append(self.mapToDic(m))
-        return jsonify(Message=mapped_results)
+        return jsonify(Messages=mapped_results)
 
     def getGroupMessages(self, gid):
         dao = MessageDAO()
@@ -25,4 +25,12 @@ class MessageHandler:
         mapped_results = []
         for m in result:
             mapped_results.append(self.mapToDic(m))
-        return jsonify(Message=mapped_results)
+        return jsonify(Messages=mapped_results)
+
+    def getMessagesBySender(self, gid, pid):
+        dao = MessageDAO()
+        result = dao.getMessagesBySender(gid, pid)
+        mapped_results = []
+        for m in result:
+            mapped_results.append(self.mapToDic(m))
+        return jsonify(Message_by=mapped_results)
