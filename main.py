@@ -1,5 +1,4 @@
-from flask import Flask, request
-from handler.parts import PartHandelr
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -14,8 +13,20 @@ def login():
 
 @app.route('/groups')
 def groups():
+    return 0
 
-@app.route('/groups/<')
+@app.route('/groups/<int:gid>/members')
+def members():
+    return 0
+
+@app.route('/groups/<int:gid>/messages')
+def messages():
+    return 0
+
+@app.route('/contacts')
+def contacts():
+    return 0
+
 
 if __name__ == '__main__':
     app.run()

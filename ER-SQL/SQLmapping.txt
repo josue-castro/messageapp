@@ -1,16 +1,16 @@
------Mapped Tables-----
-
 CREATE TABLE Person(
   pid SERIAL PRIMARY KEY,
-  firstName VARCHAR(10) NOT NULL,
-  lastName VARCHAR(20) NOT NULL,
+  firstName VARCHAR(20) NOT NULL,
+  lastName VARCHAR(30) NOT NULL,
   username VARCHAR(20) UNIQUE NOT NULL,
-  email VARCHAR(30) UNIQUE NOT NULL
+  phone CHAR(10) UNIQUE,
+  email VARCHAR(50) UNIQUE,
+  CHECK (phone IS NOT NULL or email IS NOT NULL)
 );
 
 CREATE TABLE GroupChat(
   gid SERIAL PRIMARY KEY,
-  gName VARCHAR(20) NOT NULL,
+  gName VARCHAR(30) NOT NULL,
   admin INTEGER REFERENCES Person(pid) NOT NULL
 );
 
@@ -31,7 +31,10 @@ CREATE TABLE Members(
 
 CREATE TABLE Contacts(
   main_user INTEGER REFERENCES Person(pid) NOT NULL,
-  contact_user VARCHAR REFERENCES Person(username) NOT NULL,
-  contact_name VARCHAR(20),
-  PRIMARY KEY (main_user,contact_user)
+  contact_name VARCHAR(30) NOT NULL,
+  contact_phone CHAR REFERENCES Person(phone),
+  contact_email VARCHAR REFERENCES Person(email),
+  contact_id INTEGER REFERENCES Person(pid),
+  PRIMARY KEY (main_user, contact_id),
+  CHECK (contact_phone IS NOT NULL OR contact_email IS NOT NULL)
 );
