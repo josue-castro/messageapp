@@ -10,6 +10,7 @@ class GroupHandler:
         result['admin'] = row[2]
         return result
 
+
     def build_supplier_dict(self, row):
         result = {}
         result['sid'] = row[0]
@@ -28,30 +29,12 @@ class GroupHandler:
         return result
 
     def getAllGroups(self):
-
-        G1 = {}
-        G1['gid'] = 1
-        G1['gName'] = 'MessageGroup'
-        G1['admin'] = 85
-
-        G2 = {}
-        G2['gid'] = 2
-        G2['gName'] = 'Grupo DB'
-        G2['admin'] = 123
-
-        G3 = {}
-        G3['gid'] = 3
-        G3['gName'] = 'Algarete Chat'
-        G3['admin'] = 1
-
-        return jsonify(G1, G2, G3)
-        # dao = GroupsDAO()
-        # groups_list = dao.getAllGroups()
-        # result_list = []
-        # for row in groups_list:
-        #     result = self.build_group_chat_dict(row)
-        #     result_list.append(result)
-        # return jsonify(Groups=result_list)
+        dao = GroupsDAO()
+        groups_list = dao.getAllGroups()
+        result_list = []
+        for row in groups_list:
+            result_list.append(self.build_group_chat_dict(row))
+        return jsonify(Groups=result_list)
 
     def getPartById(self, pid):
         dao = PartsDAO()

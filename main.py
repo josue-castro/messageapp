@@ -14,7 +14,7 @@ def login():
 
 @app.route('/groups')
 def groups():
-    return GroupHandler.getAllGroups()
+    return GroupHandler().getAllGroups()
 
 @app.route('/groups/<int:gid>/members')
 def members():

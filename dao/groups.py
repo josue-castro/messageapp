@@ -5,32 +5,23 @@ import psycopg2
 class GroupsDAO:
     def __init__(self):
 
-        connection_url = "dbname=%s user=%s password=%s" % (pg_config['dbname'],
-                                                            pg_config['user'],
-                                                            pg_config['passwd'])
-        self.conn = psycopg2._connect(connection_url)
+        #connection_url = "dbname=%s user=%s password=%s" % (pg_config['dbname'],
+        #                                                    pg_config['user'],
+        #                                                    pg_config['passwd'])
+        #self.conn = psycopg2._connect(connection_url)
+
+        #     gid,  gName,     admin
+        G1 = [101, 'Grupo DB', 120]
+        G2 = [122, 'Algarete Chat', 99]
+        G3 = [3, 'Chat Group', 124]
+
+        self.groups = []
+        self.groups.append(G1)
+        self.groups.append(G2)
+        self.groups.append(G3)
 
     def getAllGroups(self):
-        result = []
-
-        G1 = {}
-        G1['gid'] = 1
-        G1['gName'] = 'MessageGroup'
-        G1['admin'] = 85
-
-        G2 = {}
-        G2['gid'] = 2
-        G2['gName'] = 'Grupo DB'
-        G2['admin'] = 123
-
-        G3 = {}
-        G3['gid'] = 3
-        G3['gName'] = 'Algarete Chat'
-        G3['admin'] = 1
-
-        result.append(G1, G2, G3)
-
-        return result
+        return self.groups
 
         # cursor = self.conn.cursor()
         # query = "select * from GroupChat;"
@@ -41,37 +32,61 @@ class GroupsDAO:
         # return result
 
     def getGroupById(self, gid):
-        cursor = self.conn.cursor()
-        query = "select * from GroupChat where gid = %s;"
-        cursor.execute(query, gid)
-        result = cursor.fetchone()
+        result = []
+        for group in self.groups:
+            if gid == group[0]:
+                return result.append(group)
+
+        # cursor = self.conn.cursor()
+        # query = "select * from GroupChat where gid = %s;"
+        # cursor.execute(query, gid)
+        # result = cursor.fetchone()
+
         return result
 
     def getPartsByGroupName(self, gName):
-        cursor = self.conn.cursor()
-        query = "select * from GroupChat where gName = %s;"
-        cursor.execute(query, gName)
         result = []
-        for row in cursor:
-            result.append(row)
+        for group in self.groups:
+            if gName == group[1]:
+                result.append(group)
+
+        # cursor = self.conn.cursor()
+        # query = "select * from GroupChat where gName = %s;"
+        # cursor.execute(query, gName)
+        # result = []
+        # for row in cursor:
+        #     result.append(row)
+
         return result
 
     def getPartsByAdmin(self, admin):
-        cursor = self.conn.cursor()
-        query = "select * from GroupChat where admin = %d;"
-        cursor.execute(query, admin)
         result = []
-        for row in cursor:
-            result.append(row)
+        for group in self.groups:
+            if admin == group[1]:
+                result.append(group)
+
+        # cursor = self.conn.cursor()
+        # query = "select * from GroupChat where admin = %d;"
+        # cursor.execute(query, admin)
+        # result = []
+        # for row in cursor:
+        #     result.append(row)
+
         return result
 
-    def getGroupChatsByGroupNameAndAdmin(self, color, material):
-        cursor = self.conn.cursor()
-        query = "select * from GroupChat where gName = %s and admin = %d;"
-        cursor.execute(query, (gName, admin))
+    def getGroupChatsByGroupNameAndAdmin(self, gName, admin):
         result = []
-        for row in cursor:
-            result.append(row)
+        for group in self.groups:
+            if (gName == group[1]) and (admin == group[2]):
+                result.append(group)
+
+        # cursor = self.conn.cursor()
+        # query = "select * from GroupChat where gName = %s and admin = %d;"
+        # cursor.execute(query, (gName, admin))
+        # result = []
+        # for row in cursor:
+        #     result.append(row)
+
         return result
 
 
