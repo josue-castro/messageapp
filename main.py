@@ -1,4 +1,5 @@
 from flask import Flask
+from handler.groups import GroupHandler
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ def login():
 
 @app.route('/groups')
 def groups():
-    return 0
+    return GroupHandler.getAllGroups()
 
 @app.route('/groups/<int:gid>/members')
 def members():
