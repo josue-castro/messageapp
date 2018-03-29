@@ -2,6 +2,7 @@
 from flask import Flask, render_template
 from handlers.messages import MessageHandler
 from handlers.contacts import ContactHandler
+from handlers.members import MemberHandler
 from handler.groups import GroupHandler
 
 app = Flask(__name__, template_folder='template')
@@ -28,8 +29,8 @@ def groups():
 
 
 @app.route('/groups/<int:gid>/members')
-def members():
-    return 0
+def members(gid):
+    return MemberHandler().getMembers(gid)
 
 
 @app.route('/group/<int:gid>/messages')
