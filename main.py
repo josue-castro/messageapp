@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template
 from handlers.messages import MessageHandler
 from handlers.contacts import ContactHandler
