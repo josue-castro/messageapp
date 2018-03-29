@@ -1,5 +1,4 @@
-
-from flask import Flask, render_template
+from flask import Flask
 from handlers.messages import MessageHandler
 from handlers.contacts import ContactHandler
 from handlers.members import MemberHandler
