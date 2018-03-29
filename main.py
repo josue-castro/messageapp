@@ -1,8 +1,7 @@
-
-from flask import Flask, render_template
+from flask import Flask
 from handlers.messages import MessageHandler
 from handlers.contacts import ContactHandler
-from handler.groups import GroupHandler
+from handlers.groups import GroupHandler
 
 app = Flask(__name__, template_folder='template')
 

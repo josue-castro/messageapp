@@ -1,7 +1,3 @@
-from config.dbconfig import pg_config
-import psycopg2
-
-
 class GroupsDAO:
     def __init__(self):
 
