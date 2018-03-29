@@ -8,7 +8,7 @@ class MemberHandler:
         return result
 
     def getMembers(self, gid):
-        dao = MembersDao()
+        dao = MembersDAO()
         result = dao.getMembers(gid)
         mapped_results = []
         for c in result:
