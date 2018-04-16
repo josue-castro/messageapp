@@ -19,6 +19,8 @@ CREATE TABLE Messages(
   content VARCHAR(280),
   pid INTEGER REFERENCES Person(pid) NOT NULL, --send by
   gid INTEGER REFERENCES GroupChat(gid) NOT NULL, --send to
+  numLikes INTEGER,
+  numDislikes INTEGER,
   replying INTEGER REFERENCES Messages(mid), --original message
   date TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
@@ -26,6 +28,7 @@ CREATE TABLE Messages(
 CREATE TABLE Members(
   gid INTEGER REFERENCES GroupChat(gid) NOT NULL,
   pid INTEGER REFERENCES Person(pid) NOT NULL,
+  numMembers INTEGER,
   PRIMARY KEY (gid, pid)
 );
 
