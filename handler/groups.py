@@ -99,21 +99,21 @@ class GroupHandler:
             dao.delete(pid)
             return jsonify(DeleteStatus = "OK"), 200
 
-    # def updatePart(self, pid, form):
-    #     dao = PartsDAO()
-    #     if not dao.getPartById(pid):
-    #         return jsonify(Error = "Part not found."), 404
-    #     else:
-    #         if len(form) != 4:
-    #             return jsonify(Error="Malformed update request"), 400
-    #         else:
-    #             pname = form['pname']
-    #             pprice = form['pprice']
-    #             pmaterial = form['pmaterial']
-    #             pcolor = form['pcolor']
-    #             if pcolor and pprice and pmaterial and pname:
-    #                 dao.update(pid, pname, pcolor, pmaterial, pprice)
-    #                 result = self.build_part_attributes(pid, pname, pcolor, pmaterial, pprice)
-    #                 return jsonify(Part=result), 200
-    #             else:
-    #                 return jsonify(Error="Unexpected attributes in update request"), 400
+    def updatePart(self, pid, form):
+        dao = PartsDAO()
+        if not dao.getPartById(pid):
+            return jsonify(Error = "Part not found."), 404
+        else:
+            if len(form) != 4:
+                return jsonify(Error="Malformed update request"), 400
+            else:
+                pname = form['pname']
+                pprice = form['pprice']
+                pmaterial = form['pmaterial']
+                pcolor = form['pcolor']
+                if pcolor and pprice and pmaterial and pname:
+                    dao.update(pid, pname, pcolor, pmaterial, pprice)
+                    result = self.build_part_attributes(pid, pname, pcolor, pmaterial, pprice)
+                    return jsonify(Part=result), 200
+                else:
+                    # return jsonify(Error="Unexpected attributes in update request"), 400
