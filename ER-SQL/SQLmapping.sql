@@ -17,24 +17,39 @@ CREATE TABLE GroupChat(
 CREATE TABLE Messages(
   mid SERIAL PRIMARY KEY,
   content VARCHAR(280),
-  sendBy INTEGER REFERENCES Person(pid) NOT NULL,
-  sendTo INTEGER REFERENCES GroupChat(gid) NOT NULL,
-  replied INTEGER REFERENCES Messages(mid),
+  pid INTEGER REFERENCES Person(pid) NOT NULL, --send by
+  gid INTEGER REFERENCES GroupChat(gid) NOT NULL, --send to
+  numLikes INTEGER,
+  numDislikes INTEGER,
+  replying INTEGER REFERENCES Messages(mid), --original message
   date TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 CREATE TABLE Members(
-  "group" INTEGER REFERENCES GroupChat(gid) NOT NULL,
-  "user" INTEGER REFERENCES Person(pid) NOT NULL,
-  PRIMARY KEY ("group","user")
+  gid INTEGER REFERENCES GroupChat(gid) NOT NULL,
+  pid INTEGER REFERENCES Person(pid) NOT NULL,
+  numMembers INTEGER,
+  PRIMARY KEY (gid, pid)
 );
 
 CREATE TABLE Contacts(
-  main_user INTEGER REFERENCES Person(pid) NOT NULL,
+  pid INTEGER REFERENCES Person(pid) NOT NULL, --user id that adds contact
   contact_name VARCHAR(30) NOT NULL,
-  contact_phone CHAR REFERENCES Person(phone),
-  contact_email VARCHAR REFERENCES Person(email),
-  contact_id INTEGER REFERENCES Person(pid),
-  PRIMARY KEY (main_user, contact_id),
-  CHECK (contact_phone IS NOT NULL OR contact_email IS NOT NULL)
+  phone CHAR REFERENCES Person(phone),
+  email VARCHAR REFERENCES Person(email),
+  contact_id INTEGER REFERENCES Person(pid), --user id to be added
+  PRIMARY KEY (pid, contact_id),
+  CHECK (phone IS NOT NULL OR email IS NOT NULL)
+);
+
+CREATE TABLE Likes(
+  mid INTEGER REFERENCES Messages(mid),
+  pid INTEGER REFERENCES Person(pid),
+  PRIMARY KEY (mid, pid)
+);
+
+CREATE TABLE Dislikes(
+  mid INTEGER REFERENCES Messages(mid),
+  pid INTEGER REFERENCES Person(pid),
+  PRIMARY KEY (mid, pid)
 );
