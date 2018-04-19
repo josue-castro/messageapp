@@ -3,6 +3,7 @@ from handlers.messages import MessageHandler
 from handlers.contacts import ContactHandler
 from handlers.members import MemberHandler
 from handlers.groups import GroupHandler
+from handlers.users import UserHandler
 
 app = Flask(__name__, template_folder='template')
 
@@ -25,6 +26,10 @@ def login():
 @app.route('/groups')
 def groups():
     return GroupHandler().getAllGroups()
+
+@app.route('/users')
+def users():
+    return UserHandler().getAllUsers()
 
 
 @app.route('/group/<int:gid>/members')
