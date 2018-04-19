@@ -1,5 +1,5 @@
 CREATE TABLE Person(
-  pid SERIAL PRIMARY KEY,
+  pid BIGSERIAL PRIMARY KEY,
   firstName VARCHAR(20) NOT NULL,
   lastName VARCHAR(30) NOT NULL,
   username VARCHAR(20) UNIQUE NOT NULL,
@@ -9,47 +9,56 @@ CREATE TABLE Person(
 );
 
 CREATE TABLE GroupChat(
-  gid SERIAL PRIMARY KEY,
+  gid BIGSERIAL PRIMARY KEY,
   gName VARCHAR(30) NOT NULL,
-  admin INTEGER REFERENCES Person(pid) NOT NULL
+  pid BIGINT REFERENCES Person(pid) --administrator id
 );
 
 CREATE TABLE Messages(
-  mid SERIAL PRIMARY KEY,
+  mid BIGSERIAL PRIMARY KEY,
   content VARCHAR(280),
-  pid INTEGER REFERENCES Person(pid) NOT NULL, --send by
-  gid INTEGER REFERENCES GroupChat(gid) NOT NULL, --send to
-  numLikes INTEGER,
-  numDislikes INTEGER,
-  replying INTEGER REFERENCES Messages(mid), --original message
+  pid BIGINT REFERENCES Person(pid), --send by
+  gid BIGINT REFERENCES GroupChat(gid), --send to
   date TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
+CREATE TABLE Hashtag(
+  hid BIGSERIAL PRIMARY KEY,
+  tag VARCHAR(30) UNIQUE NOT NULL
+);
+
 CREATE TABLE Members(
-  gid INTEGER REFERENCES GroupChat(gid) NOT NULL,
-  pid INTEGER REFERENCES Person(pid) NOT NULL,
-  numMembers INTEGER,
+  gid BIGINT REFERENCES GroupChat(gid),
+  pid BIGINT REFERENCES Person(pid),
   PRIMARY KEY (gid, pid)
 );
 
 CREATE TABLE Contacts(
-  pid INTEGER REFERENCES Person(pid) NOT NULL, --user id that adds contact
-  contact_name VARCHAR(30) NOT NULL,
-  phone CHAR REFERENCES Person(phone),
-  email VARCHAR REFERENCES Person(email),
-  contact_id INTEGER REFERENCES Person(pid), --user id to be added
-  PRIMARY KEY (pid, contact_id),
-  CHECK (phone IS NOT NULL OR email IS NOT NULL)
+  pid BIGINT REFERENCES Person(pid), --user id that adds contact
+  contact_id BIGINT REFERENCES Person(pid), --user id to be added
+  PRIMARY KEY (pid, contact_id)
 );
 
 CREATE TABLE Likes(
-  mid INTEGER REFERENCES Messages(mid),
-  pid INTEGER REFERENCES Person(pid),
+  mid BIGINT REFERENCES Messages(mid),
+  pid BIGINT REFERENCES Person(pid),
   PRIMARY KEY (mid, pid)
 );
 
 CREATE TABLE Dislikes(
-  mid INTEGER REFERENCES Messages(mid),
-  pid INTEGER REFERENCES Person(pid),
+  mid BIGINT REFERENCES Messages(mid),
+  pid BIGINT REFERENCES Person(pid),
   PRIMARY KEY (mid, pid)
+);
+
+CREATE TABLE Tagged(
+  mid BIGINT REFERENCES Messages(mid),
+  hid BIGINT REFERENCES Hashtag(hid),
+  PRIMARY KEY (mid, hid)
+);
+
+CREATE TABLE Replies(
+  mid BIGINT REFERENCES Messages(mid), --original message
+  reply_id BIGINT REFERENCES Messages (mid), --reply message
+  PRIMARY KEY (mid, reply_id)
 );
