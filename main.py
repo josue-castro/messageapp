@@ -27,6 +27,7 @@ def login():
 def groups():
     return GroupHandler().getAllGroups()
 
+
 @app.route('/users')
 def users():
     return UserHandler().getAllUsers()

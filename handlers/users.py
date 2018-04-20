@@ -10,11 +10,12 @@ class UserHandler:
         result['username'] = row[3]
         result['phone'] = row[4]
         result['email'] = row[5]
+        return result
 
     def getAllUsers(self):
         dao = UserDAO()
-        users_list = dao.getAllUsers()
+        user_list = dao.getAllUsers()
         result_list = []
-        for row in users_list:
+        for row in user_list:
             result_list.append(self.build_user_dict(row))
         return jsonify(Users=result_list)
