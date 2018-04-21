@@ -1,7 +1,7 @@
 import psycopg2
+import subprocess
 
 from config.dbconfig import pg_config
-
 
 class GroupsDAO:
     def __init__(self):
@@ -88,27 +88,3 @@ class GroupsDAO:
         #     result.append(row)
 
         return result
-
-
-    # def insert(self, gid, gName, admin):
-    #     cursor = self.conn.cursor()
-    #     query = "insert into GroupChat(gid, gName, admin) values (%s, %s, %d) returning gid;"
-    #     cursor.execute(query, (gid, gName, admin))
-    #     gid = cursor.fetchone()[0]
-    #     self.conn.commit()
-    #     return gid
-    #
-    # def delete(self, gid):
-    #     cursor = self.conn.cursor()
-    #     query = "delete from GroupChat where gid = %s;"
-    #     cursor.execute(query, (gid,))
-    #     self.conn.commit()
-    #     return gid
-    #
-    # def update(self, gid, gName, admin):
-    #     cursor = self.conn.cursor()
-    #     query = "update GroupChat set gName = %s, admin = %s, pmaterial = %s, pprice = %s where gid = %s;"
-    #     cursor.execute(query, (gid, gName, admin))
-    #     self.conn.commit()
-    #     return gid
-
