@@ -1,37 +1,56 @@
-class MessageDAO:
+from config.herokudbconfig import pg_config
+import psycopg2
+
+
+class MessageDao:
     def __init__(self):
-        # message id, content, sender id, group id, replied = NULL, date
-        M1 = [300, 'Que hacen?', 120, 101, '', '3/23/18']
-        M2 = [301, 'Trabajando en el proyecto de DB. Y tu?', 117, 101, '', '3/23/18']
-        M3 = [302, 'Estudiando para un examen', 120, 101, '', '3/23/18']
-        M4 = [303, 'Yo voy a salir, no hare na de la uni hoy', 131, 101, '', '3/23/18']
+        connection_url = "dbname=%s user=%s password=%s port=%s host=%s" % (pg_config['dbname'],
+                                                                            pg_config['user'],
+                                                                            pg_config['password'],
+                                                                            pg_config['port'],
+                                                                            pg_config['host'])
 
-        M5 = [257, 'Van para la actividad de hoy?', 99, 122, '', '3/11/18']
-        M6 = [258, 'No voy a poder ir mano tengo compromiso', 76, 122, '', '3/11/18']
-        M7 = [259, 'Mala mia me quede dormido. Como estuvo?', 81, 122, '', '3/12/18']
-
-        self.messages = []
-        self.messages.append(M1)
-        self.messages.append(M2)
-        self.messages.append(M3)
-        self.messages.append(M4)
-        self.messages.append(M5)
-        self.messages.append(M6)
-        self.messages.append(M7)
+        self.conn = psycopg2._connect(connection_url)
 
     def getAllMessages(self):
-        return self.messages
-
-    def getGroupMessages(self, gid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages;"
+        cursor.execute(query)
         result = []
-        for m in self.messages:
-            if gid == m[3]:
-                result.append(m)
+        for row in cursor:
+            result.append(row)
         return result
 
-    def getMessagesBySender(self, gid, pid):
+    def getAllGroupMessages(self, gid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages WHERE gid = %s;"
+        cursor.execute(query, (gid,))
         result = []
-        for m in self.messages:
-            if gid == m[3] and pid == m[2]:
-                result.append(m)
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllUserMessages(self, pid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages WHERE pid = %s;"
+        cursor.execute(query, (pid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getGroupMessagesByUser(self, gid, pid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages WHERE gid = %s AND pid = %s;"
+        cursor.execute(query, (gid, pid))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getMessageById(self, mid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        result = cursor.fetchone()
         return result

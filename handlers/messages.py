@@ -19,7 +19,7 @@ class MessageHandler:
             mapped_results.append(self.mapToDic(m))
         return jsonify(Messages=mapped_results)
 
-    def getGroupMessages(self, gid):
+    def getAllGroupMessages(self, gid):
         dao = MessageDAO()
         result = dao.getGroupMessages(gid)
         mapped_results = []
@@ -27,10 +27,27 @@ class MessageHandler:
             mapped_results.append(self.mapToDic(m))
         return jsonify(Messages=mapped_results)
 
-    def getMessagesBySender(self, gid, pid):
+    def getAllUserMessages(self, pid):
+        dao = MessageDAO()
+        result = dao.getAllUserMessages()
+        mapped_results = []
+        for m in result:
+            mapped_results.append(self.mapToDic(m))
+        return jsonify(Messages=mapped_results)
+
+    def getGroupMessagesByUser(self, gid, pid):
         dao = MessageDAO()
         result = dao.getMessagesBySender(gid, pid)
         mapped_results = []
         for m in result:
             mapped_results.append(self.mapToDic(m))
         return jsonify(Message_by=mapped_results)
+
+    def getMessageById(self, mid):
+        dao = MessageDAO()
+        row = dao.getMessageById(mid)
+        if not row:
+            return jsonify(Error="User Not Found"), 404
+        else:
+            user = self.build_user_dict(row)
+            return jsonify(User=user)
