@@ -1,5 +1,5 @@
 from flask import jsonify
-from dao.members import MembersDAO
+from dao.member import MembersDAO
 class MemberHandler:
     def mapToDic(self, row):
         result = {}
@@ -9,7 +9,7 @@ class MemberHandler:
 
     def getMembers(self, gid):
         dao = MembersDAO()
-        result = dao.getMembers(gid)
+        result = dao.getMembersINFO(gid)
         mapped_results = []
         for c in result:
             mapped_results.append(self.mapToDic(c))

@@ -1,7 +1,6 @@
 import psycopg2
 from config.herokudbconfig import pg_config
 
-from config.dbconfig import pg_config
 
 class GroupsDAO:
     def __init__(self):
@@ -24,7 +23,7 @@ class GroupsDAO:
         self.groups.append(G2)
         self.groups.append(G3)
 
-    def getAllGroups(self):
+    def getAllGroupsINFO(self):
         cursor = self.conn.cursor()
         query = "SELECT * FROM groupchat;"
         cursor.execute(query)
@@ -33,17 +32,39 @@ class GroupsDAO:
             result.append(row)
         return result
 
-    def getGroupById(self, gid):
+    def getGroupByIdINFO(self, gid):
         cursor = self.conn.cursor()
         query = "SELECT * FROM GroupChat WHERE gid = %s;"
         cursor.execute(query, gid)
         result = cursor.fetchone()
         return result
 
-    def getGroupByGroupName(self, gName):
+    def getGroupByGroupNameINFO(self, gName):
         cursor = self.conn.cursor()
         query = "SELECT * FROM GroupChat WHERE gName = %s;"
         cursor.execute(query, gName)
+        result = []
+        for row in cursor:
+            result.append(row)
+
+        return result
+
+    def getGroupNameById(self, gid):
+        cursor = self.conn.cursor()
+        query = "SELECT gname FROM GroupChat WHERE gid = %s;"
+        cursor.execute(query, gid)
+        result = []
+        for row in cursor:
+            result.append(row)
+
+        return result
+
+    def getGroupOwnerINFO(self, gid):
+        cursor = self.conn.cursor()
+        query = "SELECT pid, firstname, lastname,username,phone,email " \
+                " FROM GroupChat NATURAL INNER JOIN person " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (gid,))
         result = []
         for row in cursor:
             result.append(row)

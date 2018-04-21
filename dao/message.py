@@ -1,3 +1,7 @@
+import psycopg2
+from config.herokudbconfig import pg_config
+
+
 class MessageDAO:
     def __init__(self):
 
@@ -9,7 +13,7 @@ class MessageDAO:
 
         self.conn = psycopg2.connect(connection_url)
 
-    def getAllMessages(self):
+    def getAllMessagesINFO(self):
         cursor = self.conn.cursor()
         query = "SELECT * FROM messages;"
         cursor.execute(query)
@@ -18,16 +22,45 @@ class MessageDAO:
             result.append(row)
         return result
 
+    def getGroupMessagesINFO(self, gid):
+        cursor = self.conn.cursor()
+        query = 'SELECT * FROM messages WHERE gid = %s;'
+        cursor.execute(query, (gid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
     def getGroupMessages(self, gid):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM messages WHERE gid = %s;"
-        cursor.execute(query, gid)
+        query = 'SELECT content FROM messages WHERE gid = %s;'
+        cursor.execute(query, (gid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getMessagesInGroupBySenderINFO(self, gid, pid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages WHERE gid = %s AND pid = %s;"
+        cursor.execute(query, (gid, pid))
         result = cursor.fetchone()
         return result
 
-    def getMessagesBySender(self, gid, pid):
+    def getAllMessagesBySenderINFO(self, pid):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM messages WHERE gid = %s AND pid = %s;"
-        cursor.execute(query, gid, pid)
-        result = cursor.fetchone()
+        query = "SELECT * FROM messages WHERE pid = %s;"
+        cursor.execute(query, (pid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesInGroupBySenderINFO(self, gid, pid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages WHERE pid = %s AND gid = %s;"
+        cursor.execute(query, (pid, gid))
+        result = []
+        for row in cursor:
+            result.append(row)
         return result

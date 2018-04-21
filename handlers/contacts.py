@@ -1,24 +1,34 @@
 from flask import jsonify
 from dao.contact import ContactDao
+
+
 class ContactHandler:
     def mapToDic(self, row):
         result = {}
-        result['main user'] = row[0]
-        result['contact name'] = row[1]
-        result['phone'] = row[2]
-        result['email'] = row[3]
-        result['cid'] = row[4]
+        result['pid'] = row[0]
+        result['contact_id'] = row[1]
+        return result
+
+    def map_to_contact_info(self, row):
+        result = {}
+        result['pid'] = row[0]
+        result['contact_id'] = row[1]
+        result['firstname'] = row[2]
+        result['lastname'] = row[3]
+        result['username'] = row[4]
+        result['phone'] = row[5]
+        result['email'] = row[6]
         return result
 
     def getMyContacts(self, pid):
         dao = ContactDao()
-        result = dao.getMyContacts(pid)
+        result = dao.getMyContactsINFO(pid)
         mapped_results = []
         for c in result:
-            mapped_results.append(self.mapToDic(c))
+            mapped_results.append(self.map_to_contact_info(c))
         return jsonify(My_contacts=mapped_results)
 
-    def getContactByName(self,pid,name):
+    def getContactByName(self, pid, name):
         dao = ContactDao()
         result = dao.getContactByName(pid, name)
         mapped_results = []

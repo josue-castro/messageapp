@@ -1,5 +1,16 @@
+import psycopg2
+from config.herokudbconfig import pg_config
+
+
 class ContactDao:
     def __init__(self):
+        connection_url = "dbname=%s user=%s password=%s port=%s host=%s" % (pg_config['dbname'],
+                                                                            pg_config['user'],
+                                                                            pg_config['password'],
+                                                                            pg_config['port'],
+                                                                            pg_config['host'])
+
+        self.conn = psycopg2.connect(connection_url)
         #main user id, contact name, phone, email, cid
         C1 = [120, 'Joseph', '7873334455', '', 131]
         C2 = [120, 'Pamela', '', 'pamela.18@gmail.com', 171]
@@ -22,17 +33,17 @@ class ContactDao:
         self.contacts.append(C8)
         self.contacts.append(C9)
 
-    def getMyContacts(self, pid):
+    def getMyContactsINFO(self, pid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM contacts NATURAL INNER JOIN person " \
+                "WHERE pid = %s"
+        cursor.execute(query, (pid,))
         result = []
-        for c in self.contacts:
-            if c[0] == pid:
-                result.append(c)
+        for row in cursor:
+            result.append(row)
         return result
 
-    def getContactByName(self, pid, name):
-        result = []
+    def getContactByName(self, pid, name): #TODO IMPLEMENT
+        result = ["not implemented"]
 
-        for c in self.contacts:
-            if c[0] == pid and str.lower(c[1]) == str.lower(name):
-                result.append(c)
         return result
