@@ -1,4 +1,4 @@
-class ContactDao:
+class ContactDAO:
     def __init__(self):
         #main user id, contact name, phone, email, cid
         C1 = [120, 'Joseph', '7873334455', '', 131]

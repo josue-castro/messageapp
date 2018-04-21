@@ -1,5 +1,5 @@
 from flask import jsonify
-from dao.contact import ContactDao
+from dao.contact import ContactDAO
 class ContactHandler:
     def mapToDic(self, row):
         result = {}
@@ -11,7 +11,7 @@ class ContactHandler:
         return result
 
     def getMyContacts(self, pid):
-        dao = ContactDao()
+        dao = ContactDAO()
         result = dao.getMyContacts(pid)
         mapped_results = []
         for c in result:
@@ -19,7 +19,7 @@ class ContactHandler:
         return jsonify(My_contacts=mapped_results)
 
     def getContactByName(self,pid,name):
-        dao = ContactDao()
+        dao = ContactDAO()
         result = dao.getContactByName(pid, name)
         mapped_results = []
         for c in result:
