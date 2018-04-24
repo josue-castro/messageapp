@@ -21,15 +21,16 @@ class ContactHandler:
         return result
 
     def getMyContacts(self, pid):
-        dao = ContactDao()
         result = dao.getMyContactsINFO(pid)
+        dao = ContactDAO()
+        result = dao.getMyContacts(pid)
         mapped_results = []
         for c in result:
             mapped_results.append(self.map_to_contact_info(c))
         return jsonify(My_contacts=mapped_results)
 
-    def getContactByName(self, pid, name):
-        dao = ContactDao()
+    def getContactByName(self,pid,name):
+        dao = ContactDAO()
         result = dao.getContactByName(pid, name)
         mapped_results = []
         for c in result:

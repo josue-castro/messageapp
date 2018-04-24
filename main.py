@@ -4,6 +4,7 @@ from handlers.contacts import ContactHandler
 from handlers.members import MemberHandler
 from handlers.groups import GroupHandler
 from handlers.Reactions import ReactionHandler
+from handlers.users import UserHandler
 
 app = Flask(__name__, template_folder='template')
 
@@ -27,11 +28,13 @@ def login():
 def groups():
     return GroupHandler().getAllGroups()
 
-
 @app.route('/groups/<int:gid>/owner')
 def groupOwner(gid):
     return GroupHandler().getGroupOwner(gid)
 
+@app.route('/users')
+def users():
+    return UserHandler().getAllUsers()
 
 @app.route('/groups/<int:gid>/members')
 def members(gid):

@@ -1,5 +1,5 @@
-import psycopg2
 from config.herokudbconfig import pg_config
+import psycopg2
 
 
 class MessageDAO:
@@ -31,15 +31,6 @@ class MessageDAO:
             result.append(row)
         return result
 
-    def getGroupMessages(self, gid):
-        cursor = self.conn.cursor()
-        query = 'SELECT content FROM messages WHERE gid = %s;'
-        cursor.execute(query, (gid,))
-        result = []
-        for row in cursor:
-            result.append(row)
-        return result
-
     def getMessagesInGroupBySenderINFO(self, gid, pid):
         cursor = self.conn.cursor()
         query = "SELECT * FROM messages WHERE gid = %s AND pid = %s;"
@@ -51,6 +42,11 @@ class MessageDAO:
         cursor = self.conn.cursor()
         query = "SELECT * FROM messages WHERE pid = %s;"
         cursor.execute(query, (pid,))
+
+    def getAllGroupMessages(self, gid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages WHERE gid = %s;"
+        cursor.execute(query, (gid,))
         result = []
         for row in cursor:
             result.append(row)

@@ -127,6 +127,34 @@
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
+      <file leaf-file-name="contacts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handlers/contacts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groups.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/groups.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="members.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/members.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -236,12 +264,32 @@
             <path>
               <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="messageapp" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messageapp" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="messageapp" type="462c0819:PsiDirectoryNode" />
               <item name="handlers" type="462c0819:PsiDirectoryNode" />
+              <item name="ER-SQL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messageapp" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messageapp" type="462c0819:PsiDirectoryNode" />
+              <item name="handlers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -314,6 +362,21 @@
       <option name="presentableId" value="Default" />
       <updated>1523391336151</updated>
     </task>
+    <task id="LOCAL-00001" summary="setting heroku">
+      <created>1524165759767</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524165759767</updated>
+    </task>
+    <task id="LOCAL-00002" summary="some queries added to User and Messages">
+      <created>1524287839870</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524287839870</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -362,6 +425,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="setting heroku" />
+    <MESSAGE value="some queries added to User and Messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="some queries added to User and Messages" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -369,10 +437,76 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dao/group.py">
+    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/herokudbconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/dbconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1524287187985" expanded="true" signature="718:738" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="724:738" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="957:992" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="963:977" ph="select * fro... person" />
+            <marker date="1524287187985" expanded="true" signature="1181:1218" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="1409:1446" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="1643:1683" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="1907:2012" ph="INSERT INTO person... " />
+            <marker date="1524287187985" expanded="true" signature="2255:2288" ph="DELETE FROM person... " />
+            <marker date="1524287187985" expanded="true" signature="2500:2601" ph="UPDATE pERS... " />
+            <marker date="1524287187985" expanded="true" signature="2506:2601" ph="update parts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ER-SQL/DiagramP2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -386,14 +520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
+        <state relative-caret-position="945">
           <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
           <folding />
         </state>
@@ -405,10 +532,67 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/herokudbconfig.py">
+    <entry file="file:///usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/os.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="-896">
+          <caret line="668" column="0" lean-forward="false" selection-start-line="668" selection-start-column="0" selection-end-line="668" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/groups.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/psycopg2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="1981" column="0" lean-forward="false" selection-start-line="1981" selection-start-column="0" selection-end-line="1981" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/dbconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-465">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="39" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -489,6 +673,23 @@
             <marker date="1524340962904" expanded="true" signature="1746:1788" ph="SELECT * FRO... GroupChat" />
             <marker date="1524340962904" expanded="true" signature="2019:2134" ph="SELECT * FRO... GroupChat" />
             <marker date="1524340962904" expanded="true" signature="2019:2170" ph="SELECT * FRO... GroupChat" />
+    <entry file="file://$PROJECT_DIR$/dao/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1524287187985" expanded="true" signature="718:738" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="724:738" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="957:992" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="963:977" ph="select * fro... person" />
+            <marker date="1524287187985" expanded="true" signature="1181:1218" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="1409:1446" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="1643:1683" ph="SELECT * FRO... person" />
+            <marker date="1524287187985" expanded="true" signature="1907:2012" ph="INSERT INTO person... " />
+            <marker date="1524287187985" expanded="true" signature="2255:2288" ph="DELETE FROM person... " />
+            <marker date="1524287187985" expanded="true" signature="2500:2601" ph="UPDATE pERS... " />
+            <marker date="1524287187985" expanded="true" signature="2506:2601" ph="update parts... " />
           </folding>
         </state>
       </provider>
@@ -513,6 +714,10 @@
             <marker date="1524342444419" expanded="true" signature="1541:1591" ph="SELECT * FRO... messages" />
             <marker date="1524342444419" expanded="true" signature="1794:1831" ph="SELECT * FRO... messages" />
             <marker date="1524342444419" expanded="true" signature="2085:2135" ph="SELECT * FRO... messages" />
+        <state relative-caret-position="-193">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
