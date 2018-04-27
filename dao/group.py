@@ -14,14 +14,14 @@ class GroupsDAO:
         self.conn = psycopg2.connect(connection_url)
 
         #     gid,  gName,     admin
-        G1 = [101, 'Grupo DB', 120]
-        G2 = [122, 'Algarete Chat', 99]
-        G3 = [3, 'Chat Group', 124]
-
-        self.groups = []
-        self.groups.append(G1)
-        self.groups.append(G2)
-        self.groups.append(G3)
+        # G1 = [101, 'Grupo DB', 120]
+        # G2 = [122, 'Algarete Chat', 99]
+        # G3 = [3, 'Chat Group', 124]
+        #
+        # self.groups = []
+        # self.groups.append(G1)
+        # self.groups.append(G2)
+        # self.groups.append(G3)
 
     def getAllGroupsINFO(self):
         cursor = self.conn.cursor()

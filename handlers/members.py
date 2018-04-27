@@ -1,10 +1,10 @@
 from flask import jsonify
 from dao.member import MembersDAO
+
+
 class MemberHandler:
     def mapToDic(self, row):
-        result = {}
-        result['gid'] = row[0]
-        result['pid'] = row[1]
+        result = {'username': row}
         return result
 
     def getMembers(self, gid):

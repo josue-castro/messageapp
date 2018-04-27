@@ -12,6 +12,17 @@ class MessageHandler:
         result['date'] = row[4]
         return result
 
+    def build_message_attributes(self, mid, content, pid, gid, date):
+        result = {}
+        result['mid'] = mid
+        result['content'] = content
+        result['pid'] = pid
+        result['gid'] = gid
+        result['date'] = date
+        return result
+
+
+
     def getAllMessages(self):
         dao = MessageDAO()
         result = dao.getAllMessagesINFO()
@@ -22,7 +33,7 @@ class MessageHandler:
 
     def getAllGroupMessages(self, gid):
         dao = MessageDAO()
-        result = dao.getGroupMessages(gid)
+        result = dao.getAllGroupMessages(gid)
         mapped_results = []
         for m in result:
             mapped_results.append(self.mapToDic(m))
@@ -52,3 +63,18 @@ class MessageHandler:
         else:
             user = self.build_user_dict(row)
             return jsonify(User=user)
+
+    def insertMessage(self, form):
+        if len(form) != 3:
+            return jsonify(Error="Malformed post request"), 400
+        else:
+            content = form['content']
+            pid = form['pid']
+            gid = form['gid']
+            if content and pid and gid:
+                dao = MessageDAO()
+                mid = dao.insert(content, pid, gid)
+                result = self.build_message_attributes(mid[0], content, pid, gid, mid[1])
+                return jsonify(Message=result), 201
+            else:
+                return jsonify(Error="Unexpected attributes in post request"), 400

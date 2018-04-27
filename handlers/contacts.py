@@ -11,19 +11,16 @@ class ContactHandler:
 
     def map_to_contact_info(self, row):
         result = {}
-        result['pid'] = row[0]
-        result['contact_id'] = row[1]
-        result['firstname'] = row[2]
-        result['lastname'] = row[3]
-        result['username'] = row[4]
-        result['phone'] = row[5]
-        result['email'] = row[6]
+        result['firstname'] = row[0]
+        result['lastname'] = row[1]
+        result['username'] = row[2]
+        result['phone'] = row[3]
+        result['email'] = row[4]
         return result
 
     def getMyContacts(self, pid):
+        dao = ContactDao()
         result = dao.getMyContactsINFO(pid)
-        dao = ContactDAO()
-        result = dao.getMyContacts(pid)
         mapped_results = []
         for c in result:
             mapped_results.append(self.map_to_contact_info(c))

@@ -60,3 +60,29 @@ class MessageDAO:
         for row in cursor:
             result.append(row)
         return result
+
+    def getAllMessgesWithHashtagINFO(self, hid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages NATURAL INNER JOIN hashtag where hid = %s;"
+        cursor.execute(query, (hid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesInGroupWithHashtagINFO(self, gid, hid):
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM messages NATURAL INNER JOIN hashtag where gid = %s AND hid = %s;"
+        cursor.execute(query, (gid, hid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def insert(self, content, pid, gid):
+        cursor = self.conn.cursor()
+        query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s) RETURNING mid, date;"
+        cursor.execute(query, (content, pid, gid))
+        mid = cursor.fetchone()
+        self.conn.commit()
+        return mid

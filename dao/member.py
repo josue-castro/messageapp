@@ -12,25 +12,25 @@ class MembersDAO:
 
         self.conn = psycopg2.connect(connection_url)
         # member gid, pid
-        M1 = [101, 120]
-        M2 = [101, 117]
-        M3 = [101, 131]
-
-        M4 = [122, 99]
-        M5 = [122, 76]
-        M6 = [122, 81]
-
-        self.members = []
-        self.members.append(M1)
-        self.members.append(M2)
-        self.members.append(M3)
-        self.members.append(M4)
-        self.members.append(M5)
-        self.members.append(M6)
+        # M1 = [101, 120]
+        # M2 = [101, 117]
+        # M3 = [101, 131]
+        #
+        # M4 = [122, 99]
+        # M5 = [122, 76]
+        # M6 = [122, 81]
+        #
+        # self.members = []
+        # self.members.append(M1)
+        # self.members.append(M2)
+        # self.members.append(M3)
+        # self.members.append(M4)
+        # self.members.append(M5)
+        # self.members.append(M6)
 
     def getMembersINFO(self, gid):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM members WHERE gid = %s"
+        query = "SELECT username FROM members NATURAL INNER JOIN person WHERE gid = %s"
         result = []
         cursor.execute(query, (gid,))
         for row in cursor:
