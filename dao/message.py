@@ -22,19 +22,10 @@ class MessageDAO:
             result.append(row)
         return result
 
-    def getGroupMessagesINFO(self, gid):
+    def getMessageById(self, mid):
         cursor = self.conn.cursor()
-        query = 'SELECT * FROM messages WHERE gid = %s;'
-        cursor.execute(query, (gid,))
-        result = []
-        for row in cursor:
-            result.append(row)
-        return result
-
-    def getMessagesInGroupBySenderINFO(self, gid, pid):
-        cursor = self.conn.cursor()
-        query = "SELECT * FROM messages WHERE gid = %s AND pid = %s;"
-        cursor.execute(query, (gid, pid))
+        query = "SElect * FROM messages WHERE mid = %s;"
+        cursor.execute(query, (mid,))
         result = cursor.fetchone()
         return result
 
@@ -42,10 +33,16 @@ class MessageDAO:
         cursor = self.conn.cursor()
         query = "SELECT * FROM messages WHERE pid = %s;"
         cursor.execute(query, (pid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
 
-    def getAllGroupMessages(self, gid):
+    def getAllGroupMessagesINFO(self, gid):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM messages WHERE gid = %s;"
+        query = "SELECT username, content, date " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE gid = %s;"
         cursor.execute(query, (gid,))
         result = []
         for row in cursor:
@@ -54,26 +51,32 @@ class MessageDAO:
 
     def getAllMessagesInGroupBySenderINFO(self, gid, pid):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM messages WHERE pid = %s AND gid = %s;"
+        query = "SELECT username, content, date " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE pid = %s AND gid = %s;"
         cursor.execute(query, (pid, gid))
         result = []
         for row in cursor:
             result.append(row)
         return result
 
-    def getAllMessgesWithHashtagINFO(self, hid):
+    def getAllMessagesWithHashtagINFO(self, tag):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM messages NATURAL INNER JOIN hashtag where hid = %s;"
-        cursor.execute(query, (hid,))
+        query = "SELECT username, content, date, tag " \
+                "FROM tagged NATURAL INNER JOIN hashtag NATURAL INNER JOIN person NATURAL INNER JOIN messages " \
+                "WHERE tag = %s;"
+        cursor.execute(query, (tag,))
         result = []
         for row in cursor:
             result.append(row)
         return result
 
-    def getAllMessagesInGroupWithHashtagINFO(self, gid, hid):
+    def getAllMessagesInGroupWithHashtagINFO(self, gid, tag):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM messages NATURAL INNER JOIN hashtag where gid = %s AND hid = %s;"
-        cursor.execute(query, (gid, hid,))
+        query = "SELECT username, content, date, tag " \
+                "FROM tagged NATURAL INNER JOIN hashtag NATURAL INNER JOIN person NATURAL INNER JOIN messages " \
+                "WHERE messages.gid = %s AND tag = %s;"
+        cursor.execute(query, (gid, tag,))
         result = []
         for row in cursor:
             result.append(row)

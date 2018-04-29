@@ -33,10 +33,12 @@ class ContactDao:
         # self.contacts.append(C8)
         # self.contacts.append(C9)
 
-    def getMyContactsINFO(self, pid):
+    def getMyContactsINFO(self, pid): #hay que usar equi join
         cursor = self.conn.cursor()
-        query = "SELECT firstName, lastName, username, phone, email FROM contacts NATURAL INNER JOIN person " \
-                "WHERE pid = %s"
+        # query = "SELECT firstName, lastName, username, phone, email FROM contacts NATURAL INNER JOIN person " \
+        #         "WHERE pid = %s"
+        query = "SELECT firstname, lastname, username, phone, email " \
+                "FROM contacts c INNER JOIN person p ON c.contact_id = p.pid WHERE c.pid = %s;"
         cursor.execute(query, (pid,))
         result = []
         for row in cursor:

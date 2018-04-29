@@ -12,6 +12,25 @@ class UserHandler:
         result['email'] = row[5]
         return result
 
+    def build_user_contact_dict(self, row):
+        result = {}
+        result['firstname'] = row[0]
+        result['lastname'] = row[1]
+        result['username'] = row[2]
+        result['phone'] = row[3]
+        result['email'] = row[4]
+        return result
+
+    def build_username_dict(self, row):
+        result = {'username': row[0]}
+        return result
+
+    def build_user_groups_dict(self, row):
+        result = {}
+        result['gid'] = row[0]
+        result['gname'] = row[1]
+        result['pid'] = row[2]
+
     def build_user_attributes(self, pid, firstName, lastName, username, phone, email):
         result = {}
         result['pid'] = pid
@@ -27,7 +46,7 @@ class UserHandler:
         user_list = dao.getAllUsers()
         result_list = []
         for row in user_list:
-            result_list.append(self.build_user_dict(row))
+            result_list.append(self.build_username_dict(row))
         return jsonify(Users=result_list)
 
     def getUserById(self, pid):
@@ -65,6 +84,23 @@ class UserHandler:
         else:
             user = self.build_user_dict(row)
             return jsonify(User=user)
+
+    def getUserGroups(self, pid):
+        dao = UserDAO()
+        group_list = dao.getUserGroups(pid)
+        result_list = []
+        for row in group_list:
+            result_list.append(self.build_user_groups_dict(row))
+        return jsonify(My_Groups=result_list)
+
+    def getUserContacts(self, pid):
+        dao = UserDAO()
+        contact_list = dao.getUserContacts(pid)
+        result_list = []
+        for row in contact_list:
+            result_list.append(self.build_user_contact_dict(row))
+        return jsonify(My_contacts=result_list)
+
 
     def insertUser(self, form):
         if len(form) != 5:

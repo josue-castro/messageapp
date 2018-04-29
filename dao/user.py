@@ -14,7 +14,7 @@ class UserDAO:
 
     def getAllUsers(self):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM person;"
+        query = "SELECT username FROM person;"
         cursor.execute(query)
         result = []
         for row in cursor:
@@ -49,6 +49,25 @@ class UserDAO:
         result = cursor.fetchone()
         return result
 
+    def getUserGroups(self, pid): #get groups where User with pid = pid is a member, not necessarily admin
+        cursor = self.conn.cursor()
+        query = "SELECT gid, gname, pid FROM members NATURAL INNER JOIN groupchat WHERE pid = %s;"
+        cursor.execute(query, (pid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getUserContacts(self, pid):
+        cursor = self.conn.cursor()
+        query = "SELECT firstname, lastname, username, phone, email " \
+                "FROM contacts c INNER JOIN person p ON c.contact_id = p.pid WHERE c.pid = %s;"
+        cursor.execute(query, (pid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
     def insert(self, firstName, lastName, username, phone, email):
         cursor = self.conn.cursor()
         query = "INSERT INTO person(firstName, lastName, username, phone, email) VALUES (%s, %s, %s, %s, %s) RETURNING pid;"
@@ -66,7 +85,7 @@ class UserDAO:
 
     def update(self, pid, firtName, lastName, username, phone, email):
         cursor = self.conn.cursor()
-        query = "UPDATE person set firstName = %s, lastName = %s, username = %s, phone = %s, email = %s WHERE pid = %s;"
+        query = "UPDATE person SET firstName = %s, lastName = %s, username = %s, phone = %s, email = %s WHERE pid = %s;"
         cursor.execute(query, (firtName, lastName, username, phone, email, pid))
         self.conn.commit()
         return pid

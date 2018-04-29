@@ -26,8 +26,8 @@ class ContactHandler:
             mapped_results.append(self.map_to_contact_info(c))
         return jsonify(My_contacts=mapped_results)
 
-    def getContactByName(self,pid,name):
-        dao = ContactDAO()
+    def getContactByName(self, pid, name):
+        dao = ContactDao()
         result = dao.getContactByName(pid, name)
         mapped_results = []
         for c in result:

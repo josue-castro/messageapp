@@ -30,7 +30,7 @@ class MembersDAO:
 
     def getMembersINFO(self, gid):
         cursor = self.conn.cursor()
-        query = "SELECT username FROM members NATURAL INNER JOIN person WHERE gid = %s"
+        query = "SELECT username, firstName, lastName FROM members NATURAL INNER JOIN person WHERE gid = %s"
         result = []
         cursor.execute(query, (gid,))
         for row in cursor:
