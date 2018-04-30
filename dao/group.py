@@ -94,8 +94,36 @@ class GroupsDAO:
         return gid
 
     def delete(self, gid):
+        """Delete a group from groupchat table."""
         cursor = self.conn.cursor()
         query = "DELETE FROM groupchat WHERE gid = %s;"
         cursor.execute(query, (gid,))
+        self.conn.commit()
+        return gid
+
+    def update(self, gid, gname, pid):
+        """update all values of a specific group in in Groupchat table."""
+        cursor = self.conn.cursor()
+        query = "UPDATE groupchat SET gname = %s, pid = %s " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (gid, gname, pid))
+        self.conn.commit()
+        return gid
+
+    def changeGroupName(self, gid, gname):
+        """Update the group's name"""
+        cursor = self.conn.cursor()
+        query = "UPDATE groupchat SET gname = %s " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (gid, gname))
+        self.conn.commit()
+        return gid
+
+    def changeAdmin(self, gid, pid):
+        """Change the admin of a group"""
+        cursor = self.conn.cursor()
+        query = "UPDATE groupchat SET pid = %s " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (pid, gid))
         self.conn.commit()
         return gid

@@ -97,3 +97,19 @@ class MessageDAO:
         cursor.execute(query, (mid,))
         self.conn.commit()
         return mid
+
+    def updateMessage(self, mid, content):
+        cursor = self.conn.cursor()
+        query = "UPDATE messages SET content = %s " \
+                "WHERE mid = %s;"
+        cursor.execute(query, (content, mid))
+        self.conn.commit()
+        return mid
+
+    def updateMessageInfo(self, mid, content, pid, gid):
+        cursor = self.conn.cursor()
+        query = "UPDATE messages SET content = %s, pid = %s, gid = %s " \
+                "WHERE mid = %s;"
+        cursor.execute(query, (content, pid, gid, mid))
+        self.conn.commit()
+        return mid

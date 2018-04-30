@@ -47,3 +47,4 @@ class MembersDAO:
         cursor.execute(query, (pid,))
         self.conn.commit()
         return pid
+

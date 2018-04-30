@@ -98,9 +98,30 @@ class ReactionDAO:
         self.conn.commit()
         return mid
 
-    def delete(self, mid):
+    def deleteLike(self, mid):
         cursor = self.conn.cursor()
         query = "DELETE FROM likes WHERE mid = %s;"
         cursor.execute(query, (mid,))
         self.conn.commit()
         return mid
+
+    def deleteDislike(self, mid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM dislikes WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        self.conn.commit()
+        return mid
+
+    def deleteTag(self, mid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM tagged WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        self.conn.commit()
+        return mid
+
+    def deleteHashtag(self, hid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM hashtag WHERE hid = %s;"
+        cursor.execute(query, (hid,))
+        self.conn.commit()
+        return hid
