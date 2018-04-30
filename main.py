@@ -23,21 +23,26 @@ def register():
 def login():
     return render_template('login.html')
 
+
 @app.route('/MessageApp/users')
 def users():
     return UserHandler().getAllUsers()
+
 
 @app.route('/MessageApp/users/<string:username>')
 def getUserByUsername(username):
     return UserHandler().getUserByUsername(username)
 
+
 @app.route('/MessageApp/users/<int:pid>/contacts')
 def getMyContacts(pid):
     return UserHandler().getUserContacts(pid)
 
+
 @app.route('/MessageApp/groups')
 def groups():
     return GroupHandler().getAllGroupsINFO()
+
 
 # @app.route('/groups/<int:gid>/owner')
 # def groupOwner(gid):
@@ -47,17 +52,21 @@ def groups():
 def getGroupMembers(gid):
     return GroupHandler().getGroupMembersINFO(gid)
 
+
 @app.route('/MessageApp/groups/<int:gid>/messages')
 def get_messages_in_chat(gid):
     return MessageHandler().getAllGroupMessages(gid)
+
 
 @app.route('/MessageApp/groups/<int:gid>/messages/by/<int:pid>')
 def getMessageInGroupBySender(gid, pid):
     return MessageHandler().getAllMessagesInGroupBySender(gid, pid)
 
+
 @app.route('/MessageApp/groups/<int:gid>/messages/hashtag/<string:tag>')
 def getAllMessagesInGroupWithHashtag(gid, tag):
     return MessageHandler().getAllMessagesInGroupWithHashtag(gid, tag)
+
 
 @app.route('/MessageApp/messages')
 def messages():
@@ -67,6 +76,7 @@ def messages():
 @app.route('/MessageApp/messages/by/<int:pid>')
 def getMessageBySender(pid):
     return MessageHandler().getAllMessagesBySender(pid)
+
 
 @app.route('/MessageApp/<int:pid>/contacts/<string:name>')
 def getContactByName(pid, name):
@@ -91,6 +101,7 @@ def number_of_dislikes(mid):
 @app.route('/MessageApp/messages/<int:mid>/who-dislikes')
 def get_who_disliked(mid):
     return ReactionHandler().getWhoDislikedMessage(mid)
+
 
 @app.route('/MessageApp/messages/hashtag/<string:tag>')
 def getAllMessagesWithHashtag(tag):

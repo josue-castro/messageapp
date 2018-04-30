@@ -32,6 +32,7 @@ class MembersDAO:
         cursor = self.conn.cursor()
         query = "SELECT username, firstName, lastName FROM members NATURAL INNER JOIN person WHERE gid = %s"
         result = []
+        print(cursor.execute(query, (gid,)))
         cursor.execute(query, (gid,))
         for row in cursor:
             result.append(row)

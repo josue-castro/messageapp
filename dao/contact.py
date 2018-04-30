@@ -2,7 +2,7 @@ import psycopg2
 from config.herokudbconfig import pg_config
 
 
-class ContactDao:
+class ContactDAO:
     def __init__(self):
         connection_url = "dbname=%s user=%s password=%s port=%s host=%s" % (pg_config['dbname'],
                                                                             pg_config['user'],
