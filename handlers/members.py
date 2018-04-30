@@ -1,17 +1,19 @@
 from flask import jsonify
-from dao.members import MembersDAO
+from dao.member import MembersDAO
+
+
 class MemberHandler:
-    def mapToDic(self, row):
+    def build_member_dict(self,row):
         result = {}
-        result['gid'] = row[0]
-        result['pid'] = row[1]
-        return result
+        result['username'] = row[0]
+        result['firstName'] = row[1]
+        result['lastName'] = row[2]
 
     def getMembers(self, gid):
         dao = MembersDAO()
-        result = dao.getMembers(gid)
-        mapped_results = []
-        for c in result:
-            mapped_results.append(self.mapToDic(c))
-        return jsonify(Members=mapped_results)
+        member_list = dao.getMembersINFO(gid)
+        result_list = []
+        for m in member_list:
+            result_list.append(self.build_member_dict(m))
+        return jsonify(Members=result_list)
 
