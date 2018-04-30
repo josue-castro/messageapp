@@ -8,9 +8,9 @@ class GroupHandler:
         result['gid'] = row[0]
         result['gname'] = row[1]
         result['pid'] = row[2]
-        result['username'] = row[3]
-        result['firstName'] = row[4]
-        result['lastName'] = row[5]
+        result['admin username'] = row[3]
+        result['admin name'] = row[4]
+        result['admin last name'] = row[5]
         return result
 
     def build_group_dict(self, row):

@@ -84,8 +84,32 @@ class MessageDAO:
 
     def insert(self, content, pid, gid):
         cursor = self.conn.cursor()
-        query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s) RETURNING mid, date;"
+        query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s)" \
+                "RETURNING mid, date;"
         cursor.execute(query, (content, pid, gid))
         mid = cursor.fetchone()
+        self.conn.commit()
+        return mid
+
+    def delete(self, mid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM messages WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        self.conn.commit()
+        return mid
+
+    def updateMessage(self, mid, content):
+        cursor = self.conn.cursor()
+        query = "UPDATE messages SET content = %s " \
+                "WHERE mid = %s;"
+        cursor.execute(query, (content, mid))
+        self.conn.commit()
+        return mid
+
+    def updateMessageInfo(self, mid, content, pid, gid):
+        cursor = self.conn.cursor()
+        query = "UPDATE messages SET content = %s, pid = %s, gid = %s " \
+                "WHERE mid = %s;"
+        cursor.execute(query, (content, pid, gid, mid))
         self.conn.commit()
         return mid

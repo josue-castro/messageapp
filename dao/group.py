@@ -13,16 +13,6 @@ class GroupsDAO:
 
         self.conn = psycopg2.connect(connection_url)
 
-        #     gid,  gName,     admin
-        # G1 = [101, 'Grupo DB', 120]
-        # G2 = [122, 'Algarete Chat', 99]
-        # G3 = [3, 'Chat Group', 124]
-        #
-        # self.groups = []
-        # self.groups.append(G1)
-        # self.groups.append(G2)
-        # self.groups.append(G3)
-
     def getAllGroupsINFO(self):
         cursor = self.conn.cursor()
         query = "SELECT gid, gname, pid, username, firstName, lastName " \
@@ -71,7 +61,8 @@ class GroupsDAO:
     #     result = cursor.fetchone()
     #     return result
 
-    def getAllGroupsAdminByUserINFO(self, pid): #get all groups that are administrated by User with pid = pid
+    def getAllGroupsAdminByUserINFO(self, pid):
+        """get all groups that are administrated by User with pid = pid"""
         cursor = self.conn.cursor()
         query = "SELECT gid, gname " \
                 "FROM groupchat NATURAL INNER JOIN person " \
@@ -95,8 +86,44 @@ class GroupsDAO:
 
     def insertGroup(self, gname, pid):
         cursor = self.conn.cursor()
-        query = "INSERT INTO groupchat (gname, pid) VALUES (%s, %s) RETURNING gid;"
+        query = "INSERT INTO groupchat (gname, pid) VALUES (%s, %s) " \
+                "RETURNING gid;"
         cursor.execute(query, (gname, pid,))
         gid = cursor.fetchone()[0]
+        self.conn.commit()
+        return gid
+
+    def delete(self, gid):
+        """Delete a group from groupchat table."""
+        cursor = self.conn.cursor()
+        query = "DELETE FROM groupchat WHERE gid = %s;"
+        cursor.execute(query, (gid,))
+        self.conn.commit()
+        return gid
+
+    def update(self, gid, gname, pid):
+        """update all values of a specific group in in Groupchat table."""
+        cursor = self.conn.cursor()
+        query = "UPDATE groupchat SET gname = %s, pid = %s " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (gid, gname, pid))
+        self.conn.commit()
+        return gid
+
+    def changeGroupName(self, gid, gname):
+        """Update the group's name"""
+        cursor = self.conn.cursor()
+        query = "UPDATE groupchat SET gname = %s " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (gid, gname))
+        self.conn.commit()
+        return gid
+
+    def changeAdmin(self, gid, pid):
+        """Change the admin of a group"""
+        cursor = self.conn.cursor()
+        query = "UPDATE groupchat SET pid = %s " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (pid, gid))
         self.conn.commit()
         return gid

@@ -34,6 +34,11 @@ def getUserByUsername(username):
     return UserHandler().getUserByUsername(username)
 
 
+@app.route('/MessageApp/users/<int:pid>')
+def getUserById(pid):
+    return UserHandler().getUserById(pid)
+
+
 @app.route('/MessageApp/users/<int:pid>/contacts')
 def getMyContacts(pid):
     return UserHandler().getUserContacts(pid)
