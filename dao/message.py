@@ -82,6 +82,17 @@ class MessageDAO:
             result.append(row)
         return result
 
+    def getReplies(self, mid):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date " \
+                "FROM replies NATURAL INNER JOIN messages " \
+                "WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
     def insert(self, content, pid, gid):
         cursor = self.conn.cursor()
         query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s)" \

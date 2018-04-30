@@ -36,6 +36,11 @@ class MessageHandler:
         result['date'] = date
         return result
 
+    def build_reply_dict(self, mid, reply_id):
+        result = {}
+        result['mid'] = mid
+        result['reply']
+
 
 
     def getAllMessages(self):
@@ -94,6 +99,14 @@ class MessageHandler:
         for row in message_list:
             result_list.append(self.build_tagged_message_dict(row))
         return jsonify(Messages=result_list)
+
+    def getReplies(self, mid):
+        dao = MessageDAO()
+        replies = dao.getReplies(mid)
+        result_list = []
+        for row in replies:
+            result_list.append(self.build_message_info_dict(row))
+        return jsonify(Replies=result_list)
 
     def insertMessage(self, form):
         if len(form) != 3:
