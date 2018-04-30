@@ -11,22 +11,6 @@ class MembersDAO:
                                                                             pg_config['host'])
 
         self.conn = psycopg2.connect(connection_url)
-        # member gid, pid
-        # M1 = [101, 120]
-        # M2 = [101, 117]
-        # M3 = [101, 131]
-        #
-        # M4 = [122, 99]
-        # M5 = [122, 76]
-        # M6 = [122, 81]
-        #
-        # self.members = []
-        # self.members.append(M1)
-        # self.members.append(M2)
-        # self.members.append(M3)
-        # self.members.append(M4)
-        # self.members.append(M5)
-        # self.members.append(M6)
 
     def getMembersINFO(self, gid):
         cursor = self.conn.cursor()
@@ -39,12 +23,20 @@ class MembersDAO:
         return result
 
     def getMember(self, gid, pid):
-        result = []
-        for member in self.members:
-            if gid == member[0] & pid == member[1]:
-                result.append(member)
+        cursor = self.conn.cursor()
+        query = "SELECT username, firstName, lastName FROM members NATURAL INNER JOIN person WHERE gid = %s"
+        print(cursor.execute(query, (gid,)))
+        cursor.execute(query, (gid,))
+        result = cursor.fetchone()
         return result
 
+
     def addMember(self, gid, pid):
-        member = [gid, pid]
-        self.members.append(member)
+        """Insert method for members table."""
+        cursor = self.conn.cursor()
+        query = "INSERT INTO members (gid, pid) VALUES (%s, %s) " \
+                "RETURNING pid;"
+        cursor.execute(query, (gid, pid))
+        pid = cursor.fetchone()[0]
+        self.conn.commit()
+        return pid
