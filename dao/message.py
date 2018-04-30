@@ -93,7 +93,7 @@ class MessageDAO:
             result.append(row)
         return result
 
-    def insert(self, content, pid, gid):
+    def insertMessage(self, content, pid, gid):
         cursor = self.conn.cursor()
         query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s)" \
                 "RETURNING mid, date;"
@@ -102,7 +102,7 @@ class MessageDAO:
         self.conn.commit()
         return mid
 
-    def delete(self, mid):
+    def deleteMessage(self, mid):
         cursor = self.conn.cursor()
         query = "DELETE FROM messages WHERE mid = %s;"
         cursor.execute(query, (mid,))
@@ -122,5 +122,20 @@ class MessageDAO:
         query = "UPDATE messages SET content = %s, pid = %s, gid = %s " \
                 "WHERE mid = %s;"
         cursor.execute(query, (content, pid, gid, mid))
+        self.conn.commit()
+        return mid
+
+    def insertReply(self, mid, reply_id):
+        cursor = self.conn.cursor()
+        query = "INSERT INTO replies (mid, reply_id) " \
+                "VALUES (%s, %s);"
+        cursor.execute(query, (mid, reply_id))
+        self.conn.commit()
+        return mid
+
+    def deleteReply(self, mid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM replies WHERE mid = %s;"
+        cursor.execute(query, (mid,))
         self.conn.commit()
         return mid

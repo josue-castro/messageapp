@@ -117,7 +117,7 @@ class MessageHandler:
             gid = form['gid']
             if content and pid and gid:
                 dao = MessageDAO()
-                mid = dao.insert(content, pid, gid)
+                mid = dao.insertMessage(content, pid, gid)
                 result = self.build_message_attributes(mid[0], content, pid, gid, mid[1])
                 return jsonify(Message=result), 201
             else:

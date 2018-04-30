@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a225ef6b-c61a-43c5-ae5b-96c85809daee" name="Default" comment="Updates Done.">
+    <list default="true" id="a225ef6b-c61a-43c5-ae5b-96c85809daee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/messageapp.iml" afterPath="$PROJECT_DIR$/.idea/messageapp.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dao/user.py" afterPath="$PROJECT_DIR$/dao/user.py" />
-      <change beforePath="$PROJECT_DIR$/handlers/users.py" afterPath="$PROJECT_DIR$/handlers/users.py" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change beforePath="$PROJECT_DIR$/dao/message.py" afterPath="$PROJECT_DIR$/dao/message.py" />
+      <change beforePath="$PROJECT_DIR$/handlers/messages.py" afterPath="$PROJECT_DIR$/handlers/messages.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/messageapp$main.coverage" NAME="main Coverage Results" MODIFIED="1525125745158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/messageapp$main.coverage" NAME="main Coverage Results" MODIFIED="1525126857740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -79,32 +78,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dao/user.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            <state relative-caret-position="400">
+              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dao/message.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-226">
+              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
-                <marker date="1525126661947" expanded="true" signature="742:759" ph="SELECT pid F... prson" />
-                <marker date="1525126661947" expanded="true" signature="742:764" ph="SELECT pid F... person" />
-                <marker date="1525126661947" expanded="true" signature="847:874" ph="SELECT usern... person" />
-                <marker date="1525126661947" expanded="true" signature="1093:1175" ph="SELECT * FRO... person" />
-                <marker date="1525126661947" expanded="true" signature="1364:1448" ph="SELECT * FRO... person" />
-                <marker date="1525126661947" expanded="true" signature="1639:1723" ph="SELECT * FRO... person" />
-                <marker date="1525126661947" expanded="true" signature="1920:2007" ph="SELECT * FRO... person" />
-                <marker date="1525126661947" expanded="true" signature="2220:2374" ph="SELECT * FRO... person" />
-                <marker date="1525126661947" expanded="true" signature="2220:2375" ph="SELECT * FRO... person" />
-                <marker date="1525126661947" expanded="true" signature="2715:2794" ph="SELECT gid, members" />
-                <marker date="1525126661947" expanded="true" signature="3025:3173" ph="SELECT first... contacts" />
-                <marker date="1525126661947" expanded="true" signature="3431:3562" ph="SELECT first... contacts" />
-                <marker date="1525126661947" expanded="true" signature="3431:3600" ph="SELECT first... contacts" />
-                <marker date="1525126661947" expanded="true" signature="3431:3668" ph="SELECT first... contacts" />
-                <marker date="1525126661947" expanded="true" signature="3431:3669" ph="SELECT first... contacts" />
-                <marker date="1525126661947" expanded="true" signature="3962:4035" ph="INSERT INTO person... " />
-                <marker date="1525126661947" expanded="true" signature="3962:4126" ph="INSERT INTO person... " />
-                <marker date="1525126661947" expanded="true" signature="4379:4412" ph="DELETE FROM person... " />
-                <marker date="1525126661947" expanded="true" signature="4624:4731" ph="UPDATE person... " />
-                <marker date="1525126661947" expanded="true" signature="4624:4806" ph="UPDATE person... " />
+                <marker date="1525128664098" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
+                <marker date="1525128664098" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
+                <marker date="1525128664098" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
+                <marker date="1525128664098" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
+                <marker date="1525128664098" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
+                <marker date="1525128664098" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
+                <marker date="1525128664098" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
+                <marker date="1525128664098" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
+                <marker date="1525128664098" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
+                <marker date="1525128664098" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
+                <marker date="1525128664098" expanded="true" signature="3134:3267" ph="SELECT mid, replies" />
+                <marker date="1525128664098" expanded="true" signature="3510:3610" ph="INSERT INTO messages... " />
+                <marker date="1525128664098" expanded="true" signature="3830:3865" ph="DELETE FROM messages... " />
+                <marker date="1525128664098" expanded="true" signature="4049:4117" ph="UPDATE messages... " />
+                <marker date="1525128664098" expanded="true" signature="4323:4411" ph="UPDATE messages... " />
+                <marker date="1525128664098" expanded="true" signature="4612:4675" ph="INSERT INTO replies... " />
+                <marker date="1525128664098" expanded="true" signature="4612:4684" ph="INSERT INTO replies... " />
+                <marker date="1525128664098" expanded="true" signature="4866:4900" ph="DELETE FROM replies... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handlers/messages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="119" column="39" lean-forward="false" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
+              <folding>
+                <marker date="1525127522240" expanded="true" signature="3467:3482" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contacts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handlers/contacts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,20 +144,33 @@
       <file leaf-file-name="users.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handlers/users.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1604">
-              <caret line="143" column="13" lean-forward="true" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding>
+                <marker date="1525127206091" expanded="true" signature="661:680" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="members.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handlers/members.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+      <file leaf-file-name="contact.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="54">
+              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="16" />
               <folding>
-                <element signature="e#85#125#0" expanded="true" />
+                <marker date="1525126661877" expanded="true" signature="79:1909" ph="..." />
+                <marker date="1525126661877" expanded="true" signature="103:639" ph="..." />
               </folding>
             </state>
           </provider>
@@ -161,7 +205,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Fase2_v1" />
+        <entry key="$PROJECT_DIR$" value="Fase2_revise1" />
       </map>
     </option>
   </component>
@@ -177,6 +221,7 @@
         <option value="$PROJECT_DIR$/handlers/dislikes.py" />
         <option value="$PROJECT_DIR$/handlers/members.py" />
         <option value="$PROJECT_DIR$/handlers/Reactions.py" />
+        <option value="$PROJECT_DIR$/handlers/users.py" />
         <option value="$PROJECT_DIR$/handlers/contacts.py" />
         <option value="$PROJECT_DIR$/handlers/groups.py" />
         <option value="src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.groupchat" />
@@ -184,12 +229,11 @@
         <option value="$PROJECT_DIR$/dao/contact.py" />
         <option value="$PROJECT_DIR$/dao/member.py" />
         <option value="$PROJECT_DIR$/dao/reaction.py" />
-        <option value="$PROJECT_DIR$/dao/message.py" />
+        <option value="$PROJECT_DIR$/dao/user.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/handlers/messages.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/console.sql" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/handlers/users.py" />
-        <option value="$PROJECT_DIR$/dao/user.py" />
+        <option value="$PROJECT_DIR$/dao/message.py" />
       </list>
     </option>
   </component>
@@ -199,10 +243,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="709" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
+    <option name="y" value="83" />
+    <option name="width" value="713" />
+    <option name="height" value="448" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -238,7 +283,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -261,6 +305,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,12 +313,126 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="SearchEverywhereHistoryKey" value="data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;da&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;DA&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;databas&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;databa&#9;ACTION&#9;ActivateDatabaseToolWindow" />
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ER-SQL" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/messageapp.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/dao/user.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/handlers/users.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/main.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -308,11 +467,12 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
         <item index="1" class="java.lang.String" itemvalue="Python.main" />
         <item index="2" class="java.lang.String" itemvalue="Python.main" />
         <item index="3" class="java.lang.String" itemvalue="Python.main" />
+        <item index="4" class="java.lang.String" itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -379,33 +539,47 @@
       <option name="project" value="LOCAL" />
       <updated>1525101502167</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added getReplies in Message Dao and Handler and its route.&#10;/MessageApp/messages/&lt;int:mid&gt;/replies&#10;&#10;Added route to get groups a specified user is part of.&#10;/MessageApp/users/&lt;int:pid&gt;/groups">
+      <created>1525118094502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1525118094502</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added getReplies in Message Dao and Handler and its route.&#10;/MessageApp/messages/&lt;int:mid&gt;/replies&#10;&#10;Added route to get groups a specified user is part of.&#10;/MessageApp/users/&lt;int:pid&gt;/groups">
+      <created>1525126263005</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1525126263005</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="65" y="83" width="1233" height="715" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24209079" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21107267" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3306189" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14781906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28719723" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33910036" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14767933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25345248" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25316456" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32612312" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -446,7 +620,8 @@
     <MESSAGE value="inserts done" />
     <MESSAGE value="delete done" />
     <MESSAGE value="Updates Done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates Done." />
+    <MESSAGE value="Added getReplies in Message Dao and Handler and its route.&#10;/MessageApp/messages/&lt;int:mid&gt;/replies&#10;&#10;Added route to get groups a specified user is part of.&#10;/MessageApp/users/&lt;int:pid&gt;/groups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getReplies in Message Dao and Handler and its route.&#10;/MessageApp/messages/&lt;int:mid&gt;/replies&#10;&#10;Added route to get groups a specified user is part of.&#10;/MessageApp/users/&lt;int:pid&gt;/groups" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -455,28 +630,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="83" lean-forward="false" selection-start-line="0" selection-start-column="83" selection-end-line="0" selection-end-column="83" />
-          <folding>
-            <element signature="e#85#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/messages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="107" column="64" lean-forward="false" selection-start-line="107" selection-start-column="64" selection-end-line="107" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -484,9 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <element signature="e#85#125#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -498,14 +654,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/reactions.py" />
+    <entry file="file://$PROJECT_DIR$/handlers/Reactions.py" />
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
           <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
-          <folding>
-            <element signature="e#85#125#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -513,6 +667,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
           <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -520,7 +675,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
           <caret line="74" column="18" lean-forward="false" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-          <folding />
+          <folding>
+            <marker date="1525127206091" expanded="true" signature="661:680" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -536,6 +693,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding>
+            <marker date="1525126661877" expanded="true" signature="79:1909" ph="..." />
+            <marker date="1525126661877" expanded="true" signature="103:639" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -544,7 +705,7 @@
         <state relative-caret-position="18">
           <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
           <folding>
-            <element signature="e#0#25#0" expanded="false" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -554,18 +715,24 @@
         <state relative-caret-position="792">
           <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="19" />
           <folding>
-            <marker date="1525119362383" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
-            <marker date="1525119362383" expanded="true" signature="972:1009" ph="SElect * FRO... messages" />
-            <marker date="1525119362383" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
-            <marker date="1525119362383" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
-            <marker date="1525119362383" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
-            <marker date="1525119362383" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
-            <marker date="1525119362383" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
-            <marker date="1525119362383" expanded="true" signature="3134:3267" ph="SELECT mid, replies" />
-            <marker date="1525119362383" expanded="true" signature="3503:3603" ph="INSERT INTO messages... " />
-            <marker date="1525119362383" expanded="true" signature="3816:3851" ph="DELETE FROM messages... " />
-            <marker date="1525119362383" expanded="true" signature="4035:4103" ph="UPDATE messages... " />
-            <marker date="1525119362383" expanded="true" signature="4309:4397" ph="UPDATE messages... " />
+            <marker date="1525128664098" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
+            <marker date="1525128664098" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
+            <marker date="1525128664098" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
+            <marker date="1525128664098" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
+            <marker date="1525128664098" expanded="true" signature="3134:3267" ph="SELECT mid, replies" />
+            <marker date="1525128664098" expanded="true" signature="3510:3610" ph="INSERT INTO messages... " />
+            <marker date="1525128664098" expanded="true" signature="3830:3865" ph="DELETE FROM messages... " />
+            <marker date="1525128664098" expanded="true" signature="4049:4117" ph="UPDATE messages... " />
+            <marker date="1525128664098" expanded="true" signature="4323:4411" ph="UPDATE messages... " />
+            <marker date="1525128664098" expanded="true" signature="4612:4675" ph="INSERT INTO replies... " />
+            <marker date="1525128664098" expanded="true" signature="4612:4684" ph="INSERT INTO replies... " />
+            <marker date="1525128664098" expanded="true" signature="4866:4900" ph="DELETE FROM replies... " />
           </folding>
         </state>
       </provider>
@@ -574,14 +741,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/reactions.py" />
+    <entry file="file://$PROJECT_DIR$/handlers/Reactions.py" />
     <entry file="file://$PROJECT_DIR$/dao/reaction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -589,9 +758,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
           <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
-          <folding>
-            <element signature="e#85#125#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -599,6 +766,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -637,20 +805,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.messages" />
-    <entry file="file://$PROJECT_DIR$/handlers/reactions.py" />
-    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.contacts" />
+    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.messages">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/Reactions.py" />
+    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.contacts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/handlers/dislikes.py" />
-    <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.messages" />
-    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.person" />
-    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.groupchat" />
-    <entry file="file://$PROJECT_DIR$/handlers/reactions.py" />
+    <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.messages">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.person">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.groupchat">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/Reactions.py" />
+    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.5/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="840" column="0" lean-forward="false" selection-start-line="840" selection-start-column="0" selection-end-line="840" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/groups.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.hashtag">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.groupchat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/member.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="126" column="39" lean-forward="false" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.tagged">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/reaction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="126" column="18" lean-forward="true" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="51" column="106" lean-forward="false" selection-start-line="51" selection-start-column="106" selection-end-line="51" selection-end-column="106" />
+          <folding>
+            <marker date="1525127206091" expanded="true" signature="718:725" ph="SELECT * FRO... person" />
+            <marker date="1525127206091" expanded="true" signature="718:745" ph="SELECT usern... person" />
+            <marker date="1525127206091" expanded="true" signature="957:992" ph="SELECT * FRO... person" />
+            <marker date="1525127206091" expanded="true" signature="1181:1218" ph="SELECT * FRO... person" />
+            <marker date="1525127206091" expanded="true" signature="1409:1446" ph="SELECT * FRO... person" />
+            <marker date="1525127206091" expanded="true" signature="1643:1683" ph="SELECT * FRO... person" />
+            <marker date="1525127206091" expanded="true" signature="1827:2195" ph="..." />
+            <marker date="1525127206091" expanded="true" signature="1929:2034" ph="INSERT INTO person... " />
+            <marker date="1525127206091" expanded="true" signature="2286:2434" ph="SELECT first... contacts" />
+            <marker date="1525127206091" expanded="true" signature="2696:2801" ph="INSERT INTO person... " />
+            <marker date="1525127206091" expanded="true" signature="3044:3077" ph="DELETE FROM person... " />
+            <marker date="1525127206091" expanded="true" signature="4792:4806" ph="UPDATE person... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.replies">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/handlers/contacts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        <state relative-caret-position="504">
+          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
           <folding>
-            <element signature="e#0#25#0" expanded="false" />
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <marker date="1525127206091" expanded="true" signature="661:680" ph="..." />
           </folding>
         </state>
       </provider>
@@ -659,135 +964,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../venv/lib/python3.5/site-packages/flask/app.py" />
-    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.hashtag" />
-    <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.groupchat" />
-    <entry file="file://$PROJECT_DIR$/dao/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/member.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.tagged" />
-    <entry file="file://$PROJECT_DIR$/dao/reaction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="126" column="18" lean-forward="true" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.replies" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/console.sql" />
-    <entry file="file://$PROJECT_DIR$/handlers/groups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/group.py">
+    <entry file="file://$PROJECT_DIR$/dao/contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1738">
-          <caret line="126" column="39" lean-forward="false" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
+        <state relative-caret-position="54">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="16" />
           <folding>
-            <marker date="1525118165599" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-            <marker date="1525118165599" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-            <marker date="1525118165599" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
-            <marker date="1525118165599" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
-            <marker date="1525118165599" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
-            <marker date="1525118165599" expanded="true" signature="3243:3328" ph="INSERT INTO groupchat... " />
-            <marker date="1525118165599" expanded="true" signature="3589:3625" ph="DELETE FROM groupchat... " />
-            <marker date="1525118165599" expanded="true" signature="3880:3957" ph="UPDATE groupchat... " />
-            <marker date="1525118165599" expanded="true" signature="4190:4257" ph="UPDATE groupchat... " />
-            <marker date="1525118165599" expanded="true" signature="4483:4548" ph="UPDATE groupchat... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
-          <folding>
-            <marker date="1525119362383" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
-            <marker date="1525119362383" expanded="true" signature="972:1009" ph="SElect * FRO... messages" />
-            <marker date="1525119362383" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
-            <marker date="1525119362383" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
-            <marker date="1525119362383" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
-            <marker date="1525119362383" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
-            <marker date="1525119362383" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
-            <marker date="1525119362383" expanded="true" signature="3134:3267" ph="SELECT mid, replies" />
-            <marker date="1525119362383" expanded="true" signature="3503:3603" ph="INSERT INTO messages... " />
-            <marker date="1525119362383" expanded="true" signature="3816:3851" ph="DELETE FROM messages... " />
-            <marker date="1525119362383" expanded="true" signature="4035:4103" ph="UPDATE messages... " />
-            <marker date="1525119362383" expanded="true" signature="4309:4397" ph="UPDATE messages... " />
+            <marker date="1525126661877" expanded="true" signature="79:1909" ph="..." />
+            <marker date="1525126661877" expanded="true" signature="103:639" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handlers/messages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="107" column="64" lean-forward="false" selection-start-line="107" selection-start-column="64" selection-end-line="107" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="328">
+          <caret line="119" column="39" lean-forward="false" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
           <folding>
-            <element signature="e#85#125#0" expanded="true" />
+            <marker date="1525127522240" expanded="true" signature="3467:3482" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/users.py">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1604">
-          <caret line="143" column="13" lean-forward="true" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+        <state relative-caret-position="36">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/user.py">
+    <entry file="file://$PROJECT_DIR$/dao/message.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="-226">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
-            <marker date="1525126661947" expanded="true" signature="742:759" ph="SELECT pid F... prson" />
-            <marker date="1525126661947" expanded="true" signature="742:764" ph="SELECT pid F... person" />
-            <marker date="1525126661947" expanded="true" signature="847:874" ph="SELECT usern... person" />
-            <marker date="1525126661947" expanded="true" signature="1093:1175" ph="SELECT * FRO... person" />
-            <marker date="1525126661947" expanded="true" signature="1364:1448" ph="SELECT * FRO... person" />
-            <marker date="1525126661947" expanded="true" signature="1639:1723" ph="SELECT * FRO... person" />
-            <marker date="1525126661947" expanded="true" signature="1920:2007" ph="SELECT * FRO... person" />
-            <marker date="1525126661947" expanded="true" signature="2220:2374" ph="SELECT * FRO... person" />
-            <marker date="1525126661947" expanded="true" signature="2220:2375" ph="SELECT * FRO... person" />
-            <marker date="1525126661947" expanded="true" signature="2715:2794" ph="SELECT gid, members" />
-            <marker date="1525126661947" expanded="true" signature="3025:3173" ph="SELECT first... contacts" />
-            <marker date="1525126661947" expanded="true" signature="3431:3562" ph="SELECT first... contacts" />
-            <marker date="1525126661947" expanded="true" signature="3431:3600" ph="SELECT first... contacts" />
-            <marker date="1525126661947" expanded="true" signature="3431:3668" ph="SELECT first... contacts" />
-            <marker date="1525126661947" expanded="true" signature="3431:3669" ph="SELECT first... contacts" />
-            <marker date="1525126661947" expanded="true" signature="3962:4035" ph="INSERT INTO person... " />
-            <marker date="1525126661947" expanded="true" signature="3962:4126" ph="INSERT INTO person... " />
-            <marker date="1525126661947" expanded="true" signature="4379:4412" ph="DELETE FROM person... " />
-            <marker date="1525126661947" expanded="true" signature="4624:4731" ph="UPDATE person... " />
-            <marker date="1525126661947" expanded="true" signature="4624:4806" ph="UPDATE person... " />
+            <marker date="1525128664098" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
+            <marker date="1525128664098" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
+            <marker date="1525128664098" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
+            <marker date="1525128664098" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
+            <marker date="1525128664098" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
+            <marker date="1525128664098" expanded="true" signature="3134:3267" ph="SELECT mid, replies" />
+            <marker date="1525128664098" expanded="true" signature="3510:3610" ph="INSERT INTO messages... " />
+            <marker date="1525128664098" expanded="true" signature="3830:3865" ph="DELETE FROM messages... " />
+            <marker date="1525128664098" expanded="true" signature="4049:4117" ph="UPDATE messages... " />
+            <marker date="1525128664098" expanded="true" signature="4323:4411" ph="UPDATE messages... " />
+            <marker date="1525128664098" expanded="true" signature="4612:4675" ph="INSERT INTO replies... " />
+            <marker date="1525128664098" expanded="true" signature="4612:4684" ph="INSERT INTO replies... " />
+            <marker date="1525128664098" expanded="true" signature="4866:4900" ph="DELETE FROM replies... " />
           </folding>
         </state>
       </provider>
