@@ -97,3 +97,10 @@ class ReactionDAO:
         mid = cursor.fetchone()[0]
         self.conn.commit()
         return mid
+
+    def delete(self, mid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM likes WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        self.conn.commit()
+        return mid

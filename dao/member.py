@@ -31,7 +31,6 @@ class MembersDAO:
         self.conn.commit()
         return gid
 
-
     def addMember(self, gid, pid):
         """Insert method for members table."""
         cursor = self.conn.cursor()
@@ -41,3 +40,10 @@ class MembersDAO:
         gid = cursor.fetchone()[0]
         self.conn.commit()
         return gid
+
+    def delete(self, pid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM members WHERE pid = %s;"
+        cursor.execute(query, (pid,))
+        self.conn.commit()
+        return pid

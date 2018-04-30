@@ -90,3 +90,10 @@ class MessageDAO:
         mid = cursor.fetchone()
         self.conn.commit()
         return mid
+
+    def delete(self, mid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM messages WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        self.conn.commit()
+        return mid

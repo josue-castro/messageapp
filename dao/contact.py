@@ -38,3 +38,10 @@ class ContactDAO:
         pid = cursor.fetchone()[0]
         self.conn.commit()
         return pid
+
+    def delete(self, contact_id):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM contacts WHERE contact_id = %s;"
+        cursor.execute(query, (contact_id,))
+        self.conn.commit()
+        return contact_id

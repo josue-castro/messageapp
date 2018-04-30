@@ -92,3 +92,10 @@ class GroupsDAO:
         gid = cursor.fetchone()[0]
         self.conn.commit()
         return gid
+
+    def delete(self, gid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM groupchat WHERE gid = %s;"
+        cursor.execute(query, (gid,))
+        self.conn.commit()
+        return gid
