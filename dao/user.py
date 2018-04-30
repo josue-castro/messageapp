@@ -49,7 +49,9 @@ class UserDAO:
         result = cursor.fetchone()
         return result
 
-    def getUserGroups(self, pid): #get groups where User with pid = pid is a member, not necessarily admin
+    def getUserGroups(self, pid):
+        """Gets groups where User with pid = pid is a member,
+        not necessarily admin"""
         cursor = self.conn.cursor()
         query = "SELECT gid, gname, pid FROM members NATURAL INNER JOIN groupchat WHERE pid = %s;"
         cursor.execute(query, (pid,))

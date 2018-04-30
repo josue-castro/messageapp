@@ -1,3 +1,5 @@
+# Keroku Password: 3b884db910a7ed97661a75d3203b101e7bf41248fb6c8b36d39ff02dc1556fd5
+
 from flask import Flask, render_template
 from handlers.messages import MessageHandler
 from handlers.contacts import ContactHandler
@@ -44,6 +46,11 @@ def getMyContacts(pid):
     return UserHandler().getUserContacts(pid)
 
 
+@app.route('/MessageApp/users/<int:pid>/groups')
+def getUserGroups(pid):
+    return UserHandler().getUserGroups(pid)
+
+
 @app.route('/MessageApp/groups')
 def groups():
     return GroupHandler().getAllGroupsINFO()
@@ -81,6 +88,10 @@ def messages():
 @app.route('/MessageApp/messages/by/<int:pid>')
 def getMessageBySender(pid):
     return MessageHandler().getAllMessagesBySender(pid)
+
+@app.route('/MessageApp/messages/<int:mid>/replies')
+def getMessageReplies(mid):
+    return MessageHandler().getReplies(mid)
 
 
 @app.route('/MessageApp/<int:pid>/contacts/<string:name>')
