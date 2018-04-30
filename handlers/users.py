@@ -22,7 +22,8 @@ class UserHandler:
         return result
 
     def build_username_dict(self, row):
-        result = {'username': row[0]}
+        result = {}
+        result['username'] = row[0]
         return result
 
     def build_user_groups_dict(self, row):
@@ -31,7 +32,7 @@ class UserHandler:
         result['gname'] = row[1]
         result['pid'] = row[2]
 
-    def build_user_attributes(self, pid, firstName, lastName, username, phone, email):
+    def build_user_attributes(self, pid, firstName, lastName, username, phone, email, password):
         result = {}
         result['pid'] = pid
         result['firstName'] = firstName
@@ -39,6 +40,7 @@ class UserHandler:
         result['username'] = username
         result['phone'] = phone
         result['email'] = email
+        result['password'] = password
         return result
 
     def getAllUsers(self):
@@ -78,12 +80,20 @@ class UserHandler:
 
     def getUserByUsername(self, username):
         dao = UserDAO()
-        row =dao.getUserByUsername(username)
+        row = dao.getUserByUsername(username)
         if not row:
             return jsonify(Error="User Not Found"), 404
         else:
             user = self.build_user_dict(row)
             return jsonify(User=user)
+
+    def getUserSearchByName(self, firstName, lastName):
+        dao = UserDAO()
+        user_list = dao.getUserSearchByName(firstName, lastName)
+        result_list = []
+        for row in user_list:
+            result_list.append(self.build_user_dict(row))
+        return jsonify(Contacts=result_list)
 
     def getUserGroups(self, pid):
         dao = UserDAO()
@@ -101,9 +111,16 @@ class UserHandler:
             result_list.append(self.build_user_contact_dict(row))
         return jsonify(My_contacts=result_list)
 
+    def getUserContactsByName(self, pid, firstName, lastName):
+        dao = UserDAO()
+        contact_list = dao.getUserContactsByName(pid, firstName, lastName)
+        result_list = []
+        for row in contact_list:
+            result_list.append(self.build_user_contact_dict(row))
+        return jsonify(Contacts=result_list)
 
     def insertUser(self, form):
-        if len(form) != 5:
+        if len(form) != 6:
             return jsonify(Error="Malformed post request"), 400
         else:
             firstName = form['firstName']
@@ -111,10 +128,11 @@ class UserHandler:
             username = form['username']
             phone = form['phone']
             email = form['email']
+            password = form['password']
             if firstName and lastName and username and phone and email:
                 dao = UserDAO()
                 pid = dao.insert(firstName, lastName, username, phone, email)
-                result = self.build_user_attributes(pid, firstName, lastName, username, phone, email)
+                result = self.build_user_attributes(pid, firstName, lastName, username, phone, email, password)
                 return jsonify(User=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400

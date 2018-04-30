@@ -12,6 +12,10 @@ class UserDAO:
 
         self.conn = psycopg2._connect(connection_url)
 
+    def getUserPidLogin(self, username, password):
+        cursor = self.conn.cursor()
+        query = "SELECT pid FROM person"
+
     def getAllUsers(self):
         cursor = self.conn.cursor()
         query = "SELECT username FROM person;"
@@ -23,30 +27,40 @@ class UserDAO:
 
     def getUserById(self, pid):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM person WHERE pid = %s;"
+        query = "SELECT pid, firstname, lastname, username, phone, email FROM person WHERE pid = %s;"
         cursor.execute(query, (pid,))
         result = cursor.fetchone()
         return result
 
     def getUserByPhone(self, phone):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM person WHERE phone = %s;"
+        query = "SELECT pid, firstname, lastname, username, phone, email FROM person WHERE phone = %s;"
         cursor.execute(query, (phone,))
         result = cursor.fetchone()
         return result
 
     def getUserByEmail(self, email):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM person WHERE email = %s;"
+        query = "SELECT pid, firstname, lastname, username, phone, email FROM person WHERE email = %s;"
         cursor.execute(query, (email,))
         result = cursor.fetchone()
         return result
 
     def getUserByUsername(self, username):
         cursor = self.conn.cursor()
-        query = "SELECT * FROM person WHERE username = %s;"
+        query = "SELECT pid, firstname, lastname, username, phone, email FROM person WHERE username = %s;"
         cursor.execute(query, (username,))
         result = cursor.fetchone()
+        return result
+
+    def getUserSearchByName(self, firstName, lastName):
+        cursor = self.conn.cursor()
+        query = "SELECT pid, firstname, lastname, username, phone, email " \
+                "FROM person WHERE lower(firstname) = lower(%s) AND lower(lastname) = lower(%s);"
+        cursor.execute(query, (firstName, lastName,))
+        result = []
+        for row in cursor:
+            result.append(row)
         return result
 
     def getUserGroups(self, pid):
@@ -70,10 +84,22 @@ class UserDAO:
             result.append(row)
         return result
 
-    def insert(self, firstName, lastName, username, phone, email):
+    def getUserContactsByName(self, pid, firstName, lastName):
         cursor = self.conn.cursor()
-        query = "INSERT INTO person(firstName, lastName, username, phone, email) VALUES (%s, %s, %s, %s, %s) RETURNING pid;"
-        cursor.execute(query, (firstName, lastName, username, phone, email,))
+        query = "SELECT firstname, lastname, username, phone, email " \
+                "FROM contacts c INNER JOIN person p ON c.contact_id = p.pid " \
+                "WHERE c.pid = %s AND lower(p.firstname) = lower(%s) AND lower(p.lastname) = lower(%s);"
+        cursor.execute(query, (pid, firstName, lastName,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def insert(self, firstName, lastName, username, phone, email, password):
+        cursor = self.conn.cursor()
+        query = "INSERT INTO person(firstName, lastName, username, phone, email, password) " \
+                "VALUES (%s, %s, %s, %s, %s, crypt(%s, gen_salt('md5'))) RETURNING pid;"
+        cursor.execute(query, (firstName, lastName, username, phone, email, password,))
         pid = cursor.fetchone()[0]
         self.conn.commit()
         return pid
@@ -87,7 +113,9 @@ class UserDAO:
 
     def update(self, pid, firtName, lastName, username, phone, email):
         cursor = self.conn.cursor()
-        query = "UPDATE person SET firstName = %s, lastName = %s, username = %s, phone = %s, email = %s WHERE pid = %s;"
+        query = "UPDATE person SET firstName = %s, lastName = %s, " \
+                "username = %s, phone = %s, email = %s, password = crypt(%s, gen_salt('md5')) " \
+                "WHERE pid = %s;"
         cursor.execute(query, (firtName, lastName, username, phone, email, pid))
         self.conn.commit()
         return pid

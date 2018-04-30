@@ -1,9 +1,7 @@
-# Keroku Password: 3b884db910a7ed97661a75d3203b101e7bf41248fb6c8b36d39ff02dc1556fd5
+# heroku Password: 3b884db910a7ed97661a75d3203b101e7bf41248fb6c8b36d39ff02dc1556fd5
 
 from flask import Flask, render_template
 from handlers.messages import MessageHandler
-from handlers.contacts import ContactHandler
-from handlers.members import MemberHandler
 from handlers.groups import GroupHandler
 from handlers.reactions import ReactionHandler
 from handlers.users import UserHandler
@@ -41,9 +39,19 @@ def getUserById(pid):
     return UserHandler().getUserById(pid)
 
 
+@app.route('/MessageApp/users/<string:firstName>-<string:lastName>')
+def getUserSearchByName(firstName, lastName):
+    return UserHandler().getUserSearchByName(firstName, lastName)
+
+
 @app.route('/MessageApp/users/<int:pid>/contacts')
 def getMyContacts(pid):
     return UserHandler().getUserContacts(pid)
+
+
+@app.route('/MessageApp/users/<int:pid>/contacts/<string:firstName>-<string:lastName>')
+def getUserContactsByName(pid,firstName, lastName):
+    return UserHandler().getUserContactsByName(pid, firstName, lastName)
 
 
 @app.route('/MessageApp/users/<int:pid>/groups')
@@ -92,11 +100,6 @@ def getMessageBySender(pid):
 @app.route('/MessageApp/messages/<int:mid>/replies')
 def getMessageReplies(mid):
     return MessageHandler().getReplies(mid)
-
-
-@app.route('/MessageApp/<int:pid>/contacts/<string:name>')
-def getContactByName(pid, name):
-    return ContactHandler().getContactByName(pid, name)
 
 
 @app.route('/MessageApp/messages/<int:mid>/number-of-likes')
