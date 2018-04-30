@@ -84,7 +84,8 @@ class MessageDAO:
 
     def insert(self, content, pid, gid):
         cursor = self.conn.cursor()
-        query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s) RETURNING mid, date;"
+        query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s)" \
+                "RETURNING mid, date;"
         cursor.execute(query, (content, pid, gid))
         mid = cursor.fetchone()
         self.conn.commit()

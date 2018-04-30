@@ -86,7 +86,8 @@ class GroupsDAO:
 
     def insertGroup(self, gname, pid):
         cursor = self.conn.cursor()
-        query = "INSERT INTO groupchat (gname, pid) VALUES (%s, %s) RETURNING gid;"
+        query = "INSERT INTO groupchat (gname, pid) VALUES (%s, %s) " \
+                "RETURNING gid;"
         cursor.execute(query, (gname, pid,))
         gid = cursor.fetchone()[0]
         self.conn.commit()

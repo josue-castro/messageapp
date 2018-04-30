@@ -26,9 +26,10 @@ class MembersDAO:
         cursor = self.conn.cursor()
         query = "SELECT username, firstName, lastName FROM members NATURAL INNER JOIN person WHERE gid = %s"
         print(cursor.execute(query, (gid,)))
-        cursor.execute(query, (gid,))
-        result = cursor.fetchone()
-        return result
+        cursor.execute(query, (gid, pid))
+        gid = cursor.fetchone()
+        self.conn.commit()
+        return gid
 
 
     def addMember(self, gid, pid):
@@ -37,6 +38,6 @@ class MembersDAO:
         query = "INSERT INTO members (gid, pid) VALUES (%s, %s) " \
                 "RETURNING pid;"
         cursor.execute(query, (gid, pid))
-        pid = cursor.fetchone()[0]
+        gid = cursor.fetchone()[0]
         self.conn.commit()
-        return pid
+        return gid

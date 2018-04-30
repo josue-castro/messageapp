@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a225ef6b-c61a-43c5-ae5b-96c85809daee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/dao/contact.py" afterPath="$PROJECT_DIR$/dao/contact.py" />
       <change beforePath="$PROJECT_DIR$/dao/group.py" afterPath="$PROJECT_DIR$/dao/group.py" />
       <change beforePath="$PROJECT_DIR$/dao/member.py" afterPath="$PROJECT_DIR$/dao/member.py" />
+      <change beforePath="$PROJECT_DIR$/dao/message.py" afterPath="$PROJECT_DIR$/dao/message.py" />
+      <change beforePath="$PROJECT_DIR$/dao/reaction.py" afterPath="$PROJECT_DIR$/dao/reaction.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,7 +68,7 @@
         <item name="d4aeehb1r16558: database" type="6d9b600a:PostgresImplModel$Database" />
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="members: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+        <item name="tagged: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -76,18 +79,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="group.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dao/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
-              <caret line="64" column="74" lean-forward="false" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
+            <state relative-caret-position="468">
+              <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
               <folding>
-                <marker date="1525092717252" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-                <marker date="1525092717252" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-                <marker date="1525092717252" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
-                <marker date="1525092717252" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
-                <marker date="1525092717252" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
-                <marker date="1525092717252" expanded="true" signature="3243:3307" ph="INSERT INTO groupchat... " />
+                <marker date="1525095868686" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
+                <marker date="1525095868686" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
+                <marker date="1525095868686" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
+                <marker date="1525095868686" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
+                <marker date="1525095868686" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
+                <marker date="1525095868686" expanded="true" signature="3243:3328" ph="INSERT INTO groupchat... " />
               </folding>
             </state>
           </provider>
@@ -96,14 +99,14 @@
       <file leaf-file-name="member.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dao/member.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            <state relative-caret-position="495">
+              <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
               <folding>
-                <marker date="1525092717196" expanded="true" signature="728:818" ph="SELECT usern... members" />
-                <marker date="1525092717196" expanded="true" signature="1092:1182" ph="SELECT usern... members" />
-                <marker date="1525092717196" expanded="true" signature="1461:1482" ph="INSERT INTO person... " />
-                <marker date="1525092717196" expanded="true" signature="1461:1507" ph="INSERT INTO members... " />
-                <marker date="1525092717196" expanded="true" signature="1461:1542" ph="INSERT INTO person... " />
+                <marker date="1525095868646" expanded="true" signature="728:818" ph="SELECT usern... members" />
+                <marker date="1525095868646" expanded="true" signature="1092:1182" ph="SELECT usern... members" />
+                <marker date="1525095868646" expanded="true" signature="1486:1507" ph="INSERT INTO person... " />
+                <marker date="1525095868646" expanded="true" signature="1486:1532" ph="INSERT INTO members... " />
+                <marker date="1525095868646" expanded="true" signature="1486:1567" ph="INSERT INTO person... " />
               </folding>
             </state>
           </provider>
@@ -112,14 +115,21 @@
       <file leaf-file-name="message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dao/message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-401">
-              <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="19" />
+            <state relative-caret-position="427">
+              <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
               <folding>
-                <marker date="1525055198999" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
-                <marker date="1525055198999" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
-                <marker date="1525055198999" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
-                <marker date="1525055198999" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
-                <marker date="1525055198999" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
+                <marker date="1525095868654" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
+                <marker date="1525095868654" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
+                <marker date="1525095868654" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
+                <marker date="1525095868654" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
+                <marker date="1525095868654" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
+                <marker date="1525095868654" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
+                <marker date="1525095868654" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
+                <marker date="1525095868654" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
+                <marker date="1525095868654" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
+                <marker date="1525095868654" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
+                <marker date="1525095868654" expanded="true" signature="3144:3204" ph="INSERT INTO messages... " />
+                <marker date="1525095868654" expanded="true" signature="3144:3244" ph="INSERT INTO messages... " />
               </folding>
             </state>
           </provider>
@@ -128,10 +138,11 @@
       <file leaf-file-name="contact.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dao/contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="427">
+              <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
               <folding>
-                <marker date="1525055072702" expanded="true" signature="1850:1998" ph="SELECT first... contacts" />
+                <marker date="1525095868662" expanded="true" signature="904:1052" ph="SELECT first... contacts" />
+                <marker date="1525095868662" expanded="true" signature="1457:1546" ph="INSERT INTO contacts... " />
               </folding>
             </state>
           </provider>
@@ -140,8 +151,8 @@
       <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dao/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="70" column="4" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="76" selection-end-column="18" />
+            <state relative-caret-position="182">
+              <caret line="76" column="18" lean-forward="true" selection-start-line="71" selection-start-column="8" selection-end-line="76" selection-end-column="18" />
               <folding>
                 <marker date="1525055072462" expanded="true" signature="718:725" ph="SELECT * FRO... person" />
                 <marker date="1525055072462" expanded="true" signature="718:745" ph="SELECT usern... person" />
@@ -159,32 +170,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reaction.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reaction.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dao/reaction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="423">
+              <caret line="97" column="26" lean-forward="true" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
               <folding>
-                <marker date="1524593255672" expanded="true" signature="747:801" ph="SELECT * FRO... likes" />
-                <marker date="1524593255672" expanded="true" signature="747:877" ph="SELECT * FRO... likes" />
-                <marker date="1524593255672" expanded="true" signature="1057:1098" ph="SELECT count... likes" />
-                <marker date="1524593255672" expanded="true" signature="1289:1335" ph="SELECT usern... likes" />
-                <marker date="1524593255672" expanded="true" signature="1289:1341" ph="SELECT usern... likes" />
-                <marker date="1524593255672" expanded="true" signature="1289:1377" ph="SELECT usern... likes" />
-                <marker date="1524593255672" expanded="true" signature="1612:1656" ph="SELECT count... dislikes" />
-                <marker date="1524593255672" expanded="true" signature="1850:1962" ph="SELECT usern... dislikes" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <marker date="1525097138582" expanded="true" signature="747:801" ph="SELECT * FRO... likes" />
+                <marker date="1525097138582" expanded="true" signature="747:877" ph="SELECT * FRO... likes" />
+                <marker date="1525097138582" expanded="true" signature="1057:1098" ph="SELECT count... likes" />
+                <marker date="1525097138582" expanded="true" signature="1289:1335" ph="SELECT usern... likes" />
+                <marker date="1525097138582" expanded="true" signature="1289:1341" ph="SELECT usern... likes" />
+                <marker date="1525097138582" expanded="true" signature="1289:1377" ph="SELECT usern... likes" />
+                <marker date="1525097138582" expanded="true" signature="1612:1656" ph="SELECT count... dislikes" />
+                <marker date="1525097138582" expanded="true" signature="1850:1962" ph="SELECT usern... dislikes" />
+                <marker date="1525097138582" expanded="true" signature="2243:2322" ph="INSERT INTO likes... " />
+                <marker date="1525097138582" expanded="true" signature="2594:2641" ph="INSERT INTO dislikes... " />
+                <marker date="1525097138582" expanded="true" signature="2594:2675" ph="INSERT INTO dislikes... " />
+                <marker date="1525097138582" expanded="true" signature="2946:2978" ph="INSERT INTO hashtag... " />
+                <marker date="1525097138582" expanded="true" signature="2946:2982" ph="INSERT INTO hashtag... " />
+                <marker date="1525097138582" expanded="true" signature="2946:3020" ph="INSERT INTO hashtag... " />
+                <marker date="1525097138582" expanded="true" signature="3328:3364" ph="INSERT INTO tagged... " />
+                <marker date="1525097138582" expanded="true" signature="3328:3366" ph="INSERT INTO tagged... " />
+                <marker date="1525097138582" expanded="true" signature="3328:3369" ph="INSERT INTO tagged... " />
+                <marker date="1525097138582" expanded="true" signature="3328:3373" ph="INSERT INTO tagged... " />
+                <marker date="1525097138582" expanded="true" signature="3328:3403" ph="INSERT INTO tagged... " />
+                <marker date="1525097138582" expanded="true" signature="3328:3407" ph="INSERT INTO tagged... " />
               </folding>
             </state>
           </provider>
@@ -209,6 +220,7 @@
       <find>user</find>
       <find>owner</find>
       <find>ContactDao</find>
+      <find>byid</find>
     </findStrings>
     <replaceStrings>
       <replace>ContactDAO</replace>
@@ -237,15 +249,15 @@
         <option value="$PROJECT_DIR$/dao/user.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/console.sql" />
         <option value="$PROJECT_DIR$/handlers/users.py" />
-        <option value="$PROJECT_DIR$/dao/message.py" />
         <option value="$PROJECT_DIR$/handlers/messages.py" />
-        <option value="$PROJECT_DIR$/dao/contact.py" />
-        <option value="$PROJECT_DIR$/dao/reaction.py" />
         <option value="$PROJECT_DIR$/handlers/contacts.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/handlers/groups.py" />
-        <option value="$PROJECT_DIR$/dao/member.py" />
         <option value="$PROJECT_DIR$/dao/group.py" />
+        <option value="$PROJECT_DIR$/dao/message.py" />
+        <option value="$PROJECT_DIR$/dao/member.py" />
+        <option value="$PROJECT_DIR$/dao/contact.py" />
+        <option value="$PROJECT_DIR$/dao/reaction.py" />
       </list>
     </option>
   </component>
@@ -407,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525057470045</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="insert method in member and group dao. &#10;&#10;added some documentation comments.">
+      <created>1525092822594</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525092822594</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -447,7 +466,8 @@
     <MESSAGE value="http://127.0.0.1:5000/&#10;/register&#10;/login&#10;/groups&#10;/groups/&lt;int:pid&gt;/owner  #TODO MOVER A USER HANDLER Y DAO&#10;&#10;/groups/&lt;int:gid&gt;/members&#10;&#10;/messages ##TODO NOT FOUND&#10;&#10;/messages/by/&lt;int:pid&gt;&#10;&#10;/groups/&lt;int:gid&gt;/messages&#10;&#10;/groups/&lt;int:gid&gt;/messages/by/&lt;int:pid&gt;&#10;&#10;/&lt;int:pid&gt;/contacts&#10;&#10;/&lt;int:pid&gt;/contacts/&lt;string:name&gt; #TODO IMPLEMENT&#10;&#10;/messages/&lt;int:mid&gt;/number-of-likes&#10;&#10;/messages/&lt;int:mid&gt;/who-likes #TypeError: getWhoLikedMessage() missing 1 required positional argument: 'mid'&#10;&#10;/messages/&lt;int:mid&gt;/number-of-dislikes&#10;&#10;/messages/&lt;int:mid&gt;/who-likes #TypeError: getWhoLikedMessage() missing 1 required positional argument: 'mid'" />
     <MESSAGE value="fixed bad reference to ContactDAO." />
     <MESSAGE value="added user by id route" />
-    <option name="LAST_COMMIT_MESSAGE" value="added user by id route" />
+    <MESSAGE value="insert method in member and group dao. &#10;&#10;added some documentation comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="insert method in member and group dao. &#10;&#10;added some documentation comments." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -461,12 +481,12 @@
         <state relative-caret-position="450">
           <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
-            <marker date="1525092717252" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
-            <marker date="1525092717252" expanded="true" signature="3243:3307" ph="INSERT INTO groupchat... " />
+            <marker date="1525095868686" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
+            <marker date="1525095868686" expanded="true" signature="3243:3328" ph="INSERT INTO groupchat... " />
           </folding>
         </state>
       </provider>
@@ -476,7 +496,7 @@
         <state relative-caret-position="1980">
           <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -495,7 +515,7 @@
         <state relative-caret-position="1386">
           <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -505,12 +525,12 @@
         <state relative-caret-position="1152">
           <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
           <folding>
-            <marker date="1525092717252" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
-            <marker date="1525092717252" expanded="true" signature="3243:3307" ph="INSERT INTO groupchat... " />
+            <marker date="1525095868686" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
+            <marker date="1525095868686" expanded="true" signature="3243:3328" ph="INSERT INTO groupchat... " />
           </folding>
         </state>
       </provider>
@@ -536,7 +556,8 @@
         <state relative-caret-position="54">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
-            <marker date="1525055072702" expanded="true" signature="1850:1998" ph="SELECT first... contacts" />
+            <marker date="1525095868662" expanded="true" signature="904:1052" ph="SELECT first... contacts" />
+            <marker date="1525095868662" expanded="true" signature="1457:1546" ph="INSERT INTO contacts... " />
           </folding>
         </state>
       </provider>
@@ -546,7 +567,7 @@
         <state relative-caret-position="18">
           <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -556,14 +577,18 @@
         <state relative-caret-position="792">
           <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="19" />
           <folding>
-            <marker date="1525055198999" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="1763:1868" ph="..." />
-            <marker date="1525055198999" expanded="true" signature="1982:2032" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="2265:2302" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
+            <marker date="1525095868654" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
+            <marker date="1525095868654" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
+            <marker date="1525095868654" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
+            <marker date="1525095868654" expanded="true" signature="3144:3204" ph="INSERT INTO messages... " />
+            <marker date="1525095868654" expanded="true" signature="3144:3244" ph="INSERT INTO messages... " />
           </folding>
         </state>
       </provider>
@@ -573,14 +598,26 @@
         <state relative-caret-position="666">
           <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
           <folding>
-            <marker date="1524593255672" expanded="true" signature="747:801" ph="SELECT * FRO... likes" />
-            <marker date="1524593255672" expanded="true" signature="747:877" ph="SELECT * FRO... likes" />
-            <marker date="1524593255672" expanded="true" signature="1057:1098" ph="SELECT count... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1335" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1341" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1377" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1612:1656" ph="SELECT count... dislikes" />
-            <marker date="1524593255672" expanded="true" signature="1850:1962" ph="SELECT usern... dislikes" />
+            <marker date="1525097138582" expanded="true" signature="747:801" ph="SELECT * FRO... likes" />
+            <marker date="1525097138582" expanded="true" signature="747:877" ph="SELECT * FRO... likes" />
+            <marker date="1525097138582" expanded="true" signature="1057:1098" ph="SELECT count... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1335" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1341" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1377" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1612:1656" ph="SELECT count... dislikes" />
+            <marker date="1525097138582" expanded="true" signature="1850:1962" ph="SELECT usern... dislikes" />
+            <marker date="1525097138582" expanded="true" signature="2243:2322" ph="INSERT INTO likes... " />
+            <marker date="1525097138582" expanded="true" signature="2594:2641" ph="INSERT INTO dislikes... " />
+            <marker date="1525097138582" expanded="true" signature="2594:2675" ph="INSERT INTO dislikes... " />
+            <marker date="1525097138582" expanded="true" signature="2946:2978" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="2946:2982" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="2946:3020" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3364" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3366" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3369" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3373" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3403" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3407" ph="INSERT INTO tagged... " />
           </folding>
         </state>
       </provider>
@@ -591,14 +628,26 @@
         <state relative-caret-position="396">
           <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding>
-            <marker date="1524593255672" expanded="true" signature="747:801" ph="SELECT * FRO... likes" />
-            <marker date="1524593255672" expanded="true" signature="747:877" ph="SELECT * FRO... likes" />
-            <marker date="1524593255672" expanded="true" signature="1057:1098" ph="SELECT count... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1335" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1341" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1377" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1612:1656" ph="SELECT count... dislikes" />
-            <marker date="1524593255672" expanded="true" signature="1850:1962" ph="SELECT usern... dislikes" />
+            <marker date="1525097138582" expanded="true" signature="747:801" ph="SELECT * FRO... likes" />
+            <marker date="1525097138582" expanded="true" signature="747:877" ph="SELECT * FRO... likes" />
+            <marker date="1525097138582" expanded="true" signature="1057:1098" ph="SELECT count... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1335" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1341" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1377" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1612:1656" ph="SELECT count... dislikes" />
+            <marker date="1525097138582" expanded="true" signature="1850:1962" ph="SELECT usern... dislikes" />
+            <marker date="1525097138582" expanded="true" signature="2243:2322" ph="INSERT INTO likes... " />
+            <marker date="1525097138582" expanded="true" signature="2594:2641" ph="INSERT INTO dislikes... " />
+            <marker date="1525097138582" expanded="true" signature="2594:2675" ph="INSERT INTO dislikes... " />
+            <marker date="1525097138582" expanded="true" signature="2946:2978" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="2946:2982" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="2946:3020" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3364" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3366" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3369" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3373" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3403" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3407" ph="INSERT INTO tagged... " />
           </folding>
         </state>
       </provider>
@@ -608,7 +657,7 @@
         <state relative-caret-position="1278">
           <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -618,12 +667,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1525092717252" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
-            <marker date="1525092717252" expanded="true" signature="3243:3307" ph="INSERT INTO groupchat... " />
+            <marker date="1525095868686" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
+            <marker date="1525095868686" expanded="true" signature="3243:3328" ph="INSERT INTO groupchat... " />
           </folding>
         </state>
       </provider>
@@ -735,7 +784,7 @@
         <state relative-caret-position="522">
           <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -763,16 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/handlers/groups.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -781,27 +820,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/reaction.py">
+    <entry file="file://$PROJECT_DIR$/dao/member.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="495">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
-            <marker date="1524593255672" expanded="true" signature="747:801" ph="SELECT * FRO... likes" />
-            <marker date="1524593255672" expanded="true" signature="747:877" ph="SELECT * FRO... likes" />
-            <marker date="1524593255672" expanded="true" signature="1057:1098" ph="SELECT count... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1335" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1341" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1289:1377" ph="SELECT usern... likes" />
-            <marker date="1524593255672" expanded="true" signature="1612:1656" ph="SELECT count... dislikes" />
-            <marker date="1524593255672" expanded="true" signature="1850:1962" ph="SELECT usern... dislikes" />
+            <marker date="1525095868646" expanded="true" signature="728:818" ph="SELECT usern... members" />
+            <marker date="1525095868646" expanded="true" signature="1092:1182" ph="SELECT usern... members" />
+            <marker date="1525095868646" expanded="true" signature="1486:1507" ph="INSERT INTO person... " />
+            <marker date="1525095868646" expanded="true" signature="1486:1532" ph="INSERT INTO members... " />
+            <marker date="1525095868646" expanded="true" signature="1486:1567" ph="INSERT INTO person... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+          <folding>
+            <marker date="1525095868654" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
+            <marker date="1525095868654" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
+            <marker date="1525095868654" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
+            <marker date="1525095868654" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
+            <marker date="1525095868654" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
+            <marker date="1525095868654" expanded="true" signature="3144:3204" ph="INSERT INTO messages... " />
+            <marker date="1525095868654" expanded="true" signature="3144:3244" ph="INSERT INTO messages... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <folding>
+            <marker date="1525095868662" expanded="true" signature="904:1052" ph="SELECT first... contacts" />
+            <marker date="1525095868662" expanded="true" signature="1457:1546" ph="INSERT INTO contacts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dao/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="70" column="4" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="76" selection-end-column="18" />
+        <state relative-caret-position="182">
+          <caret line="76" column="18" lean-forward="true" selection-start-line="71" selection-start-column="8" selection-end-line="76" selection-end-column="18" />
           <folding>
             <marker date="1525055072462" expanded="true" signature="718:725" ph="SELECT * FRO... person" />
             <marker date="1525055072462" expanded="true" signature="718:745" ph="SELECT usern... person" />
@@ -818,58 +896,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-401">
-          <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="19" />
-          <folding>
-            <marker date="1525055198999" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="978:1015" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="1266:1316" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="1519:1556" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="1691:1728" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="1763:1868" ph="..." />
-            <marker date="1525055198999" expanded="true" signature="1982:2032" ph="SELECT * FRO... messages" />
-            <marker date="1525055198999" expanded="true" signature="2265:2302" ph="SELECT * FRO... messages" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <marker date="1525055072702" expanded="true" signature="1850:1998" ph="SELECT first... contacts" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/member.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-          <folding>
-            <marker date="1525092717196" expanded="true" signature="728:818" ph="SELECT usern... members" />
-            <marker date="1525092717196" expanded="true" signature="1092:1182" ph="SELECT usern... members" />
-            <marker date="1525092717196" expanded="true" signature="1461:1482" ph="INSERT INTO person... " />
-            <marker date="1525092717196" expanded="true" signature="1461:1507" ph="INSERT INTO members... " />
-            <marker date="1525092717196" expanded="true" signature="1461:1542" ph="INSERT INTO person... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="64" column="74" lean-forward="false" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
+        <state relative-caret-position="468">
+          <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
           <folding>
-            <marker date="1525092717252" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
-            <marker date="1525092717252" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
-            <marker date="1525092717252" expanded="true" signature="3243:3307" ph="INSERT INTO groupchat... " />
+            <marker date="1525095868686" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="1410:1563" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="2527:2642" ph="SELECT gid, groupchat" />
+            <marker date="1525095868686" expanded="true" signature="2877:3009" ph="SELECT usern... members" />
+            <marker date="1525095868686" expanded="true" signature="3243:3328" ph="INSERT INTO groupchat... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.hashtag">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/reaction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="97" column="26" lean-forward="true" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+          <folding>
+            <marker date="1525097138582" expanded="true" signature="747:801" ph="SELECT * FRO... likes" />
+            <marker date="1525097138582" expanded="true" signature="747:877" ph="SELECT * FRO... likes" />
+            <marker date="1525097138582" expanded="true" signature="1057:1098" ph="SELECT count... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1335" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1341" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1289:1377" ph="SELECT usern... likes" />
+            <marker date="1525097138582" expanded="true" signature="1612:1656" ph="SELECT count... dislikes" />
+            <marker date="1525097138582" expanded="true" signature="1850:1962" ph="SELECT usern... dislikes" />
+            <marker date="1525097138582" expanded="true" signature="2243:2322" ph="INSERT INTO likes... " />
+            <marker date="1525097138582" expanded="true" signature="2594:2641" ph="INSERT INTO dislikes... " />
+            <marker date="1525097138582" expanded="true" signature="2594:2675" ph="INSERT INTO dislikes... " />
+            <marker date="1525097138582" expanded="true" signature="2946:2978" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="2946:2982" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="2946:3020" ph="INSERT INTO hashtag... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3364" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3366" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3369" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3373" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3403" ph="INSERT INTO tagged... " />
+            <marker date="1525097138582" expanded="true" signature="3328:3407" ph="INSERT INTO tagged... " />
           </folding>
         </state>
       </provider>
