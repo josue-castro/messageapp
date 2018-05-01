@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a225ef6b-c61a-43c5-ae5b-96c85809daee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/handlers/groups.py" afterPath="$PROJECT_DIR$/handlers/groups.py" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -525,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525202354824</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed variables">
+      <created>1525212359866</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1525212359866</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -574,7 +579,8 @@
     <MESSAGE value="Updated diagram image phase 2" />
     <MESSAGE value="Updated sql" />
     <MESSAGE value="Updated message route and get group by id route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated message route and get group by id route" />
+    <MESSAGE value="fixed variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed variables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
