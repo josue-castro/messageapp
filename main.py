@@ -102,6 +102,7 @@ def getAllMessages():
     else:
         return MessageHandler().getAllMessages()
 
+
 @app.route('/MessegeApp/messages/<int:mid>', methods=['GET', 'PUT', 'DELETE'])
 def getMessageById(mid):
     if request.method == 'GET':
