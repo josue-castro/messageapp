@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a225ef6b-c61a-43c5-ae5b-96c85809daee" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/messageapp.iml" afterPath="$PROJECT_DIR$/.idea/messageapp.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="a225ef6b-c61a-43c5-ae5b-96c85809daee" name="Default" comment="Updated diagram image phase 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ER-SQL/DiagramP2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ER-SQL/SQLmapping.sql" afterPath="$PROJECT_DIR$/ER-SQL/SQLmapping.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,148 +34,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/user.py">
+      <file leaf-file-name="SQLmapping.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-366">
-              <caret line="70" column="117" lean-forward="false" selection-start-line="70" selection-start-column="117" selection-end-line="70" selection-end-column="117" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <marker date="1525134381180" expanded="true" signature="742:829" ph="SELECT pid F... person" />
-                <marker date="1525134381180" expanded="true" signature="943:970" ph="SELECT usern... person" />
-                <marker date="1525134381180" expanded="true" signature="1189:1271" ph="SELECT pid, person" />
-                <marker date="1525134381180" expanded="true" signature="1460:1544" ph="SELECT pid, person" />
-                <marker date="1525134381180" expanded="true" signature="1735:1819" ph="SELECT pid, person" />
-                <marker date="1525134381180" expanded="true" signature="2016:2103" ph="SELECT pid, person" />
-                <marker date="1525134381180" expanded="true" signature="2316:2471" ph="SELECT pid, person" />
-                <marker date="1525134381180" expanded="true" signature="2811:2910" ph="SELECT gid, members" />
-                <marker date="1525134381180" expanded="true" signature="3141:3289" ph="SELECT first... contacts" />
-                <marker date="1525134381180" expanded="true" signature="3547:3785" ph="SELECT first... contacts" />
-                <marker date="1525134381180" expanded="true" signature="4078:4242" ph="INSERT INTO person... " />
-                <marker date="1525134381180" expanded="true" signature="4495:4528" ph="DELETE FROM person... " />
-                <marker date="1525134381180" expanded="true" signature="4740:4922" ph="UPDATE person... " />
-                <marker date="1525134381180" expanded="true" signature="4908:4922" ph="UPDATE person... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/users.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1032">
-              <caret line="134" column="86" lean-forward="false" selection-start-line="134" selection-start-column="86" selection-end-line="134" selection-end-column="86" />
+            <state relative-caret-position="-482">
+              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-              <folding>
-                <element signature="e#85#125#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/message.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
-              <folding>
-                <marker date="1525191648160" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
-                <marker date="1525191648160" expanded="true" signature="972:1009" ph="SElect * FRO... messages" />
-                <marker date="1525191648160" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
-                <marker date="1525191648160" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
-                <marker date="1525191648160" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
-                <marker date="1525191648160" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
-                <marker date="1525191648160" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
-                <marker date="1525191648160" expanded="true" signature="3134:3267" ph="SELECT mid, replies" />
-                <marker date="1525191648160" expanded="true" signature="3510:3610" ph="INSERT INTO messages... " />
-                <marker date="1525191648160" expanded="true" signature="3840:3875" ph="DELETE FROM messages... " />
-                <marker date="1525191648160" expanded="true" signature="4059:4127" ph="UPDATE messages... " />
-                <marker date="1525191648160" expanded="true" signature="4333:4421" ph="UPDATE messages... " />
-                <marker date="1525191648160" expanded="true" signature="4622:4694" ph="INSERT INTO replies... " />
-                <marker date="1525191648160" expanded="true" signature="4876:4910" ph="DELETE FROM replies... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/group.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
-              <folding>
-                <marker date="1525191648158" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-                <marker date="1525191648158" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-                <marker date="1525191648158" expanded="true" signature="1413:1566" ph="SELECT gid, groupchat" />
-                <marker date="1525191648158" expanded="true" signature="2530:2645" ph="SELECT gid, groupchat" />
-                <marker date="1525191648158" expanded="true" signature="2880:3012" ph="SELECT usern... members" />
-                <marker date="1525191648158" expanded="true" signature="3247:3332" ph="INSERT INTO groupchat... " />
-                <marker date="1525191648158" expanded="true" signature="3461:3507" ph="INSERT INTO members... " />
-                <marker date="1525191648158" expanded="true" signature="3731:3767" ph="DELETE FROM groupchat... " />
-                <marker date="1525191648158" expanded="true" signature="4022:4099" ph="UPDATE groupchat... " />
-                <marker date="1525191648158" expanded="true" signature="4332:4399" ph="UPDATE groupchat... " />
-                <marker date="1525191648158" expanded="true" signature="4625:4690" ph="UPDATE groupchat... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/messages.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="107" column="64" lean-forward="false" selection-start-line="107" selection-start-column="64" selection-end-line="107" selection-end-column="64" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <marker date="1525191648165" expanded="true" signature="4370:4372" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="members.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/members.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <marker date="1525191648164" expanded="true" signature="82:258" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="member.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/member.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-              <folding>
-                <marker date="1525191648159" expanded="true" signature="728:764" ph="SELECT usern... members" />
-                <marker date="1525191648159" expanded="true" signature="1513:1594" ph="INSERT INTO members... " />
-                <marker date="1525191648159" expanded="true" signature="1801:1835" ph="DELETE FROM members... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groups.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/groups.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
-              <folding>
-                <marker date="1525191648162" expanded="true" signature="79:2850" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -219,7 +81,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ER-SQL/SQLmapping.txt" />
-        <option value="$PROJECT_DIR$/ER-SQL/SQLmapping.sql" />
         <option value="$PROJECT_DIR$/config/herokudbconfig.py" />
         <option value="$PROJECT_DIR$/dao/reactions.py" />
         <option value="$PROJECT_DIR$/dao/groups.py" />
@@ -240,6 +101,7 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/dao/user.py" />
         <option value="$PROJECT_DIR$/handlers/users.py" />
+        <option value="$PROJECT_DIR$/ER-SQL/SQLmapping.sql" />
       </list>
     </option>
   </component>
@@ -559,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525134905940</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated diagram image phase 2">
+      <created>1525191727323</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1525191727323</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -628,7 +497,8 @@
     <MESSAGE value="Updates Done." />
     <MESSAGE value="Updated user insert method" />
     <MESSAGE value="mygroups route working. CORS import" />
-    <option name="LAST_COMMIT_MESSAGE" value="mygroups route working. CORS import" />
+    <MESSAGE value="Updated diagram image phase 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated diagram image phase 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -787,26 +657,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handler/groups.py" />
-    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ER-SQL/UpdatedDiagram.jpg" />
-    <entry file="file://$PROJECT_DIR$/ER-SQL/DiagramP2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/herokudbconfig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -890,61 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/members.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <marker date="1525191648164" expanded="true" signature="82:258" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/member.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding>
-            <marker date="1525191648159" expanded="true" signature="728:764" ph="SELECT usern... members" />
-            <marker date="1525191648159" expanded="true" signature="1513:1594" ph="INSERT INTO members... " />
-            <marker date="1525191648159" expanded="true" signature="1801:1835" ph="DELETE FROM members... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
-          <folding>
-            <marker date="1525191648160" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
-            <marker date="1525191648160" expanded="true" signature="972:1009" ph="SElect * FRO... messages" />
-            <marker date="1525191648160" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
-            <marker date="1525191648160" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
-            <marker date="1525191648160" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
-            <marker date="1525191648160" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
-            <marker date="1525191648160" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
-            <marker date="1525191648160" expanded="true" signature="3134:3267" ph="SELECT mid, replies" />
-            <marker date="1525191648160" expanded="true" signature="3510:3610" ph="INSERT INTO messages... " />
-            <marker date="1525191648160" expanded="true" signature="3840:3875" ph="DELETE FROM messages... " />
-            <marker date="1525191648160" expanded="true" signature="4059:4127" ph="UPDATE messages... " />
-            <marker date="1525191648160" expanded="true" signature="4333:4421" ph="UPDATE messages... " />
-            <marker date="1525191648160" expanded="true" signature="4622:4694" ph="INSERT INTO replies... " />
-            <marker date="1525191648160" expanded="true" signature="4876:4910" ph="DELETE FROM replies... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/groups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
-          <folding>
-            <marker date="1525191648162" expanded="true" signature="79:2850" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-366">
@@ -977,13 +773,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
+        <state relative-caret-position="-294">
           <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="e#85#125#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ER-SQL/DiagramP2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+          <folding>
+            <marker date="1525191648160" expanded="true" signature="728:750" ph="SELECT * FRO... messages" />
+            <marker date="1525191648160" expanded="true" signature="972:1009" ph="SElect * FRO... messages" />
+            <marker date="1525191648160" expanded="true" signature="1208:1245" ph="SELECT * FRO... messages" />
+            <marker date="1525191648160" expanded="true" signature="1484:1611" ph="SELECT usern... messages" />
+            <marker date="1525191648160" expanded="true" signature="1865:2005" ph="SELECT usern... messages" />
+            <marker date="1525191648160" expanded="true" signature="2254:2439" ph="SELECT usern... tagged" />
+            <marker date="1525191648160" expanded="true" signature="2696:2903" ph="SELECT usern... tagged" />
+            <marker date="1525191648160" expanded="true" signature="3134:3267" ph="SELECT mid, replies" />
+            <marker date="1525191648160" expanded="true" signature="3510:3610" ph="INSERT INTO messages... " />
+            <marker date="1525191648160" expanded="true" signature="3840:3875" ph="DELETE FROM messages... " />
+            <marker date="1525191648160" expanded="true" signature="4059:4127" ph="UPDATE messages... " />
+            <marker date="1525191648160" expanded="true" signature="4333:4421" ph="UPDATE messages... " />
+            <marker date="1525191648160" expanded="true" signature="4622:4694" ph="INSERT INTO replies... " />
+            <marker date="1525191648160" expanded="true" signature="4876:4910" ph="DELETE FROM replies... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/members.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/member.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <folding>
+            <marker date="1525191648159" expanded="true" signature="728:764" ph="SELECT usern... members" />
+            <marker date="1525191648159" expanded="true" signature="728:853" ph="SELECT usern... members" />
+            <marker date="1525191648159" expanded="true" signature="1086:1245" ph="SELECT usern... members" />
+            <marker date="1525191648159" expanded="true" signature="1513:1594" ph="INSERT INTO members... " />
+            <marker date="1525191648159" expanded="true" signature="1801:1835" ph="DELETE FROM members... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/groups.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-482">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
