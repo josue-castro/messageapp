@@ -27,7 +27,7 @@ class MessageHandler:
         result['hashtag'] = row[3]
         return result
 
-    def build_message_attributes(self, mid, content, pid, gid, date):
+    def build_message_attributes_with_date(self, mid, content, pid, gid, date):
         result = {}
         result['mid'] = mid
         result['content'] = content
@@ -36,11 +36,24 @@ class MessageHandler:
         result['date'] = date
         return result
 
+    def build_message_attributes_withot_date(self, mid, content, pid, gid):
+        result = {}
+        result['mid'] = mid
+        result['content'] = content
+        result['pid'] = pid
+        result['gid'] = gid
+        return result
+
+    def map_to_content(self, content):
+        result = {}
+        result['content'] = content
+        return result
+
     def build_reply_dict(self, mid, reply_id):
         result = {}
         result['mid'] = mid
-        result['reply']
-
+        result['reply'] = reply_id
+        return result
 
 
     def getAllMessages(self):
@@ -100,6 +113,26 @@ class MessageHandler:
             result_list.append(self.build_tagged_message_dict(row))
         return jsonify(Messages=result_list)
 
+    def searchMessages(self, args):
+        group = args.get("gid")
+        user = args.get("pid")
+        date = args.get('date')
+        dao = MessageDAO()
+        message_list = []
+        if (len(args) == 2) and group and user:
+            message_list = dao.getAllMessagesInGroupBySenderINFO(group, user)
+        elif (len(args) == 3) and group and user and date:
+            message_list = dao.getMessagesByGroupPersonAndDate(group, user, date)
+        elif (len(args) == 1) and user:
+            message_list = dao.getAllMessagesBySenderINFO(user)
+        else:
+            return jsonify(Error="Malformed query string"), 400
+        result_list = []
+        for row in message_list:
+            result = self.build_message_info_dict(row)
+            result_list.append(result)
+            return jsonify(Messages=result_list)
+
     def getReplies(self, mid):
         dao = MessageDAO()
         replies = dao.getReplies(mid)
@@ -118,10 +151,47 @@ class MessageHandler:
             if content and pid and gid:
                 dao = MessageDAO()
                 mid_date = dao.insertMessage(content, pid, gid)
-                result = self.build_message_attributes(mid_date[0], content, pid, gid, mid_date[1])
+                result = self.build_message_attributes_with_date(mid_date[0], content, pid, gid, mid_date[1])
                 return jsonify(Message=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
+
+    def updateMessage(self, mid, form):
+        """Only update message content. Form should have new content"""
+        dao = MessageDAO()
+        if not dao.getMessageById(mid):
+            return jsonify(Error="Part not found."), 404
+        else:
+            if len(form) != 1:
+                return jsonify(Error="Malformed update request"), 400
+            else:
+                content = form['content']
+                if content:
+                    dao.updateMessage(mid, content)
+                    result = self.build_message_attributes_withot_date(mid, content, pid, gid)
+                    return jsonify(new_Message=result), 200
+                else:
+                    return jsonify(Error="Unexpected attributes in update request"), 400
+
+    def updateMessageINFO(self, mid, form):
+        """Only update the info of a message in messages table.
+        Form should have mid, content, pid, gid"""
+        dao = MessageDAO()
+        if not dao.getMessageById(mid):
+            return jsonify(Error="Part not found."), 404
+        else:
+            if len(form) != 1:
+                return jsonify(Error="Malformed update request"), 400
+            else:
+                content = form['content']
+                pid = form['pid']
+                gid = form['gid']
+                if content:
+                    dao.updateMessageInfo(mid, content, pid, gid)
+                    result = self.build_message_info_dict(content)
+                    return jsonify(updated_info=result), 200
+                else:
+                    return jsonify(Error="Unexpected attributes in update request"), 400
 
     def deleteMessage(self, mid):
         dao = MessageDAO()

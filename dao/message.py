@@ -82,6 +82,15 @@ class MessageDAO:
             result.append(row)
         return result
 
+    def getMessagesByGroupPersonAndDate(self, gid, pid, date):
+        cursor = self.conn.cursor()
+        query = "SELECT * " \
+                "FROM messages " \
+                "WHERE gid = %s AND pid = %s AND date = %s;"
+        cursor.execute(query, (gid, pid, date))
+        result = cursor.fetchone()
+        return result
+
     def getReplies(self, mid):
         cursor = self.conn.cursor()
         query = "SELECT mid, content, pid, gid, date " \

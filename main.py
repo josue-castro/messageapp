@@ -1,6 +1,6 @@
 # heroku Password: 3b884db910a7ed97661a75d3203b101e7bf41248fb6c8b36d39ff02dc1556fd5
 
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, request
 from handlers.messages import MessageHandler
 from handlers.groups import GroupHandler
 from handlers.reactions import ReactionHandler
@@ -98,6 +98,17 @@ def getAllMessagesInGroupWithHashtag(gid, tag):
 @app.route('/MessageApp/messages')
 def messages():
     return MessageHandler().getAllMessages()
+
+@app.route('/MessegeApp/messages/<int:mid>', methods=['GET', 'PUT', 'DELETE'])
+def getMessageById(mid):
+    if request.method == 'GET':
+        return MessageHandler().getMessageById(mid)
+    elif request.method == 'PUT':
+        return MessageHandler().updateMessage(mid, request.form)
+    elif request.method == 'DELETE':
+        return MessageHandler().deleteMessage(mid)
+    else:
+        return jsonify(Error="Method not allowed."), 405
 
 
 @app.route('/MessageApp/messages/by/<int:pid>')
