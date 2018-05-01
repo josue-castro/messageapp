@@ -31,6 +31,7 @@ class UserHandler:
         result['gid'] = row[0]
         result['gname'] = row[1]
         result['pid'] = row[2]
+        return result
 
     def build_user_attributes(self, pid, firstName, lastName, username, phone, email, password):
         result = {}
@@ -131,7 +132,7 @@ class UserHandler:
             password = form['password']
             if firstName and lastName and username and phone and email:
                 dao = UserDAO()
-                pid = dao.insert(firstName, lastName, username, phone, email)
+                pid = dao.insert(firstName, lastName, username, phone, email, password)
                 result = self.build_user_attributes(pid, firstName, lastName, username, phone, email, password)
                 return jsonify(User=result), 201
             else:

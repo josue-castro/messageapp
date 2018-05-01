@@ -5,9 +5,11 @@ from handlers.messages import MessageHandler
 from handlers.groups import GroupHandler
 from handlers.reactions import ReactionHandler
 from handlers.users import UserHandler
+from flask_cors import CORS
 
 app = Flask(__name__, template_folder='template')
 
+CORS(app)
 
 @app.route('/')
 def home():
@@ -54,9 +56,14 @@ def getUserContactsByName(pid,firstName, lastName):
     return UserHandler().getUserContactsByName(pid, firstName, lastName)
 
 
-@app.route('/MessageApp/users/<int:pid>/groups')
+@app.route('/MessageApp/users/<int:pid>/mygroups')
 def getUserGroups(pid):
     return UserHandler().getUserGroups(pid)
+
+
+@app.route('/MessageApp/users/<int:pid>/mygroups/admin')
+def getAllGroupsAdminByUser(pid):
+    return GroupHandler().getAllGroupsAdminByUser(pid)
 
 
 @app.route('/MessageApp/groups')

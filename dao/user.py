@@ -14,7 +14,8 @@ class UserDAO:
 
     def getUserPidLogin(self, username, password):
         cursor = self.conn.cursor()
-        query = "SELECT pid FROM person"
+        query = "SELECT pid FROM person WHERE username = %s AND password = crypt(%s, gen_salt(password));"
+        cursor.execute(query)
 
     def getAllUsers(self):
         cursor = self.conn.cursor()
@@ -67,7 +68,7 @@ class UserDAO:
         """Gets groups where User with pid = pid is a member,
         not necessarily admin"""
         cursor = self.conn.cursor()
-        query = "SELECT gid, gname, pid FROM members NATURAL INNER JOIN groupchat WHERE pid = %s;"
+        query = "SELECT gid, gname, members.pid FROM members INNER JOIN groupchat USING (gid) WHERE members.pid = %s;"
         cursor.execute(query, (pid,))
         result = []
         for row in cursor:
