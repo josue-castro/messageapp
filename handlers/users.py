@@ -120,7 +120,7 @@ class UserHandler:
         return jsonify(Contacts=result_list)
 
     def insertUser(self, form):
-        if len(form) != 6:
+        if len(form) != 7:
             return jsonify(Error="Malformed post request"), 400
         else:
             firstName = form['firstName']
@@ -137,10 +137,10 @@ class UserHandler:
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 
-    def deletePart(self, pid):
+    def deleteUser(self, pid):
         dao = UserDAO()
         if not dao.getUserById(pid):
-            return jsonify(Error="Part not found."), 404
+            return jsonify(Error="User not found."), 404
         else:
             dao.delete(pid)
             return jsonify(DeleteStatus="OK"), 200

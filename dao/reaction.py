@@ -57,6 +57,38 @@ class ReactionDAO:
             result.append(row)
         return result
 
+    def getWhoLikedById(self, mid, pid):
+        """Get a specified user who liked a specified message"""
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM likes WHERE mid = %s AND pid = %s;"
+        cursor.execute(query, (mid, pid))
+        result = cursor.fetchone()
+        return result
+
+    def getWhoDislikedById(self, mid, pid):
+        """Get a specified user who disliked a specified message"""
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM dislikes WHERE mid = %s AND pid = %s;"
+        cursor.execute(query, (mid, pid))
+        result = cursor.fetchone()
+        return result
+
+    def getMessageHashtagById(self, mid, hid):
+        """Get a specified hashtag in a specified message"""
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM tagged WHERE mid = %s AND hid = %s;"
+        cursor.execute(query, (mid, hid))
+        result = cursor.fetchone()
+        return result
+
+    def getHashtagById(self, hid):
+        """Get a specified hashtag in a specified message"""
+        cursor = self.conn.cursor()
+        query = "SELECT * FROM hashtag WHERE hid = %s;"
+        cursor.execute(query, (hid,))
+        result = cursor.fetchone()
+        return result
+
     def insertLike(self, mid, pid):
         """Insert when someone liked a message"""
         cursor = self.conn.cursor()
@@ -81,13 +113,13 @@ class ReactionDAO:
         """Insert a new hashtag into to hashtags table"""
         cursor = self.conn.cursor()
         query = "INSERT INTO hashtag(tag) VALUES (%s)" \
-                "RETURNING hashtag"
+                "RETURNING hid"
         cursor.execute(query, (tag,))
-        hashtag = cursor.fetchone()[0]
+        hid = cursor.fetchone()[0]
         self.conn.commit()
-        return hashtag
+        return hid
 
-    def tag(self, mid, hid):
+    def insertTag(self, mid, hid):
         """Attaches a message with a contained tag and inserts it
         into tagged table."""
         cursor = self.conn.cursor()
@@ -98,17 +130,35 @@ class ReactionDAO:
         self.conn.commit()
         return mid
 
-    def deleteLike(self, mid):
+    def deleteAllLikes(self, mid):
+        """Removes all the likes from a message."""
         cursor = self.conn.cursor()
         query = "DELETE FROM likes WHERE mid = %s;"
         cursor.execute(query, (mid,))
         self.conn.commit()
         return mid
 
-    def deleteDislike(self, mid):
+    def deleteLike(self, mid, pid):
+        """Removes the like of someone who liked a specified message."""
+        cursor = self.conn.cursor()
+        query = "DELETE FROM likes WHERE mid = %s, AND pid = %s;"
+        cursor.execute(query, (mid, pid))
+        self.conn.commit()
+        return mid
+
+    def deleteAllDislikes(self, mid):
+        """Removes all the likes from a message."""
         cursor = self.conn.cursor()
         query = "DELETE FROM dislikes WHERE mid = %s;"
         cursor.execute(query, (mid,))
+        self.conn.commit()
+        return mid
+
+    def deleteDislike(self, mid, pid):
+        """Removes the dislike of someone who liked a specified message."""
+        cursor = self.conn.cursor()
+        query = "DELETE FROM dislikes WHERE mid = %s, pid = %s;"
+        cursor.execute(query, (mid, pid))
         self.conn.commit()
         return mid
 

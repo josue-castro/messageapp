@@ -87,3 +87,26 @@ class GroupHandler:
                 return jsonify(Group=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
+
+    def createGroup(self, form):
+        if len(form) !=3:
+            return jsonify(Error="Malformed post request"), 400
+        else:
+            gname = form['gname']
+            pid = form['pid']
+
+            if pid and gname:
+                dao = GroupsDAO()
+                pid = dao.insertGroup(gname, pid)
+                result = self.build_group_attributes(pid, gname, pid)
+                return jsonify(new_Group=result), 201
+            else:
+                return jsonify(Error="Unexpected attributes in post request"), 400
+
+    def delete(self, gid):
+        dao = GroupsDAO()
+        if not dao.getGroupByIdINFO(gid):
+            return jsonify(Error="User not found."), 404
+        else:
+            dao.delete(gid)
+            return jsonify(DeleteStatus="OK"), 200

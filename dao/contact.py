@@ -24,9 +24,13 @@ class ContactDAO:
             result.append(row)
         return result
 
-    def getContactByName(self, pid, name): #TODO IMPLEMENT
-        result = ["not implemented"]
-
+    def getMyContactByid(self, pid, contact_id):
+        cursor = self.conn.cursor()
+        query = "SELECT firstname, lastname, username, phone, email" \
+                "FROM contacts NATURAL INNER JOIN person" \
+                "WHERE pid = %s AND contact_id = %s;"
+        cursor.execute(query, (pid, contact_id))
+        result = cursor.fetchone()
         return result
 
     def addContact(self, pid, contact_id):
@@ -39,9 +43,9 @@ class ContactDAO:
         self.conn.commit()
         return pid
 
-    def delete(self, contact_id):
+    def delete(self, pid, contact_id):
         cursor = self.conn.cursor()
-        query = "DELETE FROM contacts WHERE contact_id = %s;"
-        cursor.execute(query, (contact_id,))
+        query = "DELETE FROM contacts WHERE pid = %s AND contact_id = %s;"
+        cursor.execute(query, (pid, contact_id,))
         self.conn.commit()
         return contact_id

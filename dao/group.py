@@ -28,7 +28,7 @@ class GroupsDAO:
         query = "SELECT gid, gname, pid, username, firstName, lastName " \
                 "FROM groupchat NATURAL INNER JOIN person " \
                 "WHERE gid = %s;"
-        cursor.execute(query, gid)
+        cursor.execute(query, (gid,))
         result = cursor.fetchone()
         return result
 

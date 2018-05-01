@@ -108,8 +108,8 @@ class MessageHandler:
             result_list.append(self.build_message_info_dict(row))
         return jsonify(Replies=result_list)
 
-    def insertMessage(self, form):
-        if len(form) != 3:
+    def addMessage(self, form):
+        if len(form) != 5:
             return jsonify(Error="Malformed post request"), 400
         else:
             content = form['content']
@@ -117,8 +117,16 @@ class MessageHandler:
             gid = form['gid']
             if content and pid and gid:
                 dao = MessageDAO()
-                mid = dao.insertMessage(content, pid, gid)
-                result = self.build_message_attributes(mid[0], content, pid, gid, mid[1])
+                mid_date = dao.insertMessage(content, pid, gid)
+                result = self.build_message_attributes(mid_date[0], content, pid, gid, mid_date[1])
                 return jsonify(Message=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
+
+    def deleteMessage(self, mid):
+        dao = MessageDAO()
+        if not dao.getMessageById(mid):
+            return jsonify(Error="Message not found."), 404
+        else:
+            dao.deleteMessage(mid)
+            return jsonify(DeleteStatus="OK"), 200

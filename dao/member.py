@@ -14,24 +14,26 @@ class MembersDAO:
 
     def getMembersINFO(self, gid):
         cursor = self.conn.cursor()
-        query = "SELECT username, firstName, lastName FROM members NATURAL INNER JOIN person WHERE gid = %s"
+        query = "SELECT username, firstName, lastName, phone, email " \
+                "FROM members NATURAL INNER JOIN person WHERE gid = %s"
         result = []
-        print(cursor.execute(query, (gid,)))
         cursor.execute(query, (gid,))
         for row in cursor:
             result.append(row)
         return result
 
-    def getMember(self, gid, pid):
+    def getMemberById(self, gid, pid):
         cursor = self.conn.cursor()
-        query = "SELECT username, firstName, lastName FROM members NATURAL INNER JOIN person WHERE gid = %s"
-        print(cursor.execute(query, (gid,)))
+        query = "SELECT username, firstName, lastName, phone, email " \
+                "FROM members NATURAL INNER JOIN person " \
+                "WHERE gid = %s AND pid = %s"
         cursor.execute(query, (gid, pid))
-        gid = cursor.fetchone()
+        result = cursor.fetchone()
         self.conn.commit()
-        return gid
+        return result
 
-    def addMember(self, gid, pid):
+
+    def insertMember(self, gid, pid):
         """Insert method for members table."""
         cursor = self.conn.cursor()
         query = "INSERT INTO members (gid, pid) VALUES (%s, %s) " \

@@ -98,9 +98,9 @@ class MessageDAO:
         query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s)" \
                 "RETURNING mid, date;"
         cursor.execute(query, (content, pid, gid))
-        mid = cursor.fetchone()
+        mid_date = cursor.fetchone()
         self.conn.commit()
-        return mid
+        return mid_date
 
     def deleteMessage(self, mid):
         cursor = self.conn.cursor()
