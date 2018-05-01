@@ -70,10 +70,10 @@ def getAllGroupsAdminByUser(pid):
 def groups():
     return GroupHandler().getAllGroupsINFO()
 
+@app.route('/MessageApp/groups/<int:gid>')
+def getGroupById(gid):
+    return GroupHandler().getGroupByIdINFO(gid)
 
-# @app.route('/groups/<int:gid>/owner')
-# def groupOwner(gid):
-#     return GroupHandler().getGroupOwner(gid)
 
 @app.route('/MessageApp/groups/<int:gid>/members')
 def getGroupMembers(gid):
@@ -95,9 +95,12 @@ def getAllMessagesInGroupWithHashtag(gid, tag):
     return MessageHandler().getAllMessagesInGroupWithHashtag(gid, tag)
 
 
-@app.route('/MessageApp/messages')
-def messages():
-    return MessageHandler().getAllMessages()
+@app.route('/MessageApp/messages', methods=['GET', 'POST'])
+def getAllMessages():
+    if request.method == 'POST':
+        return MessageHandler().addMessage(request.form)
+    else:
+        return MessageHandler().getAllMessages()
 
 @app.route('/MessegeApp/messages/<int:mid>', methods=['GET', 'PUT', 'DELETE'])
 def getMessageById(mid):
