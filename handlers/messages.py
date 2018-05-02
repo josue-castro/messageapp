@@ -10,6 +10,7 @@ class MessageHandler:
         result['pid'] = row[2]
         result['gid'] = row[3]
         result['date'] = row[4]
+        result['username'] = row[5]
         return result
 
     def build_message_dict(self, row):
