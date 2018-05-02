@@ -36,7 +36,7 @@ class MessageHandler:
         result['date'] = date
         return result
 
-    def build_message_attributes_withot_date(self, mid, content, pid, gid):
+    def build_message_attributes_without_date(self, mid, content, pid, gid):
         result = {}
         result['mid'] = mid
         result['content'] = content
@@ -78,7 +78,7 @@ class MessageHandler:
         result = dao.getAllGroupMessagesINFO(gid)
         mapped_results = []
         for m in result:
-            mapped_results.append(self.build_message_dict(m))
+            mapped_results.append(self.build_message_info_dict(m))
         return jsonify(Messages_in_group=mapped_results)
 
     def getAllMessagesBySender(self, pid):
@@ -94,7 +94,7 @@ class MessageHandler:
         result = dao.getAllMessagesInGroupBySenderINFO(gid, pid)
         mapped_results = []
         for m in result:
-            mapped_results.append(self.build_message_dict(m))
+            mapped_results.append(self.build_message_info_dict(m))
         return jsonify(Message_by=mapped_results)
 
     def getAllMessagesWithHashtag(self, hid):

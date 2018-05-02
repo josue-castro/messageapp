@@ -40,7 +40,7 @@ class MessageDAO:
 
     def getAllGroupMessagesINFO(self, gid):
         cursor = self.conn.cursor()
-        query = "SELECT username, content, date " \
+        query = "SELECT mid, content, pid, gid, date " \
                 "FROM messages NATURAL INNER JOIN person " \
                 "WHERE gid = %s;"
         cursor.execute(query, (gid,))
@@ -51,7 +51,7 @@ class MessageDAO:
 
     def getAllMessagesInGroupBySenderINFO(self, gid, pid):
         cursor = self.conn.cursor()
-        query = "SELECT username, content, date " \
+        query = "SELECT mid, content, pid, gid, date " \
                 "FROM messages NATURAL INNER JOIN person " \
                 "WHERE pid = %s AND gid = %s;"
         cursor.execute(query, (pid, gid))
