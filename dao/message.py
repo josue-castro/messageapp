@@ -1,37 +1,150 @@
+from config.herokudbconfig import pg_config
+import psycopg2
+
+
 class MessageDAO:
     def __init__(self):
-        # message id, content, sender id, group id, replied = NULL, date
-        M1 = [300, 'Que hacen?', 120, 101, '', '3/23/18']
-        M2 = [301, 'Trabajando en el proyecto de DB. Y tu?', 117, 101, '', '3/23/18']
-        M3 = [302, 'Estudiando para un examen', 120, 101, '', '3/23/18']
-        M4 = [303, 'Yo voy a salir, no hare na de la uni hoy', 131, 101, '', '3/23/18']
 
-        M5 = [257, 'Van para la actividad de hoy?', 99, 122, '', '3/11/18']
-        M6 = [258, 'No voy a poder ir mano tengo compromiso', 76, 122, '', '3/11/18']
-        M7 = [259, 'Mala mia me quede dormido. Como estuvo?', 81, 122, '', '3/12/18']
+        connection_url = "dbname=%s user=%s password=%s port=%s host=%s" % (pg_config['dbname'],
+                                                                            pg_config['user'],
+                                                                            pg_config['password'],
+                                                                            pg_config['port'],
+                                                                            pg_config['host'])
 
-        self.messages = []
-        self.messages.append(M1)
-        self.messages.append(M2)
-        self.messages.append(M3)
-        self.messages.append(M4)
-        self.messages.append(M5)
-        self.messages.append(M6)
-        self.messages.append(M7)
+        self.conn = psycopg2.connect(connection_url)
 
-    def getAllMessages(self):
-        return self.messages
-
-    def getGroupMessages(self, gid):
+    def getAllMessagesINFO(self):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username FROM messages NATURAL INNER JOIN person;"
+        cursor.execute(query)
         result = []
-        for m in self.messages:
-            if gid == m[3]:
-                result.append(m)
+        for row in cursor:
+            result.append(row)
         return result
 
-    def getMessagesBySender(self, gid, pid):
-        result = []
-        for m in self.messages:
-            if gid == m[3] and pid == m[2]:
-                result.append(m)
+    def getMessageById(self, mid):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username FROM messages NATURAL INNER JOIN person WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        result = cursor.fetchone()
         return result
+
+    def getAllMessagesBySenderINFO(self, pid):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username FROM messages NATURAL INNER JOIN person WHERE pid = %s;"
+        cursor.execute(query, (pid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllGroupMessagesINFO(self, gid):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (gid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesInGroupBySenderINFO(self, gid, pid):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE pid = %s AND gid = %s;"
+        cursor.execute(query, (pid, gid))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesWithHashtagINFO(self, tag):
+        cursor = self.conn.cursor()
+        query = "SELECT username, content, date, tag " \
+                "FROM tagged NATURAL INNER JOIN hashtag NATURAL INNER JOIN person NATURAL INNER JOIN messages " \
+                "WHERE tag = %s;"
+        cursor.execute(query, (tag,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesInGroupWithHashtagINFO(self, gid, tag):
+        cursor = self.conn.cursor()
+        query = "SELECT username, content, date, tag " \
+                "FROM tagged NATURAL INNER JOIN hashtag NATURAL INNER JOIN person NATURAL INNER JOIN messages " \
+                "WHERE messages.gid = %s AND tag = %s;"
+        cursor.execute(query, (gid, tag,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getMessagesByGroupPersonAndDate(self, gid, pid, date):
+        cursor = self.conn.cursor()
+        query = "SELECT * " \
+                "FROM messages " \
+                "WHERE gid = %s AND pid = %s AND date = %s;"
+        cursor.execute(query, (gid, pid, date))
+        result = cursor.fetchone()
+        return result
+
+    def getReplies(self, mid):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date " \
+                "FROM replies NATURAL INNER JOIN messages " \
+                "WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def insertMessage(self, content, pid, gid):
+        cursor = self.conn.cursor()
+        query = "INSERT INTO messages (content, pid, gid) VALUES (%s, %s, %s)" \
+                "RETURNING mid, date;"
+        cursor.execute(query, (content, pid, gid))
+        mid_date = cursor.fetchone()
+        self.conn.commit()
+        return mid_date
+
+    def deleteMessage(self, mid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM messages WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        self.conn.commit()
+        return mid
+
+    def updateMessage(self, mid, content):
+        cursor = self.conn.cursor()
+        query = "UPDATE messages SET content = %s " \
+                "WHERE mid = %s;"
+        cursor.execute(query, (content, mid))
+        self.conn.commit()
+        return mid
+
+    def updateMessageInfo(self, mid, content, pid, gid):
+        cursor = self.conn.cursor()
+        query = "UPDATE messages SET content = %s, pid = %s, gid = %s " \
+                "WHERE mid = %s;"
+        cursor.execute(query, (content, pid, gid, mid))
+        self.conn.commit()
+        return mid
+
+    def insertReply(self, mid, reply_id):
+        cursor = self.conn.cursor()
+        query = "INSERT INTO replies (mid, reply_id) " \
+                "VALUES (%s, %s);"
+        cursor.execute(query, (mid, reply_id))
+        self.conn.commit()
+        return mid
+
+    def deleteReply(self, mid):
+        cursor = self.conn.cursor()
+        query = "DELETE FROM replies WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        self.conn.commit()
+        return mid

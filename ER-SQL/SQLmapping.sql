@@ -5,6 +5,7 @@ CREATE TABLE Person(
   username VARCHAR(20) UNIQUE NOT NULL,
   phone CHAR(10) UNIQUE,
   email VARCHAR(50) UNIQUE,
+  password VARCHAR,
   CHECK (phone IS NOT NULL or email IS NOT NULL)
 );
 
