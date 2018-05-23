@@ -38,7 +38,6 @@ class ReactionDAO:
             result.append(row)
         return result
 
-
     def getMessageDislikes(self, mid):
         cursor = self.conn.cursor()
         query = "SELECT count(*) FROM dislikes WHERE mid = %s;"

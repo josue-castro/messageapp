@@ -12,10 +12,13 @@ class UserDAO:
 
         self.conn = psycopg2._connect(connection_url)
 
-    def getUserPidLogin(self, username, password):
+    def getUserIdLogin(self, username, password):
         cursor = self.conn.cursor()
-        query = "SELECT pid FROM person WHERE username = %s AND password = crypt(%s, gen_salt(password));"
-        cursor.execute(query)
+        query = "SELECT pid, firstname, lastname, username, phone, email FROM person " \
+                "WHERE username = %s AND password = crypt(%s, password);"
+        cursor.execute(query, (username, password,))
+        result = cursor.fetchone()
+        return result
 
     def getAllUsers(self):
         cursor = self.conn.cursor()
@@ -112,11 +115,11 @@ class UserDAO:
         self.conn.commit()
         return pid
 
-    def update(self, pid, firtName, lastName, username, phone, email):
+    def update(self, pid, firtName, lastName, username, phone, email, password):
         cursor = self.conn.cursor()
         query = "UPDATE person SET firstName = %s, lastName = %s, " \
                 "username = %s, phone = %s, email = %s, password = crypt(%s, gen_salt('md5')) " \
                 "WHERE pid = %s;"
-        cursor.execute(query, (firtName, lastName, username, phone, email, pid))
+        cursor.execute(query, (firtName, lastName, username, phone, email, password, pid))
         self.conn.commit()
         return pid

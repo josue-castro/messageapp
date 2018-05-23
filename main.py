@@ -21,10 +21,10 @@ def register():
     return render_template('register.html')
 
 
-@app.route('/MessageApp/login')
+@app.route('/MessageApp/login', methods=['GET'])
 def login():
-    return render_template('login.html')
-
+    if request.method == 'GET':
+        return UserHandler().getUserPidLogin(request.args)
 
 @app.route('/MessageApp/users')
 def users():

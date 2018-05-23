@@ -120,6 +120,23 @@ class UserHandler:
             result_list.append(self.build_user_contact_dict(row))
         return jsonify(Contacts=result_list)
 
+    def getUserPidLogin(self, args):
+        if len(args) != 2:
+            return jsonify(Error="Missing username or password"), 400
+        else:
+            username = args.get("username")
+            password = args.get("password")
+            if username and password:
+                dao = UserDAO()
+                row = dao.getUserIdLogin(username, password)
+                result = self.build_user_dict(row)
+                if not row:
+                    return jsonify(Error="Username or password are incorrect"), 404
+                else:
+                    return jsonify(User=result)
+            else:
+                return jsonify(Error="Missing username or password"), 400
+
     def insertUser(self, form):
         if len(form) != 7:
             return jsonify(Error="Malformed post request"), 400
