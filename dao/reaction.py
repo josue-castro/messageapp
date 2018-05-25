@@ -88,6 +88,13 @@ class ReactionDAO:
         result = cursor.fetchone()
         return result
 
+    def getTagId(self, tag):
+        cursor = self.conn.cursor()
+        query = "SELECT hid FROM hashtag WHERE tag = %s;"
+        cursor.execute(query, (tag,))
+        result = cursor.fetchone()
+        return result
+
     def insertLike(self, mid, pid):
         """Insert when someone liked a message"""
         cursor = self.conn.cursor()

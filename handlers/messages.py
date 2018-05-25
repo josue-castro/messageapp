@@ -150,8 +150,8 @@ class MessageHandler:
             pid = form['pid']
             gid = form['gid']
             if content and pid and gid:
-                dao = MessageDAO()
-                mid_date = dao.insertMessage(content, pid, gid)
+                message_dao = MessageDAO()
+                mid_date = message_dao.insertMessage(content, pid, gid)
                 result = self.build_message_attributes_with_date(mid_date[0], content, pid, gid, mid_date[1])
                 return jsonify(Message=result), 201
             else:
@@ -167,9 +167,11 @@ class MessageHandler:
                 return jsonify(Error="Malformed update request"), 400
             else:
                 content = form['content']
+                pid = form['pid']
+                gid = form['gid']
                 if content:
                     dao.updateMessage(mid, content)
-                    result = self.build_message_attributes_withot_date(mid, content, pid, gid)
+                    result = self.build_message_attributes_without_date(mid, content, pid, gid)
                     return jsonify(new_Message=result), 200
                 else:
                     return jsonify(Error="Unexpected attributes in update request"), 400

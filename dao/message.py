@@ -1,4 +1,5 @@
 from config.herokudbconfig import pg_config
+from dao.reaction import ReactionDAO
 import psycopg2
 
 
@@ -109,6 +110,15 @@ class MessageDAO:
         cursor.execute(query, (content, pid, gid))
         mid_date = cursor.fetchone()
         self.conn.commit()
+        reaction_dao = ReactionDAO()
+        hashtags = set(tag[1:] for tag in content.split() if tag.startswith("#"))
+        for tag in hashtags:
+            hid = reaction_dao.getTagId(tag)
+            if not hid:
+                hid = reaction_dao.createHashtag(tag)
+                reaction_dao.insertTag(mid_date[0], hid)
+            else:
+                reaction_dao.insertTag(mid_date[0], hid)
         return mid_date
 
     def deleteMessage(self, mid):
