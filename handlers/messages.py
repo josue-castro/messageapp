@@ -3,7 +3,7 @@ from dao.message import MessageDAO
 
 
 class MessageHandler:
-    def build_message_info_dict(self, row):
+    def build_message_dict(self, row):
         result = {}
         result['mid'] = row[0]
         result['content'] = row[1]
@@ -11,13 +11,6 @@ class MessageHandler:
         result['gid'] = row[3]
         result['date'] = row[4]
         result['username'] = row[5]
-        return result
-
-    def build_message_dict(self, row):
-        result = {}
-        result['username'] = row[0]
-        result['content'] = row[1]
-        result['date'] = row[2]
         return result
 
     def build_tagged_message_dict(self, row):
@@ -62,7 +55,7 @@ class MessageHandler:
         result = dao.getAllMessagesINFO()
         mapped_results = []
         for m in result:
-            mapped_results.append(self.build_message_info_dict(m))
+            mapped_results.append(self.build_message_dict(m))
         return jsonify(Messages=mapped_results)
 
     def getMessageById(self, mid):
@@ -71,7 +64,7 @@ class MessageHandler:
         if not row:
             return jsonify(Error="User Not Found"), 404
         else:
-            message = self.build_message_info_dict(row)
+            message = self.build_message_dict(row)
             return jsonify(Message=message)
 
     def getAllGroupMessages(self, gid):
@@ -79,15 +72,31 @@ class MessageHandler:
         result = dao.getAllGroupMessagesINFO(gid)
         mapped_results = []
         for m in result:
-            mapped_results.append(self.build_message_info_dict(m))
+            mapped_results.append(self.build_message_dict(m))
         return jsonify(Messages_in_group=mapped_results)
+
+    def searchGroupMessages(self, gid, args):
+        username = args.get("username")
+        hashtag = args.get("hashtag")
+        dao = MessageDAO()
+
+        if (len(args) == 1) and username:
+            message_list = dao.getAllMessagesInGroupBySenderINFO(gid, username)
+        elif (len(args) == 1) and hashtag:
+            message_list = dao.getAllMessagesInGroupWithHashtagINFO(gid, hashtag)
+        else:
+            return jsonify(Error="Malformed query string"), 400
+        result_list = []
+        for row in message_list:
+            result_list.append(self.build_message_dict(row))
+        return jsonify(Messages=result_list)
 
     def getAllMessagesBySender(self, pid):
         dao = MessageDAO()
         result = dao.getAllMessagesBySenderINFO(pid)
         mapped_results = []
         for m in result:
-            mapped_results.append(self.build_message_info_dict(m))
+            mapped_results.append(self.build_message_dict(m))
         return jsonify(Messages_by=mapped_results)
 
     def getAllMessagesInGroupBySender(self, gid, pid):
@@ -95,7 +104,7 @@ class MessageHandler:
         result = dao.getAllMessagesInGroupBySenderINFO(gid, pid)
         mapped_results = []
         for m in result:
-            mapped_results.append(self.build_message_info_dict(m))
+            mapped_results.append(self.build_message_dict(m))
         return jsonify(Message_by=mapped_results)
 
     def getAllMessagesWithHashtag(self, hid):
@@ -130,7 +139,7 @@ class MessageHandler:
             return jsonify(Error="Malformed query string"), 400
         result_list = []
         for row in message_list:
-            result = self.build_message_info_dict(row)
+            result = self.build_message_dict(row)
             result_list.append(result)
             return jsonify(Messages=result_list)
 
@@ -139,7 +148,7 @@ class MessageHandler:
         replies = dao.getReplies(mid)
         result_list = []
         for row in replies:
-            result_list.append(self.build_message_info_dict(row))
+            result_list.append(self.build_message_dict(row))
         return jsonify(Replies=result_list)
 
     def addMessage(self, form):
@@ -191,7 +200,7 @@ class MessageHandler:
                 gid = form['gid']
                 if content:
                     dao.updateMessageInfo(mid, content, pid, gid)
-                    result = self.build_message_info_dict(content)
+                    result = self.build_message_dict(content)
                     return jsonify(updated_info=result), 200
                 else:
                     return jsonify(Error="Unexpected attributes in update request"), 400

@@ -12,7 +12,7 @@ class UserDAO:
 
         self.conn = psycopg2._connect(connection_url)
 
-    def getUserIdLogin(self, username, password):
+    def UserLogin(self, username, password):
         cursor = self.conn.cursor()
         query = "SELECT pid, firstname, lastname, username, phone, email FROM person " \
                 "WHERE username = %s AND password = crypt(%s, password);"
@@ -22,7 +22,7 @@ class UserDAO:
 
     def getAllUsers(self):
         cursor = self.conn.cursor()
-        query = "SELECT username FROM person;"
+        query = "SELECT pid, firstname, lastname, username, phone, email FROM person;"
         cursor.execute(query)
         result = []
         for row in cursor:
@@ -80,7 +80,7 @@ class UserDAO:
 
     def getUserContacts(self, pid):
         cursor = self.conn.cursor()
-        query = "SELECT firstname, lastname, username, phone, email " \
+        query = "SELECT pid, firstname, lastname, username, phone, email " \
                 "FROM contacts c INNER JOIN person p ON c.contact_id = p.pid WHERE c.pid = %s;"
         cursor.execute(query, (pid,))
         result = []
@@ -90,7 +90,7 @@ class UserDAO:
 
     def getUserContactsByName(self, pid, firstName, lastName):
         cursor = self.conn.cursor()
-        query = "SELECT firstname, lastname, username, phone, email " \
+        query = "SELECT c.pid, firstname, lastname, username, phone, email " \
                 "FROM contacts c INNER JOIN person p ON c.contact_id = p.pid " \
                 "WHERE c.pid = %s AND lower(p.firstname) = lower(%s) AND lower(p.lastname) = lower(%s);"
         cursor.execute(query, (pid, firstName, lastName,))

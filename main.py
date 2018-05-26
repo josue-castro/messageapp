@@ -16,44 +16,53 @@ def home():
     return "Welcome to Message App"
 
 
-@app.route('/MessageApp/register')
+@app.route('/MessageApp/register', methods=['POST'])
 def register():
-    return render_template('register.html')
+    if request.method == 'POST':
+        return UserHandler().insertUser(request.json)
 
 
-@app.route('/MessageApp/login', methods=['GET'])
+@app.route('/MessageApp/login', methods=['POST'])
 def login():
-    if request.method == 'GET':
-        return UserHandler().getUserPidLogin(request.args)
+    if request.method == 'POST':
+        return UserHandler().UserLogin(request.json)
 
-@app.route('/MessageApp/users')
+
+@app.route('/MessageApp/users', methods=['GET'])
 def users():
-    return UserHandler().getAllUsers()
+    if request.method == 'GET':
+        if not request.args:
+            return UserHandler().getAllUsers()
+        else:
+            return UserHandler().searchUser(request.args)
 
 
-@app.route('/MessageApp/users/<string:username>')
-def getUserByUsername(username):
-    return UserHandler().getUserByUsername(username)
+# @app.route('/MessageApp/users/<string:username>')
+# def getUserByUsername(username):
+#     return UserHandler().getUserByUsername(username)
+
+# @app.route('/MessageApp/users/<string:firstName>-<string:lastName>')
+# def getUserSearchByName(firstName, lastName):
+#     return UserHandler().getUserSearchByName(firstName, lastName)
 
 
-@app.route('/MessageApp/users/<int:pid>')
+@app.route('/MessageApp/users/<int:pid>', methods=['GET', 'PUT'])
 def getUserById(pid):
-    return UserHandler().getUserById(pid)
+    if request.method == 'GET':
+        return UserHandler().getUserById(pid)
 
 
-@app.route('/MessageApp/users/<string:firstName>-<string:lastName>')
-def getUserSearchByName(firstName, lastName):
-    return UserHandler().getUserSearchByName(firstName, lastName)
-
-
-@app.route('/MessageApp/users/<int:pid>/contacts')
+@app.route('/MessageApp/users/<int:pid>/contacts', methods=['GET', 'POST'])
 def getMyContacts(pid):
-    return UserHandler().getUserContacts(pid)
+    if request.method == 'GET':
+        if not request.args:
+            return UserHandler().getUserContacts(pid)
+        else:
+            return UserHandler().searchContacts(pid, request.args)
 
-
-@app.route('/MessageApp/users/<int:pid>/contacts/<string:firstName>-<string:lastName>')
-def getUserContactsByName(pid,firstName, lastName):
-    return UserHandler().getUserContactsByName(pid, firstName, lastName)
+# @app.route('/MessageApp/users/<int:pid>/contacts/<string:firstName>-<string:lastName>')
+# def getUserContactsByName(pid,firstName, lastName):
+#     return UserHandler().getUserContactsByName(pid, firstName, lastName)
 
 
 @app.route('/MessageApp/users/<int:pid>/mygroups')
@@ -80,9 +89,13 @@ def getGroupMembers(gid):
     return GroupHandler().getGroupMembersINFO(gid)
 
 
-@app.route('/MessageApp/groups/<int:gid>/messages')
+@app.route('/MessageApp/groups/<int:gid>/messages', methods=['GET', 'POST'])
 def get_messages_in_chat(gid):
-    return MessageHandler().getAllGroupMessages(gid)
+    if request.method == 'GET':
+        if not request.args:
+            return MessageHandler().getAllGroupMessages(gid)
+        else:
+            return MessageHandler().searchGroupMessages(gid, request.args)
 
 
 @app.route('/MessageApp/groups/<int:gid>/messages/by/<int:pid>')
