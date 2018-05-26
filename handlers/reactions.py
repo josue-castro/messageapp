@@ -3,6 +3,17 @@ from dao.reaction import ReactionDAO
 
 
 class ReactionHandler:
+
+    def build_user_dict(self, row):
+        result = {}
+        result['pid'] = row[0]
+        result['firstname'] = row[1]
+        result['lastname'] = row[2]
+        result['username'] = row[3]
+        result['phone'] = row[4]
+        result['email'] = row[5]
+        return result
+
     def mapToDic(self, row):
         result = {}
         result['mid'] = row[0]
@@ -37,63 +48,66 @@ class ReactionHandler:
         likes = dao.getMessageLikes(mid)
         return jsonify(Likes=likes)
 
-    def getWhoLikedMessage(self, mid):
-        dao = ReactionDAO()
-        like_list = dao.getWhoLikedMessage(mid)
-        result_list = []
-        for m in like_list:
-            result_list.append(self.mapLikesToDic(m))
-        return jsonify(Like_list=result_list)
-
     def getMessageDislikes(self, mid):
         dao = ReactionDAO()
         dislikes = dao.getMessageDislikes(mid)
         return jsonify(Dislikes=dislikes)
 
-    def getWhoDislikedMessage(self, mid):
-        dao = ReactionDAO()
-        dislike_list = dao.getWhoDisLikedMessage(mid)
-        result_list = []
-        for m in dislike_list:
-            result_list.append(self.mapLikesToDic(m))
-        return jsonify(Dislike_list=result_list)
+    def getWhoLikedMessage(self, mid, args):
+        who = args.get("who")
+        if (len(args) == 1) and who:
+            dao = ReactionDAO()
+            like_list = dao.getWhoLikedMessage(mid)
+            result_list = []
+            for m in like_list:
+                result_list.append(self.build_user_dict(m))
+            return jsonify(Like_list=result_list)
+        else:
+            return jsonify(Error="Malformed query string"), 400
 
-    def like(self, form):
+    def getWhoDislikedMessage(self, mid, args):
+        who = args.get("who")
+        if (len(args) == 1) and who:
+            dao = ReactionDAO()
+            dislike_list = dao.getWhoDislikedMessage(mid)
+            result_list = []
+            for m in dislike_list:
+                result_list.append(self.build_user_dict(m))
+            return jsonify(Dislike_list=result_list)
+        else:
+            return jsonify(Error="Malformed query string"), 400
+
+    def like(self, mid, json):
         """Add a like on the message"""
-        if len(form) != 2:
+        if len(json) != 1:
             return jsonify(Error="Malformed post request"), 400
         else:
-            mid = form['mid']
-            pid = form['pid']
-            if pid and mid:
+            pid = json['pid']
+            if pid:
                 dao = ReactionDAO()
-                mid = dao.insertLike(mid, pid)
+                if not dao.getWhoLikedById(mid, pid):
+                    mid = dao.insertLike(mid, pid)
+                else:
+                    dao.deleteLike(mid, pid)
                 result = self.map_likes_dislikes_attributes(mid, pid)
                 return jsonify(Message=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 
-    def unlike(self, mid, pid):
-        """delete a like on a message"""
-        dao = ReactionDAO()
-        if not dao.getWhoLikedById(mid, pid):
-            return jsonify(Error="User not found."), 404
-        else:
-            dao.deleteDislike(mid, pid)
-            return jsonify(DeleteStatus="OK"), 200
-
-    def dislike(self, form):
+    def dislike(self, mid, json):
         """Add a like on the message"""
-        if len(form) != 2:
+        if len(json) != 1:
             return jsonify(Error="Malformed post request"), 400
         else:
-            mid = form['mid']
-            pid = form['pid']
-            if pid and mid:
+            pid = json['pid']
+            if pid:
                 dao = ReactionDAO()
-                mid = dao.insertDislike(mid, pid)
+                if not dao.getWhoDislikedById(mid, pid):
+                    mid = dao.insertDislike(mid, pid)
+                else:
+                    dao.deleteDislike(mid, pid)
                 result = self.map_likes_dislikes_attributes(mid, pid)
-                return jsonify(Dislike=result), 201
+                return jsonify(Message=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 

@@ -101,13 +101,16 @@ def getMessageInGroup(gid, mid):
 
 @app.route('/MessageApp/messages', methods=['GET', 'POST'])
 def getAllMessages():
-    if request.method == 'POST':
+    if request.method == 'GET':
+        if not request.args:
+            return MessageHandler().getAllMessages()
+        else:
+            return MessageHandler().searchMessages(request.args)
+    elif request.method == 'POST':
         return MessageHandler().addMessage(request.form)
-    else:
-        return MessageHandler().getAllMessages()
 
 
-@app.route('/MessegeApp/messages/<int:mid>', methods=['GET', 'PUT', 'DELETE'])
+@app.route('/MessageApp/messages/<int:mid>', methods=['GET', 'PUT', 'DELETE'])
 def getMessageById(mid):
     if request.method == 'GET':
         return MessageHandler().getMessageById(mid)
@@ -119,38 +122,56 @@ def getMessageById(mid):
         return jsonify(Error="Method not allowed."), 405
 
 
-# @app.route('/MessageApp/messages/by/<int:pid>')
-# def getMessageBySender(pid):
-#     return MessageHandler().getAllMessagesBySender(pid)
-
 @app.route('/MessageApp/messages/<int:mid>/replies')
 def getMessageReplies(mid):
     return MessageHandler().getReplies(mid)
 
 
-@app.route('/MessageApp/messages/<int:mid>/number-of-likes')
-def number_of_likes(mid):
-    return ReactionHandler().getMessageLikes(mid)
+@app.route('/MessageApp/messages/<int:mid>/likes', methods=['GET', 'POST'])
+def likes(mid):
+    if request.method == 'GET':
+        if not request.args:
+            return ReactionHandler().getMessageLikes(mid)
+        else:
+            return ReactionHandler().getWhoLikedMessage(mid, request.args)
+    elif request.method == 'POST':
+        return ReactionHandler().like(mid, request.json)
 
 
-@app.route('/MessageApp/messages/<int:mid>/who-likes')
-def get_who_liked(mid):
-    return ReactionHandler().getWhoLikedMessage(mid)
+@app.route('/MessageApp/messages/<int:mid>/dislikes', methods=['GET', 'POST'])
+def dislikes(mid):
+    if request.method == 'GET':
+        if not request.args:
+            return ReactionHandler().getMessageDislikes(mid)
+        else:
+            return ReactionHandler().getWhoDislikedMessage(mid, request.args)
+    elif request.method == 'POST':
+        return ReactionHandler().dislike(mid, request.json)
 
 
-@app.route('/MessageApp/messages/<int:mid>/number-of-dislikes')
-def number_of_dislikes(mid):
-    return ReactionHandler().getMessageDislikes(mid)
+# @app.route('/MessageApp/messages/<int:mid>/number-of-likes')
+# def number_of_likes(mid):
+#     return ReactionHandler().getMessageLikes(mid)
+#
+#
+# @app.route('/MessageApp/messages/<int:mid>/who-likes')
+# def get_who_liked(mid):
+#     return ReactionHandler().getWhoLikedMessage(mid)
 
 
-@app.route('/MessageApp/messages/<int:mid>/who-dislikes')
-def get_who_disliked(mid):
-    return ReactionHandler().getWhoDislikedMessage(mid)
+# @app.route('/MessageApp/messages/<int:mid>/number-of-dislikes')
+# def number_of_likes(mid):
+#     return ReactionHandler().getMessageDislikes(mid)
+#
+#
+# @app.route('/MessageApp/messages/<int:mid>/who-dislikes')
+# def get_who_disliked(mid):
+#     return ReactionHandler().getWhoDislikedMessage(mid)
 
 
-@app.route('/MessageApp/messages/hashtag/<string:tag>')
-def getAllMessagesWithHashtag(tag):
-    return MessageHandler().getAllMessagesWithHashtag(tag)
+# @app.route('/MessageApp/messages/hashtag/<string:tag>')
+# def getAllMessagesWithHashtag(tag):
+#     return MessageHandler().getAllMessagesWithHashtag(tag)
 
 
 if __name__ == '__main__':

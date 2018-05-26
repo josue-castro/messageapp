@@ -124,24 +124,19 @@ class MessageHandler:
         return jsonify(Messages=result_list)
 
     def searchMessages(self, args):
-        group = args.get("gid")
-        user = args.get("pid")
-        date = args.get('date')
+        username = args.get("username")
+        hashtag = args.get("hashtag")
         dao = MessageDAO()
-        message_list = []
-        if (len(args) == 2) and group and user:
-            message_list = dao.getAllMessagesInGroupBySenderINFO(group, user)
-        elif (len(args) == 3) and group and user and date:
-            message_list = dao.getMessagesByGroupPersonAndDate(group, user, date)
-        elif (len(args) == 1) and user:
-            message_list = dao.getAllMessagesBySenderINFO(user)
+        if (len(args) == 1) and username:
+            message_list = dao.getAllMessagesByUsername(username)
+        elif (len(args) == 1) and hashtag:
+            message_list = dao.getAllMessagesWithHashtagINFO(hashtag)
         else:
             return jsonify(Error="Malformed query string"), 400
         result_list = []
         for row in message_list:
-            result = self.build_message_dict(row)
-            result_list.append(result)
-            return jsonify(Messages=result_list)
+            result_list.append(self.build_message_dict(row))
+        return jsonify(Message_list=result_list)
 
     def getReplies(self, mid):
         dao = MessageDAO()

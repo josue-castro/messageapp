@@ -53,23 +53,34 @@ class MessageDAO:
             result.append(row)
         return result
 
-    def getAllMessagesInGroupBySenderINFO(self, gid, username):
-        cursor = self.conn.cursor()
-        query = "SELECT mid, content, pid, gid, date, username " \
-                "FROM messages NATURAL INNER JOIN person " \
-                "WHERE username = %s AND gid = %s ORDER BY date DESC;"
-        cursor.execute(query, (username, gid))
-        result = []
-        for row in cursor:
-            result.append(row)
-        return result
-
     def getAllMessagesWithHashtagINFO(self, tag):
         cursor = self.conn.cursor()
         query = "SELECT mid, content, pid, gid, date, username " \
                 "FROM tagged NATURAL INNER JOIN hashtag NATURAL INNER JOIN person NATURAL INNER JOIN messages " \
                 "WHERE tag = %s ORDER BY date DESC;"
         cursor.execute(query, (tag,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesByUsername(self, username):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE username = %s ORDER BY date DESC;"
+        cursor.execute(query, (username,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesInGroupBySenderINFO(self, gid, username):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE username = %s AND gid = %s ORDER BY date DESC;"
+        cursor.execute(query, (username, gid))
         result = []
         for row in cursor:
             result.append(row)
