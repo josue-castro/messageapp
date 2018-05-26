@@ -91,13 +91,13 @@ class MessageHandler:
             result_list.append(self.build_message_dict(row))
         return jsonify(Messages=result_list)
 
-    def getAllMessagesBySender(self, pid):
-        dao = MessageDAO()
-        result = dao.getAllMessagesBySenderINFO(pid)
-        mapped_results = []
-        for m in result:
-            mapped_results.append(self.build_message_dict(m))
-        return jsonify(Messages_by=mapped_results)
+    # def getAllMessagesBySender(self, pid):
+    #     dao = MessageDAO()
+    #     result = dao.getAllMessagesBySenderINFO(pid)
+    #     mapped_results = []
+    #     for m in result:
+    #         mapped_results.append(self.build_message_dict(m))
+    #     return jsonify(Messages_by=mapped_results)
 
     def getAllMessagesInGroupBySender(self, gid, pid):
         dao = MessageDAO()
@@ -152,7 +152,7 @@ class MessageHandler:
         return jsonify(Replies=result_list)
 
     def addMessage(self, gid, json):
-        if len(json) != 2:
+        if len(json) >= 2:
             return jsonify(Error="Malformed post request"), 400
         else:
             content = json['content']
@@ -161,6 +161,22 @@ class MessageHandler:
                 message_dao = MessageDAO()
                 mid_date = message_dao.insertMessage(content, pid, gid)
                 result = self.build_message_attributes_with_date(mid_date[0], content, pid, gid, mid_date[1])
+                return jsonify(Message=result), 201
+            else:
+                return jsonify(Error="Unexpected attributes in post request"), 400
+
+    def addReplyMessage(self, gid, mid, json):
+        if len(json) != 2:
+            return jsonify(Error="Malformed post request"), 400
+        else:
+            content = json['content']
+            pid = json['pid']
+            if content and pid:
+                dao = MessageDAO()
+                original_message = dao.getMessageById(mid)
+                reply_message = '"RE: ' + original_message[1] + '" ' + content
+                mid_date = dao.insertMessage(reply_message, pid, gid)
+                result = self.build_message_attributes_with_date(mid_date[0], reply_message, pid, gid, mid_date[1])
                 return jsonify(Message=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400

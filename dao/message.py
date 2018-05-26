@@ -32,15 +32,15 @@ class MessageDAO:
         result = cursor.fetchone()
         return result
 
-    def getAllMessagesBySenderINFO(self, pid):
-        cursor = self.conn.cursor()
-        query = "SELECT mid, content, pid, gid, date, username " \
-                "FROM messages NATURAL INNER JOIN person WHERE pid = %s ORDER BY date DESC;"
-        cursor.execute(query, (pid,))
-        result = []
-        for row in cursor:
-            result.append(row)
-        return result
+    # def getAllMessagesBySenderINFO(self, pid):
+    #     cursor = self.conn.cursor()
+    #     query = "SELECT mid, content, pid, gid, date, username " \
+    #             "FROM messages NATURAL INNER JOIN person WHERE pid = %s ORDER BY date DESC;"
+    #     cursor.execute(query, (pid,))
+    #     result = []
+    #     for row in cursor:
+    #         result.append(row)
+    #     return result
 
     def getAllGroupMessagesINFO(self, gid):
         cursor = self.conn.cursor()

@@ -16,16 +16,20 @@ def home():
     return "Welcome to Message App"
 
 
-@app.route('/MessageApp/register', methods=['POST'])
+@app.route('/MessageApp/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         return UserHandler().insertUser(request.json)
+    else:
+        return render_template('register.html')
 
 
-@app.route('/MessageApp/login', methods=['POST'])
+@app.route('/MessageApp/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         return UserHandler().UserLogin(request.json)
+    else:
+        return render_template('login.html')
 
 
 @app.route('/MessageApp/users', methods=['GET'])
@@ -35,15 +39,6 @@ def users():
             return UserHandler().getAllUsers()
         else:
             return UserHandler().searchUser(request.args)
-
-
-# @app.route('/MessageApp/users/<string:username>')
-# def getUserByUsername(username):
-#     return UserHandler().getUserByUsername(username)
-
-# @app.route('/MessageApp/users/<string:firstName>-<string:lastName>')
-# def getUserSearchByName(firstName, lastName):
-#     return UserHandler().getUserSearchByName(firstName, lastName)
 
 
 @app.route('/MessageApp/users/<int:pid>', methods=['GET', 'PUT'])
@@ -59,10 +54,6 @@ def getMyContacts(pid):
             return UserHandler().getUserContacts(pid)
         else:
             return UserHandler().searchContacts(pid, request.args)
-
-# @app.route('/MessageApp/users/<int:pid>/contacts/<string:firstName>-<string:lastName>')
-# def getUserContactsByName(pid,firstName, lastName):
-#     return UserHandler().getUserContactsByName(pid, firstName, lastName)
 
 
 @app.route('/MessageApp/users/<int:pid>/mygroups')
@@ -90,7 +81,7 @@ def getGroupMembers(gid):
 
 
 @app.route('/MessageApp/groups/<int:gid>/messages', methods=['GET', 'POST'])
-def get_messages_in_chat(gid):
+def getMessagesInChat(gid):
     if request.method == 'GET':
         if not request.args:
             return MessageHandler().getAllGroupMessages(gid)
@@ -100,14 +91,12 @@ def get_messages_in_chat(gid):
         return MessageHandler().addMessage(gid, request.json)
 
 
-@app.route('/MessageApp/groups/<int:gid>/messages/by/<int:pid>')
-def getMessageInGroupBySender(gid, pid):
-    return MessageHandler().getAllMessagesInGroupBySender(gid, pid)
-
-
-@app.route('/MessageApp/groups/<int:gid>/messages/hashtag/<string:tag>')
-def getAllMessagesInGroupWithHashtag(gid, tag):
-    return MessageHandler().getAllMessagesInGroupWithHashtag(gid, tag)
+@app.route('/MessageApp/groups/<int:gid>/messages/<int:mid>', methods=['GET', 'POST'])
+def getMessageInGroup(gid, mid):
+    if request.method == 'GET':
+        return MessageHandler().getMessageById(mid)
+    elif request.method == 'POST':
+        return MessageHandler().addReplyMessage(gid, mid, request.json)
 
 
 @app.route('/MessageApp/messages', methods=['GET', 'POST'])
@@ -130,9 +119,9 @@ def getMessageById(mid):
         return jsonify(Error="Method not allowed."), 405
 
 
-@app.route('/MessageApp/messages/by/<int:pid>')
-def getMessageBySender(pid):
-    return MessageHandler().getAllMessagesBySender(pid)
+# @app.route('/MessageApp/messages/by/<int:pid>')
+# def getMessageBySender(pid):
+#     return MessageHandler().getAllMessagesBySender(pid)
 
 @app.route('/MessageApp/messages/<int:mid>/replies')
 def getMessageReplies(mid):
