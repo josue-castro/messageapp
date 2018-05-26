@@ -75,7 +75,7 @@ class GroupsDAO:
 
     def getGroupMembersINFO(self, gid):
         cursor = self.conn.cursor()
-        query = "SELECT username, firstName, lastName " \
+        query = "SELECT pid, firstname, lastname, username, phone, email " \
                 "FROM members NATURAL INNER JOIN person " \
                 "WHERE gid = %s;"
         cursor.execute(query, (gid,))

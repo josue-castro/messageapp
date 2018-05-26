@@ -19,6 +19,16 @@ class GroupHandler:
         result['gname'] = row[1]
         return result
 
+    def build_user_dict(self, row):
+        result = {}
+        result['pid'] = row[0]
+        result['firstname'] = row[1]
+        result['lastname'] = row[2]
+        result['username'] = row[3]
+        result['phone'] = row[4]
+        result['email'] = row[5]
+        return result
+
     def build_member_dict(self, row):
         result = {}
         result['username'] = row[0]
@@ -71,7 +81,7 @@ class GroupHandler:
         member_list = dao.getGroupMembersINFO(gid)
         result_list = []
         for row in member_list:
-            result_list.append(self.build_member_dict(row))
+            result_list.append(self.build_user_dict(row))
         return jsonify(Members=result_list)
 
     def insertGroup(self, form):

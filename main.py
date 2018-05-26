@@ -5,6 +5,7 @@ from handlers.messages import MessageHandler
 from handlers.groups import GroupHandler
 from handlers.reactions import ReactionHandler
 from handlers.users import UserHandler
+from handlers.members import MemberHandler
 from flask_cors import CORS
 
 app = Flask(__name__, template_folder='template')
@@ -21,7 +22,7 @@ def register():
     if request.method == 'POST':
         return UserHandler().insertUser(request.json)
     else:
-        return render_template('register.html')
+        return "Register"
 
 
 @app.route('/MessageApp/login', methods=['GET', 'POST'])
@@ -29,7 +30,7 @@ def login():
     if request.method == 'POST':
         return UserHandler().UserLogin(request.json)
     else:
-        return render_template('login.html')
+        return "Login"
 
 
 @app.route('/MessageApp/users', methods=['GET'])
@@ -61,9 +62,14 @@ def getUserGroups(pid):
     return UserHandler().getUserGroups(pid)
 
 
-@app.route('/MessageApp/users/<int:pid>/mygroups/admin')
+@app.route('/MessageApp/users/<int:pid>/mygroups/admin', methods=['GET', 'POST'])
 def getAllGroupsAdminByUser(pid):
-    return GroupHandler().getAllGroupsAdminByUser(pid)
+    if request.method == 'GET':
+        if not request.args:
+            return GroupHandler().getAllGroupsAdminByUser(pid)
+    elif request.method == 'POST':
+        return MemberHandler().addMember(pid, request.json)
+
 
 
 @app.route('/MessageApp/groups')
