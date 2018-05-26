@@ -1,5 +1,6 @@
 from flask import jsonify
 from dao.message import MessageDAO
+from dao.group import GroupsDAO
 
 
 class MessageHandler:
@@ -147,7 +148,7 @@ class MessageHandler:
         return jsonify(Replies=result_list)
 
     def addMessage(self, gid, json):
-        if len(json) >= 2:
+        if len(json) != 2:
             return jsonify(Error="Malformed post request"), 400
         else:
             content = json['content']
