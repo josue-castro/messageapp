@@ -151,14 +151,13 @@ class MessageHandler:
             result_list.append(self.build_message_dict(row))
         return jsonify(Replies=result_list)
 
-    def addMessage(self, form):
-        if len(form) != 5:
+    def addMessage(self, gid, json):
+        if len(json) != 2:
             return jsonify(Error="Malformed post request"), 400
         else:
-            content = form['content']
-            pid = form['pid']
-            gid = form['gid']
-            if content and pid and gid:
+            content = json['content']
+            pid = json['pid']
+            if content and pid:
                 message_dao = MessageDAO()
                 mid_date = message_dao.insertMessage(content, pid, gid)
                 result = self.build_message_attributes_with_date(mid_date[0], content, pid, gid, mid_date[1])
@@ -182,26 +181,6 @@ class MessageHandler:
                     dao.updateMessage(mid, content)
                     result = self.build_message_attributes_without_date(mid, content, pid, gid)
                     return jsonify(new_Message=result), 200
-                else:
-                    return jsonify(Error="Unexpected attributes in update request"), 400
-
-    def updateMessageINFO(self, mid, form):
-        """Only update the info of a message in messages table.
-        Form should have mid, content, pid, gid"""
-        dao = MessageDAO()
-        if not dao.getMessageById(mid):
-            return jsonify(Error="Part not found."), 404
-        else:
-            if len(form) != 1:
-                return jsonify(Error="Malformed update request"), 400
-            else:
-                content = form['content']
-                pid = form['pid']
-                gid = form['gid']
-                if content:
-                    dao.updateMessageInfo(mid, content, pid, gid)
-                    result = self.build_message_dict(content)
-                    return jsonify(updated_info=result), 200
                 else:
                     return jsonify(Error="Unexpected attributes in update request"), 400
 

@@ -96,6 +96,8 @@ def get_messages_in_chat(gid):
             return MessageHandler().getAllGroupMessages(gid)
         else:
             return MessageHandler().searchGroupMessages(gid, request.args)
+    elif request.method == 'POST':
+        return MessageHandler().addMessage(gid, request.json)
 
 
 @app.route('/MessageApp/groups/<int:gid>/messages/by/<int:pid>')
