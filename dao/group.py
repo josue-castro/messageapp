@@ -15,8 +15,7 @@ class GroupsDAO:
 
     def getAllGroupsINFO(self):
         cursor = self.conn.cursor()
-        query = "SELECT gid, gname, pid, username, firstName, lastName " \
-                "FROM groupchat NATURAL INNER JOIN person;"
+        query = "SELECT * FROM groupchat;"
         cursor.execute(query)
         result = []
         for row in cursor:
@@ -25,18 +24,14 @@ class GroupsDAO:
 
     def getGroupByIdINFO(self, gid):
         cursor = self.conn.cursor()
-        query = "SELECT gid, gname, pid, username, firstName, lastName " \
-                "FROM groupchat NATURAL INNER JOIN person " \
-                "WHERE gid = %s;"
+        query = "SELECT * FROM groupchat WHERE gid = %s;"
         cursor.execute(query, (gid,))
         result = cursor.fetchone()
         return result
 
     def getGroupByGroupNameINFO(self, gName):
         cursor = self.conn.cursor()
-        query = "SELECT gid, gname, pid, username, firstName, lastName " \
-                "FROM groupchat NATURAL INNER JOIN person " \
-                "WHERE gName = %s;"
+        query = "SELECT * FROM groupchat WHERE gName = %s;"
         cursor.execute(query, gName)
         result = []
         for row in cursor:
@@ -52,19 +47,19 @@ class GroupsDAO:
     #         result.append(row)
     #     return result
 
-    # def getGroupAdminINFO(self, gid):
-    #     cursor = self.conn.cursor()
-    #     query = "SELECT pid, firstname, lastname, username, phone, email " \
-    #             " FROM GroupChat NATURAL INNER JOIN person " \
-    #             "WHERE gid = %s;"
-    #     cursor.execute(query, (gid,))
-    #     result = cursor.fetchone()
-    #     return result
+    def getGroupAdminINFO(self, gid):
+        cursor = self.conn.cursor()
+        query = "SELECT pid, firstname, lastname, username, phone, email " \
+                "FROM GroupChat NATURAL INNER JOIN person " \
+                "WHERE gid = %s;"
+        cursor.execute(query, (gid,))
+        result = cursor.fetchone()
+        return result
 
     def getAllGroupsAdminByUserINFO(self, pid):
         """get all groups that are administrated by User with pid = pid"""
         cursor = self.conn.cursor()
-        query = "SELECT gid, gname " \
+        query = "SELECT gid, gname, pid " \
                 "FROM groupchat NATURAL INNER JOIN person " \
                 "WHERE pid = %s;"
         cursor.execute(query, (pid,))
@@ -82,6 +77,13 @@ class GroupsDAO:
         result = []
         for row in cursor:
             result.append(row)
+        return result
+
+    def userIsMember(self, pid, gid):
+        cursor = self.conn.cursor()
+        query = "SELECT pid FROM members NATURAL INNER JOIN person WHERE pid = %s AND gid = %s;"
+        cursor.execute(query, (pid, gid,))
+        result = cursor.fetchone()
         return result
 
     def insertGroup(self, gname, pid):

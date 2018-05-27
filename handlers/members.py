@@ -38,7 +38,7 @@ class MemberHandler:
                 group_dao = GroupsDAO()
                 if gid in group_dao.getAllGroupsAdminByUserINFO(pid)[0]:
                     user_id = user_dao.getUserByUsername(username)[0]
-                    if user_id not in group_dao.getGroupMembersINFO(gid)[0]:
+                    if gid not in user_dao.getUserGroups(user_id)[0]:
                         member_dao.insertMember(gid, user_id)
                         result = self.build_member_attributes(gid, user_id)
                         return jsonify(new_Member=result), 201

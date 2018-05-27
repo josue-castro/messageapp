@@ -154,10 +154,14 @@ class MessageHandler:
             content = json['content']
             pid = json['pid']
             if content and pid:
-                message_dao = MessageDAO()
-                mid_date = message_dao.insertMessage(content, pid, gid)
-                result = self.build_message_attributes_with_date(mid_date[0], content, pid, gid, mid_date[1])
-                return jsonify(Message=result), 201
+                validate = GroupsDAO().userIsMember(pid, gid)
+                if validate:
+                    message_dao = MessageDAO()
+                    mid_date = message_dao.insertMessage(content, pid, gid)
+                    result = self.build_message_attributes_with_date(mid_date[0], content, pid, gid, mid_date[1])
+                    return jsonify(Message=result), 201
+                else:
+                    return jsonify(Error="You must be a member to post"), 400
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 
@@ -168,13 +172,17 @@ class MessageHandler:
             content = json['content']
             pid = json['pid']
             if content and pid:
-                dao = MessageDAO()
-                original_message = dao.getMessageById(mid)
-                reply_message = '"RE: ' + original_message[1] + '" ' + content
-                mid_date = dao.insertMessage(reply_message, pid, gid)
-                dao.insertReply(mid, mid_date[0])
-                result = self.build_message_attributes_with_date(mid_date[0], reply_message, pid, gid, mid_date[1])
-                return jsonify(Message=result), 201
+                validate = GroupsDAO().userIsMember(pid, gid)
+                if validate:
+                    dao = MessageDAO()
+                    original_message = dao.getMessageById(mid)
+                    reply_message = '"RE: ' + original_message[1] + '" ' + content
+                    mid_date = dao.insertMessage(reply_message, pid, gid)
+                    dao.insertReply(mid, mid_date[0])
+                    result = self.build_message_attributes_with_date(mid_date[0], reply_message, pid, gid, mid_date[1])
+                    return jsonify(Message=result), 201
+                else:
+                    return jsonify(Error="You must be a member to post"), 400
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 

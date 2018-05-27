@@ -100,7 +100,7 @@ class ReactionDAO:
         """Insert when someone liked a message"""
         cursor = self.conn.cursor()
         query = "INSERT INTO likes (mid, pid) VALUES (%s, %s) " \
-                "RETURNING pid;"
+                "RETURNING mid;"
         cursor.execute(query, (mid, pid))
         mid = cursor.fetchone()[0]
         self.conn.commit()

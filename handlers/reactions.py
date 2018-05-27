@@ -55,7 +55,7 @@ class ReactionHandler:
 
     def getWhoLikedMessage(self, mid, args):
         who = args.get("who")
-        if (len(args) == 1) and who:
+        if (len(args) == 1) and who == 'true':
             dao = ReactionDAO()
             like_list = dao.getWhoLikedMessage(mid)
             result_list = []
@@ -67,7 +67,7 @@ class ReactionHandler:
 
     def getWhoDislikedMessage(self, mid, args):
         who = args.get("who")
-        if (len(args) == 1) and who:
+        if (len(args) == 1) and who == 'true':
             dao = ReactionDAO()
             dislike_list = dao.getWhoDislikedMessage(mid)
             result_list = []
@@ -141,7 +141,7 @@ class ReactionHandler:
         if not dao.getMessageHashtagById(mid, hid):
             return jsonify(Error="User not found."), 404
         else:
-            dao.deleteDislike(mid, pid)
+            dao.deleteDislike(mid, hid)
             return jsonify(DeleteStatus="OK"), 200
 
     def createNewHashtag(self, form):

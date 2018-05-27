@@ -81,6 +81,11 @@ def getGroupById(gid):
     return GroupHandler().getGroupByIdINFO(gid)
 
 
+@app.route('/MessageApp/groups/<int:gid>/admin')
+def getGroupAdmin(gid):
+    return GroupHandler().getGroupAdminInfo(gid)
+
+
 @app.route('/MessageApp/groups/<int:gid>/members')
 def getGroupMembers(gid):
     return GroupHandler().getGroupMembersINFO(gid)

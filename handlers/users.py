@@ -13,15 +13,6 @@ class UserHandler:
         result['email'] = row[5]
         return result
 
-    def build_user_contact_dict(self, row):
-        result = {}
-        result['firstname'] = row[0]
-        result['lastname'] = row[1]
-        result['username'] = row[2]
-        result['phone'] = row[3]
-        result['email'] = row[4]
-        return result
-
     def build_user_groups_dict(self, row):
         result = {}
         result['gid'] = row[0]
@@ -79,15 +70,18 @@ class UserHandler:
         lastname = args.get("lastname")
         phone = args.get("phone")
         email = args.get("email")
+        pid = args.get("pid")
         dao = UserDAO()
 
-        if (len(args) == 1) and (username or email or phone):
+        if (len(args) == 1) and (username or email or phone or pid):
             if username:
                 row = dao.getUserByUsername(username)
             elif phone:
                 row = dao.getUserByPhone(phone)
-            else:
+            elif email:
                 row = dao.getUserByEmail(email)
+            else:
+                row = dao.getUserById(pid)
 
             if not row:
                 return jsonify(Error="User Not Found"), 404
@@ -152,7 +146,7 @@ class UserHandler:
         contact_list = dao.getUserContacts(pid)
         result_list = []
         for row in contact_list:
-            result_list.append(self.build_user_contact_dict(row))
+            result_list.append(self.build_user_dict(row))
         return jsonify(My_contacts=result_list)
 
     def searchContacts(self, pid, args):

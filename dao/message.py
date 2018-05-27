@@ -108,9 +108,9 @@ class MessageDAO:
 
     def getReplies(self, mid):
         cursor = self.conn.cursor()
-        query = "SELECT mid, content, pid, gid, date " \
-                "FROM replies NATURAL INNER JOIN messages " \
-                "WHERE mid = %s ORDER BY date DESC;"
+        query = "SELECT reply_id as mid, content, pid, gid, date, username " \
+                "FROM (messages INNER JOIN replies ON messages.mid = replies.reply_id) NATURAL INNER JOIN person " \
+                "WHERE replies.mid = %s ORDER BY date DESC;"
         cursor.execute(query, (mid,))
         result = []
         for row in cursor:

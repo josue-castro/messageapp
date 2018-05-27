@@ -71,7 +71,7 @@ class UserDAO:
         """Gets groups where User with pid = pid is a member,
         not necessarily admin"""
         cursor = self.conn.cursor()
-        query = "SELECT gid, gname, members.pid FROM members INNER JOIN groupchat USING (gid) WHERE members.pid = %s;"
+        query = "SELECT gid, gname, groupchat.pid FROM members INNER JOIN groupchat USING (gid) WHERE members.pid = %s;"
         cursor.execute(query, (pid,))
         result = []
         for row in cursor:
@@ -80,7 +80,7 @@ class UserDAO:
 
     def getUserContacts(self, pid):
         cursor = self.conn.cursor()
-        query = "SELECT pid, firstname, lastname, username, phone, email " \
+        query = "SELECT c.contact_id, firstname, lastname, username, phone, email " \
                 "FROM contacts c INNER JOIN person p ON c.contact_id = p.pid WHERE c.pid = %s;"
         cursor.execute(query, (pid,))
         result = []
@@ -90,7 +90,7 @@ class UserDAO:
 
     def getUserContactsByName(self, pid, firstName, lastName):
         cursor = self.conn.cursor()
-        query = "SELECT c.pid, firstname, lastname, username, phone, email " \
+        query = "SELECT c.contact_id, firstname, lastname, username, phone, email " \
                 "FROM contacts c INNER JOIN person p ON c.contact_id = p.pid " \
                 "WHERE c.pid = %s AND lower(p.firstname) = lower(%s) AND lower(p.lastname) = lower(%s);"
         cursor.execute(query, (pid, firstName, lastName,))
