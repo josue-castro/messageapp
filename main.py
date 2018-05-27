@@ -1,13 +1,13 @@
 # heroku Password: 3b884db910a7ed97661a75d3203b101e7bf41248fb6c8b36d39ff02dc1556fd5
 
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, jsonify, request
 from handlers.messages import MessageHandler
 from handlers.groups import GroupHandler
 from handlers.reactions import ReactionHandler
 from handlers.users import UserHandler
 from handlers.members import MemberHandler
 from handlers.dashboard import DashboardHandler
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__, template_folder='template')
 

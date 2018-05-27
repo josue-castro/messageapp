@@ -34,7 +34,7 @@ class DashboardHandler:
         list = dao.topTenHashtags()
         result_list = []
         for row in list:
-            result_list.append(row)
+            result_list.append(self.build_hashtag_count(row))
         return jsonify(Hashtag_count=result_list)
 
     def repliesPerDay(self):
