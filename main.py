@@ -6,6 +6,7 @@ from handlers.groups import GroupHandler
 from handlers.reactions import ReactionHandler
 from handlers.users import UserHandler
 from handlers.members import MemberHandler
+from handlers.dashboard import DashboardHandler
 from flask_cors import CORS
 
 app = Flask(__name__, template_folder='template')
@@ -71,7 +72,6 @@ def getAllGroupsAdminByUser(pid):
         return MemberHandler().addMember(pid, request.json)
 
 
-
 @app.route('/MessageApp/groups')
 def groups():
     return GroupHandler().getAllGroupsINFO()
@@ -112,25 +112,8 @@ def getAllMessages():
             return MessageHandler().getAllMessages()
         else:
             return MessageHandler().searchMessages(request.args)
-    elif request.method == 'POST':
-        return MessageHandler().addMessage(request.form)
-
-
-@app.route('/MessageApp/messages/<int:mid>', methods=['GET', 'PUT', 'DELETE'])
-def getMessageById(mid):
-    if request.method == 'GET':
-        return MessageHandler().getMessageById(mid)
-    elif request.method == 'PUT':
-        return MessageHandler().updateMessage(mid, request.form)
-    elif request.method == 'DELETE':
-        return MessageHandler().deleteMessage(mid)
-    else:
-        return jsonify(Error="Method not allowed."), 405
-
-
-@app.route('/MessageApp/messages/<int:mid>/replies')
-def getMessageReplies(mid):
-    return MessageHandler().getReplies(mid)
+    # elif request.method == 'POST':
+    #     return MessageHandler().addMessage(request.json)
 
 
 @app.route('/MessageApp/messages/<int:mid>/likes', methods=['GET', 'POST'])
@@ -153,6 +136,23 @@ def dislikes(mid):
             return ReactionHandler().getWhoDislikedMessage(mid, request.args)
     elif request.method == 'POST':
         return ReactionHandler().dislike(mid, request.json)
+
+
+@app.route('/MessageApp/messages/<int:mid>', methods=['GET', 'PUT', 'DELETE'])
+def getMessageById(mid):
+    if request.method == 'GET':
+        return MessageHandler().getMessageById(mid)
+    elif request.method == 'PUT':
+        return MessageHandler().updateMessage(mid, request.form)
+    elif request.method == 'DELETE':
+        return MessageHandler().deleteMessage(mid)
+    else:
+        return jsonify(Error="Method not allowed."), 405
+
+
+@app.route('/MessageApp/messages/<int:mid>/replies')
+def getMessageReplies(mid):
+    return MessageHandler().getReplies(mid)
 
 
 # @app.route('/MessageApp/messages/<int:mid>/number-of-likes')
@@ -178,6 +178,28 @@ def dislikes(mid):
 # @app.route('/MessageApp/messages/hashtag/<string:tag>')
 # def getAllMessagesWithHashtag(tag):
 #     return MessageHandler().getAllMessagesWithHashtag(tag)
+
+
+@app.route('/MessageApp/dashboard/countmessagesperday')
+def countDailyMessages():
+    return DashboardHandler().messagesPerDay()
+
+
+@app.route("/MessageApp/dashboard/toptenhashtags")
+def trendingHashtags():
+    return DashboardHandler().topTenHashtags()
+
+@app.route("/MessageApp/dashboard/activeusers")
+def activeUsers():
+    return DashboardHandler().topTenHashtags()
+
+@app.route("/MessageApp/dashboard/dailylikes")
+def dailyLikes():
+    return DashboardHandler().likesPerDay()
+
+@app.route("/MessageApp/dashboard/dailydislikes")
+def dailyDisikes():
+    return DashboardHandler().dislikesPerDay()
 
 
 if __name__ == '__main__':

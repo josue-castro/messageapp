@@ -172,6 +172,7 @@ class MessageHandler:
                 original_message = dao.getMessageById(mid)
                 reply_message = '"RE: ' + original_message[1] + '" ' + content
                 mid_date = dao.insertMessage(reply_message, pid, gid)
+                dao.insertReply(mid, mid_date[0])
                 result = self.build_message_attributes_with_date(mid_date[0], reply_message, pid, gid, mid_date[1])
                 return jsonify(Message=result), 201
             else:
