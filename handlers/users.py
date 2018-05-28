@@ -184,9 +184,16 @@ class UserHandler:
             password = json['password']
             if firstname and lastname and username and (phone or email):
                 dao = UserDAO()
-                pid = dao.insert(firstname, lastname, username, phone, email, password)
-                result = self.build_user_attributes(pid, firstname, lastname, username, phone, email)
-                return jsonify(User=result), 201
+                if dao.getUserByUsername(username):
+                    return jsonify(Error="Username is already taken"), 400
+                elif dao.getUserByPhone(phone):
+                    return jsonify(Error="This phone is already registered"), 400
+                elif dao.getUserByEmail(email):
+                    return jsonify(Error="This email is already registered"), 400
+                else:
+                    pid = dao.insert(firstname, lastname, username, phone, email, password)
+                    result = self.build_user_attributes(pid, firstname, lastname, username, phone, email)
+                    return jsonify(User=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 
