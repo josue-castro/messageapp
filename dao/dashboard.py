@@ -24,7 +24,7 @@ class DashboardDAO:
     def topTenHashtags(self):
         cursor = self.conn.cursor()
         query = "SELECT tag, count(*) AS count FROM tagged NATURAL INNER JOIN hashtag " \
-                "GROUP BY tag ORDER BY count DESC LIMIT 10"
+                "GROUP BY tag ORDER BY count LIMIT 10"
         cursor.execute(query)
         result = []
         for row in cursor:
@@ -65,6 +65,18 @@ class DashboardDAO:
     def dislikesPerDay(self):
         cursor = self.conn.cursor()
         query = "SELECT date(date), count(*) FROM dislikes GROUP BY date(date) ORDER BY date;"
+        cursor.execute(query)
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def topActiveUsers(self):
+        cursor = self.conn.cursor()
+        query = "SELECT username, count(*) as count " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE date(date) = date(now()) " \
+                "GROUP BY username ORDER BY count DESC LIMIT 10;"
         cursor.execute(query)
         result = []
         for row in cursor:

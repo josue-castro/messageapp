@@ -185,26 +185,34 @@ def getMessageReplies(mid):
 #     return MessageHandler().getAllMessagesWithHashtag(tag)
 
 
-@app.route('/MessageApp/dashboard/countmessagesperday')
-def countDailyMessages():
-    return DashboardHandler().messagesPerDay()
-
-
 @app.route("/MessageApp/dashboard/toptenhashtags")
 def trendingHashtags():
     return DashboardHandler().topTenHashtags()
 
-@app.route("/MessageApp/dashboard/activeusers")
-def activeUsers():
-    return DashboardHandler().topTenHashtags()
+
+@app.route('/MessageApp/dashboard/dailymessages')
+def dailyMessages():
+    return DashboardHandler().messagesPerDay()
+
+
+@app.route("/MessageApp/dashboard/dailyreplies")
+def dailyReplies():
+    return DashboardHandler().repliesPerDay()
+
 
 @app.route("/MessageApp/dashboard/dailylikes")
 def dailyLikes():
     return DashboardHandler().likesPerDay()
 
+
 @app.route("/MessageApp/dashboard/dailydislikes")
 def dailyDisikes():
     return DashboardHandler().dislikesPerDay()
+
+
+@app.route("/MessageApp/dashboard/todaystopusers")
+def topUsers():
+    return DashboardHandler().topActiveUsers()
 
 
 if __name__ == '__main__':
