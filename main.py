@@ -6,6 +6,7 @@ from handlers.groups import GroupHandler
 from handlers.reactions import ReactionHandler
 from handlers.users import UserHandler
 from handlers.members import MemberHandler
+from handlers.contacts import ContactHandler
 from handlers.dashboard import DashboardHandler
 from flask_cors import CORS, cross_origin
 
@@ -56,6 +57,8 @@ def getMyContacts(pid):
             return UserHandler().getUserContacts(pid)
         else:
             return UserHandler().searchContacts(pid, request.args)
+    elif request.method == 'POST':
+        return ContactHandler().insertContact(pid, request.json)
 
 
 @app.route('/MessageApp/users/<int:pid>/mygroups', methods=['GET', 'POST'])
