@@ -14,7 +14,7 @@ class DashboardDAO:
 
     def messagesPerDay(self):
         cursor = self.conn.cursor()
-        query = "SELECT date(date), count(*) FROM messages GROUP BY date(date) LIMIT 7;"
+        query = "SELECT date(date), count(*) FROM messages GROUP BY date(date) ORDER BY date(date) LIMIT 7;"
         cursor.execute(query)
         result = []
         for row in cursor:
