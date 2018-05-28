@@ -58,9 +58,12 @@ def getMyContacts(pid):
             return UserHandler().searchContacts(pid, request.args)
 
 
-@app.route('/MessageApp/users/<int:pid>/mygroups')
+@app.route('/MessageApp/users/<int:pid>/mygroups', methods=['GET', 'POST'])
 def getUserGroups(pid):
-    return UserHandler().getUserGroups(pid)
+    if request.method == 'GET':
+        return UserHandler().getUserGroups(pid)
+    elif request.method == 'POST':
+        return GroupHandler().createGroup(pid, request.json)
 
 
 @app.route('/MessageApp/users/<int:pid>/mygroups/admin', methods=['GET', 'POST'])
