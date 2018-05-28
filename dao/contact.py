@@ -24,10 +24,9 @@ class ContactDAO:
             result.append(row)
         return result
 
-    def getMyContactByid(self, pid, contact_id):
+    def checkIsContact(self, pid, contact_id):
         cursor = self.conn.cursor()
-        query = "SELECT firstname, lastname, username, phone, email" \
-                "FROM contacts NATURAL INNER JOIN person" \
+        query = "SELECT contact_id FROM contacts NATURAL INNER JOIN person " \
                 "WHERE pid = %s AND contact_id = %s;"
         cursor.execute(query, (pid, contact_id))
         result = cursor.fetchone()

@@ -59,10 +59,15 @@ class ContactHandler:
                     contact_id = user_dao.getUserByEmail(info)[0]
                 else:
                     return jsonify(Error="User was not found"), 400
+
                 contact_dao = ContactDAO()
-                pid = contact_dao.addContact(pid, contact_id)
-                result = self.map_contact_attributes(pid, contact_id)
-                return jsonify(new_Contact=result), 201
+                exist = contact_dao.checkIsContact(pid, contact_id)
+                if not exist:
+                    pid = contact_dao.addContact(pid, contact_id)
+                    result = self.map_contact_attributes(pid, contact_id)
+                    return jsonify(new_Contact=result), 201
+                else:
+                    return jsonify(Error="User is already in your contact list"), 400
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 
