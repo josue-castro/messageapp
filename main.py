@@ -9,10 +9,15 @@ from handlers.members import MemberHandler
 from handlers.contacts import ContactHandler
 from handlers.dashboard import DashboardHandler
 from flask_cors import CORS, cross_origin
+import webbrowser
 
 app = Flask(__name__, template_folder='template')
 
 CORS(app)
+
+# webbrowser.open_new_tab('dashboardapp/index.html')
+webbrowser.open_new_tab('MessageAppWebsite/index.html')
+
 
 @app.route('/')
 def home():
@@ -81,6 +86,7 @@ def getAllGroupsAdminByUser(pid):
 @app.route('/MessageApp/groups')
 def groups():
     return GroupHandler().getAllGroupsINFO()
+
 
 @app.route('/MessageApp/groups/<int:gid>')
 def getGroupById(gid):
