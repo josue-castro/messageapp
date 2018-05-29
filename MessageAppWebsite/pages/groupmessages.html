@@ -1,0 +1,138 @@
+<div ng-cloak style="align-content: center; margin: 0; ">
+
+
+
+     <div id="enterreplymessagebox" style="margin-top:-40px;height:100%; width:100%; background:rgba(0, 0, 0, 0.5); z-index:9999; position:fixed; display:none;">
+			<div style="margin-top:10px;max-width:450px; margin: 200px auto;">
+				<div class="col s12 m6">
+					<div class="card teal darken-1">
+						<span text-white style="font-size:medium; color:white; margin-left:10px; cursor:pointer;" ng-click="groupMessagesCtrl.hideWriteReplyBox()">X</span>
+						<div class="card-content " style="background:green">
+							<i class="material-icons prefix" style="color: white">mode_edit</i> <span text-white style="font-size:larger; color:white">Enter Reply Message:</span>
+							 <textarea style="background: white" id="textarea3" class="materialize-textarea" ></textarea>
+						</div>
+						<div class="card-action white">
+							<button class="btn waves-effect waves-light " style="background:green" type="submit" name="action" ng-click="groupMessagesCtrl.postReplyMessage()">Reply
+							<i class="material-icons right">send</i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+
+    <div id="peopleWhoLike" style="margin-top:-40px;height:100%; width:100%; background:rgba(0, 0, 0, 0.5); z-index:9999; position:fixed; display:none;">
+			<div style="margin-top:10px;max-width:450px; margin: 200px auto;">
+				<div class="col s12 m6">
+					<div class="card teal darken-1">
+						<span text-white style="font-size:medium; color:white; margin-left:10px; cursor:pointer;" ng-click="groupMessagesCtrl.hideListWhoLikes()">X</span>
+						<div class="card-content " style="background:green">
+							<i class="material-icons prefix" style="color: white">mode_edit</i> <span text-white style="font-size:larger; color:white">People who liked:</span>
+							 <div style="background: white" id="listwholike">
+
+
+
+                             </div>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+
+     <div id="peopleWhoDislike" style="margin-top:-40px;height:100%; width:100%; background:rgba(0, 0, 0, 0.5); z-index:9999; position:fixed; display:none;">
+			<div style="margin-top:10px;max-width:450px; margin: 200px auto;">
+				<div class="col s12 m6">
+					<div class="card teal darken-1">
+						<span text-white style="font-size:medium; color:white; margin-left:10px; cursor:pointer;" ng-click="groupMessagesCtrl.hideListWhoDislikes()">X</span>
+						<div class="card-content " style="background:green">
+							<i class="material-icons prefix" style="color: white">mode_edit</i> <span text-white style="font-size:larger; color:white">People who disliked:</span>
+							 <div style="background: white" id="listwhodislike">
+
+
+
+                             </div>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+
+
+    <button style="margin-left:10px; background = white;" ng-click="groupMessagesCtrl.loadWriteMessageBox()">Write a message</button> | <button ng-click="groupMessagesCtrl.loadSearchHashtagBox()">Search message by hashtag</button> | <button ng-click="groupMessagesCtrl.messages()">Reload all messages</button>
+    <div class="row" id="writemessagebox">
+        <div class="col s12 m6">
+            <div class="card teal darken-1">
+                <div class="card-content " style="background:green">
+                    <i class="material-icons prefix" style="color: white">mode_edit</i> <span text-white style="font-size:larger; color:white">Message:</span>
+                     <textarea style="background: white" id="textarea1" class="materialize-textarea" ></textarea>
+                </div>
+                <div class="card-action white">
+                    <button class="btn waves-effect waves-light " style="background:green" type="submit" name="action" ng-click="groupMessagesCtrl.postMessage()">SEND
+                    <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" id="searchhashtagbox" style="display:none;" >
+        <div class="col s12 m6">
+            <div class="card teal darken-1">
+                <div class="card-content " style="background:green">
+                    <i class="material-icons prefix" style="color: white">mode_edit</i> <span text-white style="font-size:larger; color:white">Search Hashtags:</span>
+                     <textarea style="background: white" id="textarea2" class="materialize-textarea" ></textarea>
+                </div>
+                <div class="card-action white">
+                    <button class="btn waves-effect waves-light " style="background:green" type="submit" name="action" ng-click="groupMessagesCtrl.searchHashtagsMessages()">SEARCH
+                    <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--<div  id="chat-list" style="height:300px;overflow:auto">-->
+    <div>
+        <!-- Here come the messages in the chat, each one presented in card -->
+        <div ng-repeat="message in groupMessagesCtrl.messageList">
+            <!-- This card prodives space for the message and Like/dislike buttons -->
+            <div class="row">
+                <div class="col s12 m6" style="margin: 0 auto;">
+                    <div class="card">
+                        <div class="card-content">
+                            <!-- Card Title is the person who write the message -->
+                            <span class="card-title">{{message.username}}</span>
+                            <!-- Here comes the message text -->
+                            <p>
+                                {{message.content}}
+                            </p>
+                        </div>
+                        <div class="card-action" ng-init="groupMessagesCtrl.loadLikes(message.mid)"><div ng-init="groupMessagesCtrl.loadDislikes(message.mid)"></div>
+                            <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons" ng-click="groupMessagesCtrl.postLike(message.mid)">thumb_up
+                            </i></a> <span ng-bind= "groupMessagesCtrl.likesList[message.mid]" ng-click="groupMessagesCtrl.loadWhoLikes(message.mid)"  style="cursor:pointer;">  </span>
+                            <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons" ng-click="groupMessagesCtrl.postDislike(message.mid)">thumb_down
+                            </i></a><span ng-bind="groupMessagesCtrl.dislikesList[message.mid]" ng-click="groupMessagesCtrl.loadWhoDislikes(message.mid)" style="cursor:pointer;">  </span>
+                            <style>
+                                .replybutton{
+                                    float:right;
+                                    border: solid thin gray;
+                                }
+                                .replybutton:hover{
+                                    color:green;
+									border: solid thin green;
+								}
+                            </style>
+                            <button class="replybutton" ng-click="groupMessagesCtrl.showWriteReplyBox(message.mid)" >REPLY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<link rel="stylesheet" type="text/css" href="css/groupmessages.css">
