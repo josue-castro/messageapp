@@ -15,9 +15,6 @@ app = Flask(__name__, template_folder='template')
 
 CORS(app)
 
-webbrowser.open_new('http://localhost:63343/messageapp/MessageAppWebsite/index.html?_ijt=1ql9s0s3jgo3hc8g73utbsd539#!/login')
-webbrowser.open_new('http://localhost:63343/messageapp/dashboardapp/index.html?_ijt=1ql9s0s3jgo3hc8g73utbsd539')
-
 
 @app.route('/')
 def home():
