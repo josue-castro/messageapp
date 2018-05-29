@@ -42,17 +42,6 @@ class DashboardDAO:
             result.append(row)
         return result
 
-    def topActiveUsers(self):
-        cursor = self.conn.cursor()
-        query = "SELECT username, count(*) AS count " \
-                "FROM messages NATURAL INNER JOIN person " \
-                "GROUP BY username ORDER BY count DESC LIMIT 10;"
-        cursor.execute(query)
-        result = []
-        for row in cursor:
-            result.append(row)
-        return result
-
     def likesPerDay(self):
         cursor = self.conn.cursor()
         query = "SELECT date(date), count(*) FROM likes GROUP BY date(date) ORDER BY date;"
