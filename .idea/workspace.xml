@@ -3,29 +3,194 @@
   <component name="ChangeListManager">
     <list default="true" id="a225ef6b-c61a-43c5-ae5b-96c85809daee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/workspace.xml" afterPath="$PROJECT_DIR$/MessageAppWebsite/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/groupmessages.js" afterPath="$PROJECT_DIR$/MessageAppWebsite/appjs/groupmessages.js" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/login.js" afterPath="$PROJECT_DIR$/MessageAppWebsite/appjs/login.js" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/mygroups.js" afterPath="$PROJECT_DIR$/MessageAppWebsite/appjs/mygroups.js" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/login.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/css/login.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/main.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/tablemain.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/css/tablemain.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/tableutil.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/css/tableutil.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/util.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/css/util.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/css/material-design-iconic-font.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/css/material-design-iconic-font.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterPath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/login.js" afterPath="$PROJECT_DIR$/MessageAppWebsite/js/login.js" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/tablemain.js" afterPath="$PROJECT_DIR$/MessageAppWebsite/js/tablemain.js" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/groupmessages.html" afterPath="$PROJECT_DIR$/MessageAppWebsite/pages/groupmessages.html" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/login.html" afterPath="$PROJECT_DIR$/MessageAppWebsite/pages/login.html" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/mygroups.html" afterPath="$PROJECT_DIR$/MessageAppWebsite/pages/mygroups.html" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/register.html" afterPath="$PROJECT_DIR$/MessageAppWebsite/pages/register.html" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/countdowntime/countdowntime.js" afterPath="$PROJECT_DIR$/MessageAppWebsite/vendor/countdowntime/countdowntime.js" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.min.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.min.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.css" afterPath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.css" />
-      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.js" afterPath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.js" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/AppChat.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/libraries/R_User_Library.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/chat.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/groupmessages.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/login.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/mygroups.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/register.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/main.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/materialize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/tablemain.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/tableutil.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/util.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Bold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-BoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-ExtraBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Italic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Light.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-LightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Regular.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-SemiBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/animated.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/core.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/fixed-width.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/font-awesome.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/icons.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/larger.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/mixins.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/path.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/screen-reader.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/stacked.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/variables.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_animated.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_core.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_icons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_larger.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_list.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_path.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/css/material-design-iconic-font.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/css/material-design-iconic-font.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Black.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-BlackItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Bold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-BoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraLight.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Italic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Light.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-LightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Medium.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-MediumItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-SemiBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Thin.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ThinItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/images/avatar-01.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/images/icons/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/angular-route.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/angular.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/login.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/materialize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/tablemain.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/chatbad.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/groupmessages.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/login.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/mygroups.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/register.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animate/animate.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/css/animsition.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/css/animsition.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/js/animsition.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/js/animsition.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/popper.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/popper.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/tooltip.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/countdowntime/countdowntime.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/daterangepicker.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/daterangepicker.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/moment.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/moment.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/jquery/jquery-3.2.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/perfect-scrollbar/perfect-scrollbar.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/codeStyles/Project.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/codeStyles/codeStyleConfig.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/dashboardapp.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/appjs/Mess_and_hash.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/appjs/dashboard.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.min.js.map" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,28 +224,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="18" column="110" lean-forward="false" selection-start-line="18" selection-start-column="110" selection-end-line="18" selection-end-column="110" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboardapp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MessageAppWebsite/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -167,7 +312,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="706" />
@@ -214,16 +359,6 @@
               <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="messageapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="messageapp" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboardapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="messageapp" type="462c0819:PsiDirectoryNode" />
-              <item name="MessageAppWebsite" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -246,306 +381,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ER-SQL" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/messageapp.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/main.py</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/.idea/AppChat.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/.idea/libraries/R_User_Library.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/.idea/vcs.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/appjs/chat.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/appjs/groupmessages.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/appjs/login.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/appjs/main.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/appjs/mygroups.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/appjs/register.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/login.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/main.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/materialize.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/tablemain.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/tableutil.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/css/util.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Bold.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-BoldItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-ExtraBold.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Italic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Light.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-LightItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Regular.otf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Regular.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-SemiBold.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/HELP-US-OUT.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/css/font-awesome.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/css/font-awesome.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/animated.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/bordered-pulled.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/core.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/fixed-width.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/font-awesome.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/icons.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/larger.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/list.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/mixins.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/path.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/rotated-flipped.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/screen-reader.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/stacked.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/variables.less</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_animated.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_core.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_fixed-width.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_icons.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_larger.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_list.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_mixins.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_path.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_screen-reader.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_stacked.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_variables.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/font-awesome.scss</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/css/material-design-iconic-font.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/css/material-design-iconic-font.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.eot</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Black.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-BlackItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Bold.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-BoldItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraBold.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraBoldItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraLight.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraLightItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Italic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Light.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-LightItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Medium.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-MediumItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Regular.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-SemiBold.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-SemiBoldItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Thin.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ThinItalic.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/images/avatar-01.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/images/icons/favicon.ico</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/angular-route.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/angular.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.min.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.min.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/login.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/materialize.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/js/tablemain.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/pages/chatbad.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/pages/groupmessages.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/pages/login.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/pages/mygroups.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/pages/register.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/animate/animate.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/css/animsition.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/css/animsition.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/js/animsition.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/js/animsition.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/bootstrap.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/bootstrap.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/popper.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/popper.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/tooltip.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/countdowntime/countdowntime.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/daterangepicker.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/daterangepicker.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/moment.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/moment.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/jquery/jquery-3.2.1.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/perfect-scrollbar/perfect-scrollbar.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/perfect-scrollbar/perfect-scrollbar.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/.idea/codeStyles/Project.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/.idea/codeStyles/codeStyleConfig.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/.idea/dashboardapp.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/.idea/vcs.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/appjs/Mess_and_hash.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/appjs/dashboard.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/css/bootstrap.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.min.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/js/bootstrap.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/js/bootstrap.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/js/bootstrap.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboardapp/js/bootstrap.min.js.map</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -862,20 +697,26 @@
       <option name="project" value="LOCAL" />
       <updated>1527561462112</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fase 3 working">
+      <created>1527561733679</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1527561733679</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="706" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27372766" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27372766" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18578352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19063005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25282714" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1131,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="16" column="73" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,7 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,14 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="71" column="30" lean-forward="false" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-          <folding>
-            <marker date="1527555629944" expanded="true" signature="726:815" ph="SELECT date(... messages" />
-            <marker date="1527555629944" expanded="true" signature="1032:1158" ph="SELECT tag, tagged" />
-            <marker date="1527555629944" expanded="true" signature="1373:1556" ph="SELECT date(... replies" />
-            <marker date="1527555629944" expanded="true" signature="1770:1842" ph="SELECT date(... likes" />
-            <marker date="1527555629944" expanded="true" signature="2059:2134" ph="SELECT date(... dislikes" />
-            <marker date="1527555629944" expanded="true" signature="2351:2566" ph="SELECT usern... messages" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1209,17 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MessageAppWebsite/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,8 +1053,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="18" column="110" lean-forward="false" selection-start-line="18" selection-start-column="110" selection-end-line="18" selection-end-column="110" />
+        <state relative-caret-position="210">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MessageAppWebsite/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
