@@ -15,8 +15,8 @@ app = Flask(__name__, template_folder='template')
 
 CORS(app)
 
-# webbrowser.open_new_tab('dashboardapp/index.html')
-webbrowser.open_new_tab('MessageAppWebsite/index.html')
+webbrowser.open_new('http://localhost:63343/messageapp/MessageAppWebsite/index.html?_ijt=kmcspm04rg9t773p6iiorsd8k3#!/login')
+webbrowser.open_new('http://localhost:63343/messageapp/dashboardapp/index.html?_ijt=n10n28j2atmearajsb1veobrsh')
 
 
 @app.route('/')
