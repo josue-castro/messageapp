@@ -1,5 +1,6 @@
 from flask import jsonify
 from dao.contact import ContactDAO
+from dao.user import UserDAO
 
 
 class ContactHandler:
@@ -45,18 +46,28 @@ class ContactHandler:
             return jsonify(Contact=user)
 
 
-    def insertContact(self, form):
-        if len(form) !=3:
+    def insertContact(self, pid, json):
+        if len(json) != 1:
             return jsonify(Error="Malformed post request"), 400
         else:
-            pid = form['pid']
-            contact_id = form['contact_id']
+            info = json['info']
+            if info:
+                user_dao = UserDAO()
+                if user_dao.getUserByPhone(info):
+                    contact_id = user_dao.getUserByPhone(info)[0]
+                elif user_dao.getUserByEmail(info):
+                    contact_id = user_dao.getUserByEmail(info)[0]
+                else:
+                    return jsonify(Error="User was not found"), 400
 
-            if pid and contact_id:
-                dao = ContactDAO()
-                pid = dao.addContact(pid, contact_id)
-                result = self.map_contact_attributes(pid, contact_id)
-                return jsonify(new_Contact=result), 201
+                contact_dao = ContactDAO()
+                exist = contact_dao.checkIsContact(pid, contact_id)
+                if not exist:
+                    pid = contact_dao.addContact(pid, contact_id)
+                    result = self.map_contact_attributes(pid, contact_id)
+                    return jsonify(new_Contact=result), 201
+                else:
+                    return jsonify(Error="User is already in your contact list"), 400
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 

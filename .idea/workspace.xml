@@ -3,8 +3,194 @@
   <component name="ChangeListManager">
     <list default="true" id="a225ef6b-c61a-43c5-ae5b-96c85809daee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dao/message.py" afterPath="$PROJECT_DIR$/dao/message.py" />
-      <change beforePath="$PROJECT_DIR$/handlers/messages.py" afterPath="$PROJECT_DIR$/handlers/messages.py" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/AppChat.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/libraries/R_User_Library.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/chat.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/groupmessages.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/login.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/mygroups.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/appjs/register.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-grid.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap-reboot.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/main.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/materialize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/tablemain.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/tableutil.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/css/util.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Bold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-BoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-ExtraBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Italic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Light.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-LightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Regular.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-Regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-SemiBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/animated.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/core.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/fixed-width.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/font-awesome.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/icons.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/larger.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/list.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/mixins.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/path.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/screen-reader.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/stacked.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/less/variables.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_animated.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_core.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_icons.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_larger.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_list.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_path.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/_variables.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/css/material-design-iconic-font.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/css/material-design-iconic-font.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Black.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-BlackItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Bold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-BoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraLight.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Italic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Light.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-LightItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Medium.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-MediumItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-SemiBold.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-Thin.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/fonts/poppins/Poppins-ThinItalic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/images/avatar-01.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/images/icons/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/angular-route.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/angular.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.bundle.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/bootstrap.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/login.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/materialize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/js/tablemain.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/chatbad.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/groupmessages.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/login.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/mygroups.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/pages/register.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animate/animate.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/css/animsition.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/css/animsition.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/js/animsition.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/animsition/js/animsition.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/popper.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/popper.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/bootstrap/js/tooltip.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/countdowntime/countdowntime.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/css-hamburgers/hamburgers.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/daterangepicker.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/daterangepicker.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/moment.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/daterangepicker/moment.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/jquery/jquery-3.2.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/perfect-scrollbar/perfect-scrollbar.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MessageAppWebsite/vendor/select2/select2.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/codeStyles/Project.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/codeStyles/codeStyleConfig.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/dashboardapp.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/appjs/Mess_and_hash.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/appjs/dashboard.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-grid.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap-reboot.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.bundle.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dashboardapp/js/bootstrap.min.js.map" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +200,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/messageapp$main.coverage" NAME="main Coverage Results" MODIFIED="1525202685386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/messageapp$main.coverage" NAME="main Coverage Results" MODIFIED="1527561662299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -35,93 +221,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SQLmapping.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-482">
-              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groups.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/groups.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/group.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
-              <folding>
-                <marker date="1525191648158" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-                <marker date="1525191648158" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-                <marker date="1525191648158" expanded="true" signature="1413:1566" ph="SELECT gid, groupchat" />
-                <marker date="1525191648158" expanded="true" signature="2530:2645" ph="SELECT gid, groupchat" />
-                <marker date="1525191648158" expanded="true" signature="2880:3012" ph="SELECT usern... members" />
-                <marker date="1525191648158" expanded="true" signature="3247:3332" ph="INSERT INTO groupchat... " />
-                <marker date="1525191648158" expanded="true" signature="3461:3507" ph="INSERT INTO members... " />
-                <marker date="1525191648158" expanded="true" signature="3731:3767" ph="DELETE FROM groupchat... " />
-                <marker date="1525191648158" expanded="true" signature="4022:4099" ph="UPDATE groupchat... " />
-                <marker date="1525191648158" expanded="true" signature="4332:4399" ph="UPDATE groupchat... " />
-                <marker date="1525191648158" expanded="true" signature="4625:4690" ph="UPDATE groupchat... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+            <state relative-caret-position="210">
+              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dao/message.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-637">
-              <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
-              <folding>
-                <marker date="1525227142172" expanded="true" signature="728:787" ph="SELECT * FRO... messages" />
-                <marker date="1525227142172" expanded="true" signature="728:813" ph="SELECT * FRO... messages" />
-                <marker date="1525227142172" expanded="true" signature="1035:1135" ph="SElect * FRO... messages" />
-                <marker date="1525227142172" expanded="true" signature="1334:1434" ph="SELECT * FRO... messages" />
-                <marker date="1525227142172" expanded="true" signature="1673:1815" ph="SELECT usern... messages" />
-                <marker date="1525227142172" expanded="true" signature="2069:2224" ph="SELECT usern... messages" />
-                <marker date="1525227142172" expanded="true" signature="2473:2658" ph="SELECT usern... tagged" />
-                <marker date="1525227142172" expanded="true" signature="2915:3122" ph="SELECT usern... tagged" />
-                <marker date="1525227142172" expanded="true" signature="3385:3491" ph="SELECT * FRO... messages" />
-                <marker date="1525227142172" expanded="true" signature="3684:3817" ph="SELECT mid, replies" />
-                <marker date="1525227142172" expanded="true" signature="4060:4160" ph="INSERT INTO messages... " />
-                <marker date="1525227142172" expanded="true" signature="4390:4425" ph="DELETE FROM messages... " />
-                <marker date="1525227142172" expanded="true" signature="4609:4677" ph="UPDATE messages... " />
-                <marker date="1525227142172" expanded="true" signature="4883:4971" ph="UPDATE messages... " />
-                <marker date="1525227142172" expanded="true" signature="5172:5244" ph="INSERT INTO replies... " />
-                <marker date="1525227142172" expanded="true" signature="5426:5460" ph="DELETE FROM replies... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers/messages.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-              <folding>
-                <marker date="1525227142167" expanded="true" signature="7279:7281" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -139,13 +244,24 @@
     <findStrings>
       <find>likes</find>
       <find>like</find>
-      <find>member</find>
       <find>group</find>
       <find>conta</find>
       <find>owner</find>
       <find>ContactDao</find>
       <find>byid</find>
       <find>user</find>
+      <find>map_to_content</find>
+      <find>build_message_info_dict</find>
+      <find>build_message_dict</find>
+      <find>build_tagged_message_dict</find>
+      <find>getAllMessagesBySenderINFO</find>
+      <find>member</find>
+      <find>build_member_dic</find>
+      <find>build_user_contact_dict</find>
+      <find>build_member_dict</find>
+      <find>build_group_dict</find>
+      <find>build_group_chat_dict</find>
+      <find>build_user_groups_dict</find>
     </findStrings>
     <replaceStrings>
       <replace>ContactDAO</replace>
@@ -155,7 +271,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Fase2_v1" />
+        <entry key="$PROJECT_DIR$" value="remake" />
       </map>
     </option>
   </component>
@@ -168,22 +284,25 @@
         <option value="$PROJECT_DIR$/dao/groups.py" />
         <option value="$PROJECT_DIR$/handlers/likes.py" />
         <option value="$PROJECT_DIR$/handlers/dislikes.py" />
-        <option value="$PROJECT_DIR$/handlers/members.py" />
         <option value="$PROJECT_DIR$/handlers/Reactions.py" />
-        <option value="$PROJECT_DIR$/handlers/contacts.py" />
         <option value="src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.groupchat" />
-        <option value="$PROJECT_DIR$/dao/contact.py" />
         <option value="$PROJECT_DIR$/dao/member.py" />
-        <option value="$PROJECT_DIR$/dao/reaction.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/console.sql" />
-        <option value="$PROJECT_DIR$/dao/group.py" />
-        <option value="$PROJECT_DIR$/dao/user.py" />
-        <option value="$PROJECT_DIR$/handlers/users.py" />
         <option value="$PROJECT_DIR$/ER-SQL/SQLmapping.sql" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/handlers/groups.py" />
-        <option value="$PROJECT_DIR$/handlers/messages.py" />
+        <option value="$PROJECT_DIR$/dao/reaction.py" />
         <option value="$PROJECT_DIR$/dao/message.py" />
+        <option value="$PROJECT_DIR$/handlers/messages.py" />
+        <option value="$PROJECT_DIR$/handlers/reactions.py" />
+        <option value="$PROJECT_DIR$/dao/user.py" />
+        <option value="$PROJECT_DIR$/handlers/dashboard.py" />
+        <option value="$PROJECT_DIR$/dao/group.py" />
+        <option value="$PROJECT_DIR$/handlers/groups.py" />
+        <option value="$PROJECT_DIR$/handlers/users.py" />
+        <option value="$PROJECT_DIR$/handlers/contacts.py" />
+        <option value="$PROJECT_DIR$/dao/contact.py" />
+        <option value="$PROJECT_DIR$/dao/dashboard.py" />
+        <option value="$PROJECT_DIR$/handlers/members.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -193,10 +312,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="709" />
+    <option name="height" value="706" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -232,7 +351,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -241,151 +359,28 @@
               <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="messageapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="messageapp" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="messageapp" type="462c0819:PsiDirectoryNode" />
-              <item name="ER-SQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="messageapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="messageapp" type="462c0819:PsiDirectoryNode" />
-              <item name="handlers" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/VectorNav" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="SearchEverywhereHistoryKey" value="data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;da&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;DA&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;databas&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;databa&#9;ACTION&#9;ActivateDatabaseToolWindow" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/josue-castro/messageapp.git" />
+      <recent name="https://github.com/josue-castro/dashboard.git" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ER-SQL" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dao/message.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/handlers/messages.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/main.py</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -420,11 +415,12 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
         <item index="1" class="java.lang.String" itemvalue="Python.main" />
         <item index="2" class="java.lang.String" itemvalue="Python.main" />
         <item index="3" class="java.lang.String" itemvalue="Python.main" />
+        <item index="4" class="java.lang.String" itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -547,126 +543,268 @@
       <option name="project" value="LOCAL" />
       <updated>1525226128808</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Message handler dic and dao updated">
+      <created>1525227146944</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1525227146944</updated>
+    </task>
+    <task id="LOCAL-00017" summary="login methods">
+      <created>1527092711902</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1527092711902</updated>
+    </task>
+    <task id="LOCAL-00018" summary="adding messages with hashtag">
+      <created>1527267216001</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1527267216001</updated>
+    </task>
+    <task id="LOCAL-00019" summary="implementing route methods">
+      <created>1527293518969</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1527293518969</updated>
+    </task>
+    <task id="LOCAL-00020" summary="messages and hashtags">
+      <created>1527301835107</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1527301835107</updated>
+    </task>
+    <task id="LOCAL-00021" summary="able to reply messages RE:">
+      <created>1527338108279</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1527338108279</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Likes and dislikes">
+      <created>1527346979816</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1527346979816</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Adding members to chat">
+      <created>1527353063126</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1527353063126</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Message correction">
+      <created>1527368872064</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1527368872065</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Dashboard queries">
+      <created>1527386508254</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1527386508254</updated>
+    </task>
+    <task id="LOCAL-00026" summary="todo funcionando">
+      <created>1527443148597</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1527443148597</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fix top ten hashtag handler">
+      <created>1527454844608</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1527454844608</updated>
+    </task>
+    <task id="LOCAL-00028" summary="dashboard set">
+      <created>1527482476002</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1527482476002</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Create new groups">
+      <created>1527515731217</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1527515731217</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Validate Registration">
+      <created>1527516221260</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1527516221260</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Add contact and create group">
+      <created>1527517565267</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1527517565267</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add contact no duplicate">
+      <created>1527531636873</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1527531636873</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Adding members">
+      <created>1527555407550</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1527555407550</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Dashboard correction">
+      <created>1527555730280</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1527555730280</updated>
+    </task>
+    <task id="LOCAL-00035" summary="arregle adding members">
+      <created>1527559114138</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1527559114138</updated>
+    </task>
+    <task id="LOCAL-00036" summary="All working here">
+      <created>1527561233309</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1527561233309</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fase 3 working">
+      <created>1527561462112</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1527561462112</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Fase 3 working">
+      <created>1527561733679</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1527561733679</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="706" extended-state="0" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24209079" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14781906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27372766" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19063005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25282714" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889959" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32612312" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32612312" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="http://127.0.0.1:5000/&#10;/register&#10;/login&#10;/groups&#10;/groups/&lt;int:pid&gt;/owner  #TODO MOVER A USER HANDLER Y DAO&#10;&#10;/groups/&lt;int:gid&gt;/members&#10;&#10;/messages ##TODO NOT FOUND&#10;&#10;/messages/by/&lt;int:pid&gt;&#10;&#10;/groups/&lt;int:gid&gt;/messages&#10;&#10;/groups/&lt;int:gid&gt;/messages/by/&lt;int:pid&gt;&#10;&#10;/&lt;int:pid&gt;/contacts&#10;&#10;/&lt;int:pid&gt;/contacts/&lt;string:name&gt; #TODO IMPLEMENT&#10;&#10;/messages/&lt;int:mid&gt;/number-of-likes&#10;&#10;/messages/&lt;int:mid&gt;/who-likes #TypeError: getWhoLikedMessage() missing 1 required positional argument: 'mid'&#10;&#10;/messages/&lt;int:mid&gt;/number-of-dislikes&#10;&#10;/messages/&lt;int:mid&gt;/who-likes #TypeError: getWhoLikedMessage() missing 1 required positional argument: 'mid'" />
-    <MESSAGE value="fixed bad reference to ContactDAO." />
-    <MESSAGE value="added user by id route" />
-    <MESSAGE value="insert method in member and group dao. &#10;&#10;added some documentation comments." />
-    <MESSAGE value="inserts done" />
-    <MESSAGE value="delete done" />
-    <MESSAGE value="Updates Done." />
-    <MESSAGE value="Updated user insert method" />
-    <MESSAGE value="mygroups route working. CORS import" />
-    <MESSAGE value="Updated diagram image phase 2" />
     <MESSAGE value="Updated sql" />
     <MESSAGE value="Updated message route and get group by id route" />
     <MESSAGE value="fixed variables" />
     <MESSAGE value="Message handler dic and dao updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Message handler dic and dao updated" />
+    <MESSAGE value="login methods" />
+    <MESSAGE value="adding messages with hashtag" />
+    <MESSAGE value="implementing route methods" />
+    <MESSAGE value="messages and hashtags" />
+    <MESSAGE value="able to reply messages RE:" />
+    <MESSAGE value="Likes and dislikes" />
+    <MESSAGE value="Adding members to chat" />
+    <MESSAGE value="Message correction" />
+    <MESSAGE value="Dashboard queries" />
+    <MESSAGE value="todo funcionando" />
+    <MESSAGE value="fix top ten hashtag handler" />
+    <MESSAGE value="dashboard set" />
+    <MESSAGE value="Create new groups" />
+    <MESSAGE value="Validate Registration" />
+    <MESSAGE value="Add contact and create group" />
+    <MESSAGE value="Add contact no duplicate" />
+    <MESSAGE value="Adding members" />
+    <MESSAGE value="Dashboard correction" />
+    <MESSAGE value="arregle adding members" />
+    <MESSAGE value="All working here" />
+    <MESSAGE value="Fase 3 working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fase 3 working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="83" lean-forward="false" selection-start-line="0" selection-start-column="83" selection-end-line="0" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/messages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="107" column="64" lean-forward="false" selection-start-line="107" selection-start-column="64" selection-end-line="107" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/groups.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/reactions.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/handlers/users.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
           <caret line="74" column="18" lean-forward="false" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,7 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,9 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,24 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="19" />
-          <folding>
-            <marker date="1525227142172" expanded="true" signature="728:787" ph="SELECT * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="728:813" ph="SELECT * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="1035:1135" ph="SElect * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="1334:1434" ph="SELECT * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="1673:1815" ph="SELECT usern... messages" />
-            <marker date="1525227142172" expanded="true" signature="2069:2224" ph="SELECT usern... messages" />
-            <marker date="1525227142172" expanded="true" signature="2473:2658" ph="SELECT usern... tagged" />
-            <marker date="1525227142172" expanded="true" signature="2915:3122" ph="SELECT usern... tagged" />
-            <marker date="1525227142172" expanded="true" signature="3385:3491" ph="SELECT * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="3684:3817" ph="SELECT mid, replies" />
-            <marker date="1525227142172" expanded="true" signature="4060:4160" ph="INSERT INTO messages... " />
-            <marker date="1525227142172" expanded="true" signature="4390:4425" ph="DELETE FROM messages... " />
-            <marker date="1525227142172" expanded="true" signature="4609:4677" ph="UPDATE messages... " />
-            <marker date="1525227142172" expanded="true" signature="4883:4971" ph="UPDATE messages... " />
-            <marker date="1525227142172" expanded="true" signature="5172:5244" ph="INSERT INTO replies... " />
-            <marker date="1525227142172" expanded="true" signature="5426:5460" ph="DELETE FROM replies... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,20 +868,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/handler/groups.py" />
     <entry file="file://$PROJECT_DIR$/ER-SQL/UpdatedDiagram.jpg" />
-    <entry file="file://$PROJECT_DIR$/config/herokudbconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/dbconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.messages" />
     <entry file="file://$PROJECT_DIR$/handlers/reactions.py" />
     <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.contacts" />
@@ -773,74 +875,23 @@
     <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.messages" />
     <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.person" />
     <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.groupchat" />
-    <entry file="file://$PROJECT_DIR$/handlers/reactions.py" />
-    <entry file="file://$PROJECT_DIR$/handlers/contacts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../venv/lib/python3.5/site-packages/flask/app.py" />
     <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.hashtag" />
     <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.groupchat" />
-    <entry file="file://$PROJECT_DIR$/dao/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://src:table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.tagged" />
-    <entry file="file://$PROJECT_DIR$/dao/reaction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="126" column="18" lean-forward="true" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/5a7fec0d/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/d4aeehb1r16558.public.replies" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95e2d8d1-7c2f-47af-924b-6680c6f46ffd/console.sql" />
-    <entry file="file://$PROJECT_DIR$/dao/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
-          <caret line="70" column="117" lean-forward="false" selection-start-line="70" selection-start-column="117" selection-end-line="70" selection-end-column="117" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-            <marker date="1525134381180" expanded="true" signature="742:829" ph="SELECT pid F... person" />
-            <marker date="1525134381180" expanded="true" signature="943:970" ph="SELECT usern... person" />
-            <marker date="1525134381180" expanded="true" signature="1189:1271" ph="SELECT pid, person" />
-            <marker date="1525134381180" expanded="true" signature="1460:1544" ph="SELECT pid, person" />
-            <marker date="1525134381180" expanded="true" signature="1735:1819" ph="SELECT pid, person" />
-            <marker date="1525134381180" expanded="true" signature="2016:2103" ph="SELECT pid, person" />
-            <marker date="1525134381180" expanded="true" signature="2316:2471" ph="SELECT pid, person" />
-            <marker date="1525134381180" expanded="true" signature="2811:2910" ph="SELECT gid, members" />
-            <marker date="1525134381180" expanded="true" signature="3141:3289" ph="SELECT first... contacts" />
-            <marker date="1525134381180" expanded="true" signature="3547:3785" ph="SELECT first... contacts" />
-            <marker date="1525134381180" expanded="true" signature="4078:4242" ph="INSERT INTO person... " />
-            <marker date="1525134381180" expanded="true" signature="4495:4528" ph="DELETE FROM person... " />
-            <marker date="1525134381180" expanded="true" signature="4740:4922" ph="UPDATE person... " />
-            <marker date="1525134381180" expanded="true" signature="4908:4922" ph="UPDATE person... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/users.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1032">
-          <caret line="134" column="86" lean-forward="false" selection-start-line="134" selection-start-column="86" selection-end-line="134" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13695">
+          <caret line="942" column="0" lean-forward="false" selection-start-line="942" selection-start-column="0" selection-end-line="942" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -849,104 +900,170 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/members.py">
+    <entry file="file://$PROJECT_DIR$/config/dbconfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/herokudbconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="https://github.com/josue-castro/dashboard.git">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dao/member.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="272">
           <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding>
-            <marker date="1525191648159" expanded="true" signature="728:764" ph="SELECT usern... members" />
-            <marker date="1525191648159" expanded="true" signature="728:853" ph="SELECT usern... members" />
-            <marker date="1525191648159" expanded="true" signature="1086:1245" ph="SELECT usern... members" />
-            <marker date="1525191648159" expanded="true" signature="1513:1594" ph="INSERT INTO members... " />
-            <marker date="1525191648159" expanded="true" signature="1801:1835" ph="DELETE FROM members... " />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/reaction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="102" column="30" lean-forward="false" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ER-SQL/SQLmapping.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-482">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="-197">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handlers/groups.py">
+    <entry file="file://$PROJECT_DIR$/dao/message.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="52">
+          <caret line="105" column="34" lean-forward="true" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/reactions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dao/group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
+        <state relative-caret-position="338">
+          <caret line="96" column="43" lean-forward="true" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="199" column="30" lean-forward="true" selection-start-line="199" selection-start-column="30" selection-end-line="199" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="73" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/contacts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="75" column="53" lean-forward="false" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
           <folding>
-            <marker date="1525191648158" expanded="true" signature="725:840" ph="SELECT gid, groupchat" />
-            <marker date="1525191648158" expanded="true" signature="1064:1215" ph="SELECT gid, groupchat" />
-            <marker date="1525191648158" expanded="true" signature="1413:1566" ph="SELECT gid, groupchat" />
-            <marker date="1525191648158" expanded="true" signature="2530:2645" ph="SELECT gid, groupchat" />
-            <marker date="1525191648158" expanded="true" signature="2880:3012" ph="SELECT usern... members" />
-            <marker date="1525191648158" expanded="true" signature="3247:3332" ph="INSERT INTO groupchat... " />
-            <marker date="1525191648158" expanded="true" signature="3461:3507" ph="INSERT INTO members... " />
-            <marker date="1525191648158" expanded="true" signature="3731:3767" ph="DELETE FROM groupchat... " />
-            <marker date="1525191648158" expanded="true" signature="4022:4099" ph="UPDATE groupchat... " />
-            <marker date="1525191648158" expanded="true" signature="4332:4399" ph="UPDATE groupchat... " />
-            <marker date="1525191648158" expanded="true" signature="4625:4690" ph="UPDATE groupchat... " />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="https://github.com/josue-castro/messageapp.git">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/groups.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+        <state relative-caret-position="360">
+          <caret line="101" column="57" lean-forward="false" selection-start-line="101" selection-start-column="57" selection-end-line="101" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handlers/messages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <marker date="1525227142167" expanded="true" signature="7279:7281" ph="..." />
-          </folding>
+        <state relative-caret-position="394">
+          <caret line="171" column="37" lean-forward="false" selection-start-line="171" selection-start-column="36" selection-end-line="171" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/message.py">
+    <entry file="file://$PROJECT_DIR$/dao/dashboard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-637">
-          <caret line="53" column="62" lean-forward="false" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
-          <folding>
-            <marker date="1525227142172" expanded="true" signature="728:787" ph="SELECT * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="728:813" ph="SELECT * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="1035:1135" ph="SElect * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="1334:1434" ph="SELECT * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="1673:1815" ph="SELECT usern... messages" />
-            <marker date="1525227142172" expanded="true" signature="2069:2224" ph="SELECT usern... messages" />
-            <marker date="1525227142172" expanded="true" signature="2473:2658" ph="SELECT usern... tagged" />
-            <marker date="1525227142172" expanded="true" signature="2915:3122" ph="SELECT usern... tagged" />
-            <marker date="1525227142172" expanded="true" signature="3385:3491" ph="SELECT * FRO... messages" />
-            <marker date="1525227142172" expanded="true" signature="3684:3817" ph="SELECT mid, replies" />
-            <marker date="1525227142172" expanded="true" signature="4060:4160" ph="INSERT INTO messages... " />
-            <marker date="1525227142172" expanded="true" signature="4390:4425" ph="DELETE FROM messages... " />
-            <marker date="1525227142172" expanded="true" signature="4609:4677" ph="UPDATE messages... " />
-            <marker date="1525227142172" expanded="true" signature="4883:4971" ph="UPDATE messages... " />
-            <marker date="1525227142172" expanded="true" signature="5172:5244" ph="INSERT INTO replies... " />
-            <marker date="1525227142172" expanded="true" signature="5426:5460" ph="DELETE FROM replies... " />
-          </folding>
+        <state relative-caret-position="575">
+          <caret line="71" column="30" lean-forward="false" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/dashboard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/members.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="44" column="83" lean-forward="false" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboardapp/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboardapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MessageAppWebsite/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

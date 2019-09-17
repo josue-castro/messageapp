@@ -1,4 +1,5 @@
 from config.herokudbconfig import pg_config
+from dao.reaction import ReactionDAO
 import psycopg2
 
 
@@ -15,7 +16,8 @@ class MessageDAO:
 
     def getAllMessagesINFO(self):
         cursor = self.conn.cursor()
-        query = "SELECT mid, content, pid, gid, date, username FROM messages NATURAL INNER JOIN person;"
+        query = "SELECT mid, content, pid, gid, date, username " \
+                "FROM messages NATURAL INNER JOIN person ORDER BY date DESC;"
         cursor.execute(query)
         result = []
         for row in cursor:
@@ -24,37 +26,28 @@ class MessageDAO:
 
     def getMessageById(self, mid):
         cursor = self.conn.cursor()
-        query = "SELECT mid, content, pid, gid, date, username FROM messages NATURAL INNER JOIN person WHERE mid = %s;"
+        query = "SELECT mid, content, pid, gid, date, username " \
+                "FROM messages NATURAL INNER JOIN person WHERE mid = %s ORDER BY date DESC;"
         cursor.execute(query, (mid,))
         result = cursor.fetchone()
         return result
 
-    def getAllMessagesBySenderINFO(self, pid):
-        cursor = self.conn.cursor()
-        query = "SELECT mid, content, pid, gid, date, username FROM messages NATURAL INNER JOIN person WHERE pid = %s;"
-        cursor.execute(query, (pid,))
-        result = []
-        for row in cursor:
-            result.append(row)
-        return result
+    # def getAllMessagesBySenderINFO(self, pid):
+    #     cursor = self.conn.cursor()
+    #     query = "SELECT mid, content, pid, gid, date, username " \
+    #             "FROM messages NATURAL INNER JOIN person WHERE pid = %s ORDER BY date DESC;"
+    #     cursor.execute(query, (pid,))
+    #     result = []
+    #     for row in cursor:
+    #         result.append(row)
+    #     return result
 
     def getAllGroupMessagesINFO(self, gid):
         cursor = self.conn.cursor()
         query = "SELECT mid, content, pid, gid, date, username " \
                 "FROM messages NATURAL INNER JOIN person " \
-                "WHERE gid = %s;"
+                "WHERE gid = %s ORDER BY date DESC;"
         cursor.execute(query, (gid,))
-        result = []
-        for row in cursor:
-            result.append(row)
-        return result
-
-    def getAllMessagesInGroupBySenderINFO(self, gid, pid):
-        cursor = self.conn.cursor()
-        query = "SELECT mid, content, pid, gid, date, username " \
-                "FROM messages NATURAL INNER JOIN person " \
-                "WHERE pid = %s AND gid = %s;"
-        cursor.execute(query, (pid, gid))
         result = []
         for row in cursor:
             result.append(row)
@@ -62,10 +55,32 @@ class MessageDAO:
 
     def getAllMessagesWithHashtagINFO(self, tag):
         cursor = self.conn.cursor()
-        query = "SELECT username, content, date, tag " \
+        query = "SELECT mid, content, pid, gid, date, username " \
                 "FROM tagged NATURAL INNER JOIN hashtag NATURAL INNER JOIN person NATURAL INNER JOIN messages " \
-                "WHERE tag = %s;"
+                "WHERE tag = %s ORDER BY date DESC;"
         cursor.execute(query, (tag,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesByUsername(self, username):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE username = %s ORDER BY date DESC;"
+        cursor.execute(query, (username,))
+        result = []
+        for row in cursor:
+            result.append(row)
+        return result
+
+    def getAllMessagesInGroupBySenderINFO(self, gid, username):
+        cursor = self.conn.cursor()
+        query = "SELECT mid, content, pid, gid, date, username " \
+                "FROM messages NATURAL INNER JOIN person " \
+                "WHERE username = %s AND gid = %s ORDER BY date DESC;"
+        cursor.execute(query, (username, gid))
         result = []
         for row in cursor:
             result.append(row)
@@ -73,7 +88,7 @@ class MessageDAO:
 
     def getAllMessagesInGroupWithHashtagINFO(self, gid, tag):
         cursor = self.conn.cursor()
-        query = "SELECT username, content, date, tag " \
+        query = "SELECT mid, content, pid, gid, date, username " \
                 "FROM tagged NATURAL INNER JOIN hashtag NATURAL INNER JOIN person NATURAL INNER JOIN messages " \
                 "WHERE messages.gid = %s AND tag = %s;"
         cursor.execute(query, (gid, tag,))
@@ -86,16 +101,16 @@ class MessageDAO:
         cursor = self.conn.cursor()
         query = "SELECT * " \
                 "FROM messages " \
-                "WHERE gid = %s AND pid = %s AND date = %s;"
+                "WHERE gid = %s AND pid = %s AND date = %s ORDER BY date DESC;"
         cursor.execute(query, (gid, pid, date))
         result = cursor.fetchone()
         return result
 
     def getReplies(self, mid):
         cursor = self.conn.cursor()
-        query = "SELECT mid, content, pid, gid, date " \
-                "FROM replies NATURAL INNER JOIN messages " \
-                "WHERE mid = %s;"
+        query = "SELECT reply_id as mid, content, pid, gid, date, username " \
+                "FROM (messages INNER JOIN replies ON messages.mid = replies.reply_id) NATURAL INNER JOIN person " \
+                "WHERE replies.mid = %s ORDER BY date DESC;"
         cursor.execute(query, (mid,))
         result = []
         for row in cursor:
@@ -109,6 +124,15 @@ class MessageDAO:
         cursor.execute(query, (content, pid, gid))
         mid_date = cursor.fetchone()
         self.conn.commit()
+        reaction_dao = ReactionDAO()
+        hashtags = set(tag[1:] for tag in content.split() if tag.startswith("#"))
+        for tag in hashtags:
+            hid = reaction_dao.getTagId(tag)
+            if not hid:
+                hid = reaction_dao.createHashtag(tag)
+                reaction_dao.insertTag(mid_date[0], hid)
+            else:
+                reaction_dao.insertTag(mid_date[0], hid)
         return mid_date
 
     def deleteMessage(self, mid):

@@ -25,12 +25,20 @@ class ReactionDAO:
         cursor = self.conn.cursor()
         query = "SELECT count(*) FROM likes WHERE mid = %s;"
         cursor.execute(query, (mid,))
-        result = cursor.fetchone()
+        result = cursor.fetchone()[0]
+        return result
+
+    def getMessageDislikes(self, mid):
+        cursor = self.conn.cursor()
+        query = "SELECT count(*) FROM dislikes WHERE mid = %s;"
+        cursor.execute(query, (mid,))
+        result = cursor.fetchone()[0]
         return result
 
     def getWhoLikedMessage(self, mid):
         cursor = self.conn.cursor()
-        query = "SELECT username FROM likes NATURAL INNER JOIN person " \
+        query = "SELECT pid, firstname, lastname, username, phone, email " \
+                "FROM likes NATURAL INNER JOIN person " \
                 "WHERE mid = %s;"
         cursor.execute(query, (mid,))
         result = []
@@ -38,17 +46,9 @@ class ReactionDAO:
             result.append(row)
         return result
 
-
-    def getMessageDislikes(self, mid):
+    def getWhoDislikedMessage(self, mid):
         cursor = self.conn.cursor()
-        query = "SELECT count(*) FROM dislikes WHERE mid = %s;"
-        cursor.execute(query, (mid,))
-        result = cursor.fetchone()
-        return result
-
-    def getWhoDisLikedMessage(self, mid):
-        cursor = self.conn.cursor()
-        query = "SELECT username " \
+        query = "SELECT pid, firstname, lastname, username, phone, email " \
                 "FROM dislikes NATURAL INNER JOIN person " \
                 "WHERE mid = %s;"
         cursor.execute(query, (mid,))
@@ -89,11 +89,18 @@ class ReactionDAO:
         result = cursor.fetchone()
         return result
 
+    def getTagId(self, tag):
+        cursor = self.conn.cursor()
+        query = "SELECT hid FROM hashtag WHERE tag = %s;"
+        cursor.execute(query, (tag,))
+        result = cursor.fetchone()
+        return result
+
     def insertLike(self, mid, pid):
         """Insert when someone liked a message"""
         cursor = self.conn.cursor()
         query = "INSERT INTO likes (mid, pid) VALUES (%s, %s) " \
-                "RETURNING pid;"
+                "RETURNING mid;"
         cursor.execute(query, (mid, pid))
         mid = cursor.fetchone()[0]
         self.conn.commit()
@@ -130,6 +137,22 @@ class ReactionDAO:
         self.conn.commit()
         return mid
 
+    def deleteLike(self, mid, pid):
+        """Removes the like of someone who liked a specified message."""
+        cursor = self.conn.cursor()
+        query = "DELETE FROM likes WHERE mid = %s AND pid = %s;"
+        cursor.execute(query, (mid, pid))
+        self.conn.commit()
+        return mid
+
+    def deleteDislike(self, mid, pid):
+        """Removes the dislike of someone who liked a specified message."""
+        cursor = self.conn.cursor()
+        query = "DELETE FROM dislikes WHERE mid = %s AND pid = %s;"
+        cursor.execute(query, (mid, pid))
+        self.conn.commit()
+        return mid
+
     def deleteAllLikes(self, mid):
         """Removes all the likes from a message."""
         cursor = self.conn.cursor()
@@ -138,27 +161,11 @@ class ReactionDAO:
         self.conn.commit()
         return mid
 
-    def deleteLike(self, mid, pid):
-        """Removes the like of someone who liked a specified message."""
-        cursor = self.conn.cursor()
-        query = "DELETE FROM likes WHERE mid = %s, AND pid = %s;"
-        cursor.execute(query, (mid, pid))
-        self.conn.commit()
-        return mid
-
     def deleteAllDislikes(self, mid):
         """Removes all the likes from a message."""
         cursor = self.conn.cursor()
         query = "DELETE FROM dislikes WHERE mid = %s;"
         cursor.execute(query, (mid,))
-        self.conn.commit()
-        return mid
-
-    def deleteDislike(self, mid, pid):
-        """Removes the dislike of someone who liked a specified message."""
-        cursor = self.conn.cursor()
-        query = "DELETE FROM dislikes WHERE mid = %s, pid = %s;"
-        cursor.execute(query, (mid, pid))
         self.conn.commit()
         return mid
 

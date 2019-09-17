@@ -3,27 +3,21 @@ from dao.group import GroupsDAO
 
 
 class GroupHandler:
-    def build_group_chat_dict(self, row):
-        result = {}
-        result['gid'] = row[0]
-        result['gname'] = row[1]
-        result['pid'] = row[2]
-        result['admin_username'] = row[3]
-        result['admin_name'] = row[4]
-        result['admin_last_name'] = row[5]
-        return result
-
     def build_group_dict(self, row):
         result = {}
         result['gid'] = row[0]
         result['gname'] = row[1]
+        result['pid'] = row[2]
         return result
 
-    def build_member_dict(self, row):
+    def build_user_dict(self, row):
         result = {}
-        result['username'] = row[0]
-        result['firstName'] = row[1]
-        result['lastName'] = row[2]
+        result['pid'] = row[0]
+        result['firstname'] = row[1]
+        result['lastname'] = row[2]
+        result['username'] = row[3]
+        result['phone'] = row[4]
+        result['email'] = row[5]
         return result
 
     def build_group_attributes(self, gid, gname, pid):
@@ -38,7 +32,7 @@ class GroupHandler:
         group_list = dao.getAllGroupsINFO()
         result_list = []
         for row in group_list:
-            result_list.append(self.build_group_chat_dict(row))
+            result_list.append(self.build_group_dict(row))
         return jsonify(Groups=result_list)
 
     def getGroupByIdINFO(self, gid):
@@ -47,7 +41,7 @@ class GroupHandler:
         if not row:
             return jsonify(Error="Group Not Found"), 404
         else:
-            group = self.build_group_chat_dict(row)
+            group = self.build_group_dict(row)
             return jsonify(Group=group)
 
     def getGroupByGroupNameINFO(self, gname):
@@ -55,8 +49,14 @@ class GroupHandler:
         group_list = dao.getGroupByGroupNameINFO(gname)
         result_list = []
         for row in group_list:
-            result_list.append(self.build_group_chat_dict(row))
+            result_list.append(self.build_group_dict(row))
         return jsonify(Groups=result_list)
+
+    def getGroupAdminInfo(self, gid):
+        dao = GroupsDAO()
+        admin = dao.getGroupAdminINFO(gid)
+        result = self.build_user_dict(admin)
+        return jsonify(Admin=result)
 
     def getAllGroupsAdminByUser(self, pid):
         dao = GroupsDAO()
@@ -71,7 +71,7 @@ class GroupHandler:
         member_list = dao.getGroupMembersINFO(gid)
         result_list = []
         for row in member_list:
-            result_list.append(self.build_member_dict(row))
+            result_list.append(self.build_user_dict(row))
         return jsonify(Members=result_list)
 
     def insertGroup(self, form):
@@ -88,17 +88,15 @@ class GroupHandler:
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
 
-    def createGroup(self, form):
-        if len(form) !=3:
+    def createGroup(self, pid, json):
+        if len(json) != 1:
             return jsonify(Error="Malformed post request"), 400
         else:
-            gname = form['gname']
-            pid = form['pid']
-
-            if pid and gname:
+            gname = json['gname']
+            if gname:
                 dao = GroupsDAO()
-                pid = dao.insertGroup(gname, pid)
-                result = self.build_group_attributes(pid, gname, pid)
+                gid = dao.insertGroup(gname, pid)
+                result = self.build_group_attributes(gid, gname, pid)
                 return jsonify(new_Group=result), 201
             else:
                 return jsonify(Error="Unexpected attributes in post request"), 400
